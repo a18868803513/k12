@@ -6,7 +6,6 @@ import java.util.List;
  * Created by Administrator on 2017/9/2/002.
  */
 public class Page {
-    private int ii;
     private int pageSize; //一页的数目
     private List<?> rows;//一页的内容
     private int page;//当前页
