@@ -28,4 +28,9 @@ public class GradeServiceImpl implements GradeService {
     public List<Tb_Grade> selectAll() {
         return gradeDao.selectAll();
     }
+
+    @Override
+    public Tb_Grade selectById(int gid) {
+        return gradeDao.selectById(gid);
+    }
 }

@@ -19,6 +19,7 @@ public class GradeController {
     @RequestMapping("gradeList")
     @ResponseBody
     public List<Tb_Grade> a(){
+        System.out.print(gradeDao.selectAll());
         return gradeDao.selectAll();
     }
 

@@ -5,14 +5,14 @@
  console.log(tab);
 
  if(!tab){
- //如果没有就创建
+ //�???没�??就�??�?
  $('#tab').tabs('add',{
  title: node.text,
  closable: true
  });
 
  }else{
- //如果有就选中
+ //�?????就�??�?
  $('#tab').tabs('select', node.text);
  }
 

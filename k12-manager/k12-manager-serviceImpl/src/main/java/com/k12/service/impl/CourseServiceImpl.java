@@ -21,4 +21,9 @@ public class CourseServiceImpl implements CourseService {
     public Tb_Course selectByName(String course) {
         return courseDao.selectByName(course);
     }
+
+    @Override
+    public Tb_Course selectById(int cid) {
+        return courseDao.selectById(cid);
+    }
 }

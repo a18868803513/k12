@@ -8,4 +8,5 @@ import com.k12.domain.Tb_Course;
 
 public interface CourseService {
     Tb_Course selectByName(String course);
+    Tb_Course selectById(int cid);
 }

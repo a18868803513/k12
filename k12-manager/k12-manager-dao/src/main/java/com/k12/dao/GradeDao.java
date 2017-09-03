@@ -11,6 +11,8 @@ import java.util.List;
 public interface GradeDao {
     @Select("select * from tb_grade where grade=#{grade}")
     Tb_Grade selectByName(String grade);
+    @Select("select * from tb_grade where id=#{gid}")
+    Tb_Grade selectById(int gid);
     @Select("select * from tb_grade")
     List<Tb_Grade> selectAll();
 

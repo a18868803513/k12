@@ -6,8 +6,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>首页</title>
   <!-- 导入easyui的样式表 -->
-  <link rel="stylesheet" href="js/jquery-easyui-1.5/themes/bootstrap/easyui.css">
-  <link rel="stylesheet" href="js/jquery-easyui-1.5/themes/icon.css">
+  <link rel="stylesheet" href="/k12/js/jquery-easyui-1.5/themes/bootstrap/easyui.css">
+  <link rel="stylesheet" href="/k12/js/jquery-easyui-1.5/themes/icon.css">
 </head>
 <body class="easyui-layout">
 <div data-options="region:'north'" style="height:70px;padding-left:10px;">
@@ -65,15 +65,15 @@
   </div>
 </div>
 <!-- jquery -->
-<script src="js/jquery-easyui-1.5/jquery.min.js"></script>
+<script src="/k12/js/jquery-easyui-1.5/jquery.min.js"></script>
 <!-- jquery easyui -->
-<script src="js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
-<script src="js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
+<script src="/k12/js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+<script src="/k12/js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
 <!-- 自定义脚本 -->
 <script src="js/common.js"></script>
 <!-- 自定义js -->
 <script>
-  ttshop.registerMenuEvent();
+  /*k12.registerMenuEvent();*/
       $(function(){
           $("#menu .easyui-tree").tree({
               onClick: function(node){
