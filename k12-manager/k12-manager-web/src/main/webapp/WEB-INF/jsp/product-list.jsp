@@ -110,7 +110,7 @@
           }
         }
         },
-        {field: 'grade', title: '年级',width:100},
+        {field: 'grade', title: '年级'},
         {field: 'instrudction', title: '简介',width:100},
         {field: 'course', title: '学科',width: 100, align: 'right'}
 
