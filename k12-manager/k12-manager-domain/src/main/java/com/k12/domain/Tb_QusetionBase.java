@@ -10,7 +10,7 @@ public class Tb_QusetionBase {
     private String answer;
     private Tb_Grade tb_grade;
     private Tb_Course tb_course;
-    private int cc;
+
 
     public Tb_Grade getTb_grade() {
         return tb_grade;

@@ -1,6 +1,5 @@
 package com.k12.web;
 
-import com.k12.dao.GradeDao;
 import com.k12.domain.Tb_Grade;
 import com.k12.service.GradeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +21,4 @@ public class GradeController {
     public List<Tb_Grade> a(){
          return gradeService.selectAll();
     }
-
 }
