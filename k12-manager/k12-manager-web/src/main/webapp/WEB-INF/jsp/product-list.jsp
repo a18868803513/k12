@@ -84,7 +84,7 @@
       columns: [[
         {field: 'ck', checkbox: true},
         {field: 'id', title: '商品ID'},
-        {field: 'name', title: '商品名称'},
+        {field: 'name', title: '商品名称',width:50},
         {field: 'price', title: '商品价格'},
         {field: 'status', title: '商品状态', formatter: function (value, row, index) {
           //value就是当前取到的值，row代表一个行记录，index代表索引号
