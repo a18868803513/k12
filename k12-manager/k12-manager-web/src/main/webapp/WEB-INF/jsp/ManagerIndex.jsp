@@ -20,8 +20,8 @@
   <div id="menu" class="easyui-accordion">
     <div title="题库管理" data-options="selected:true,iconCls:'icon-tip'" style="padding:10px 0;">
       <ul class="easyui-tree">
-        <li data-options="attributes:{'href':'item-add'}">新增商品</li>
-        <li data-options="attributes:{'href':'qb-list'}">查询商品</li>
+        <li data-options="attributes:{'href':'item-add'}">新增题目</li>
+        <li data-options="attributes:{'href':'qb-list'}">查询题目</li>
         <li data-options="attributes:{'href':'item-param-list'}">规格参数</li>
       </ul>
     </div>
@@ -73,14 +73,13 @@
 <script src="js/common.js"></script>
 <!-- 自定义js -->
 <script>
-  /*k12.registerMenuEvent();*/
       $(function(){
           $("#menu .easyui-tree").tree({
               onClick: function(node){
                   $('#tab').tabs('add', {
                       title: node.text,
                       href: node.attributes.href,
-                      closable: true
+                      closable: false
                   });
             }
           });
