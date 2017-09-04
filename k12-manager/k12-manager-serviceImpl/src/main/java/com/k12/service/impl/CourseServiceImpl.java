@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2017/9/3/003.
  */
@@ -25,5 +27,10 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public Tb_Course selectById(int cid) {
         return courseDao.selectById(cid);
+    }
+
+    @Override
+    public List<Tb_Course> selectAll() {
+        return courseDao.selectAll();
     }
 }

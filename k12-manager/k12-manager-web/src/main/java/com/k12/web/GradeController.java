@@ -2,6 +2,7 @@ package com.k12.web;
 
 import com.k12.dao.GradeDao;
 import com.k12.domain.Tb_Grade;
+import com.k12.service.GradeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,12 +16,11 @@ import java.util.List;
 @Controller
 public class GradeController {
     @Autowired
-    GradeDao gradeDao;
+    GradeService gradeService;
     @RequestMapping("gradeList")
     @ResponseBody
     public List<Tb_Grade> a(){
-        System.out.print(gradeDao.selectAll());
-        return gradeDao.selectAll();
+         return gradeService.selectAll();
     }
 
 }
