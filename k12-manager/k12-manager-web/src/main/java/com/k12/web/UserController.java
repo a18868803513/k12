@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by Administrator on 2017/9/1/001.
@@ -24,7 +23,7 @@ public class UserController {
         return jn;
     }
 
-    @RequestMapping(value = "login/{username}/{password}",method = RequestMethod.GET)
+  /*  @RequestMapping(value = "login/{username}/{password}",method = RequestMethod.GET)
     public String login(@PathVariable String username,@PathVariable String password){
         if (userService.login(username,password)){
             return "success";
@@ -32,5 +31,5 @@ public class UserController {
             return "index";
         }
 
-    }
+    }*/
 }
