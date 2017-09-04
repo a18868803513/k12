@@ -44,4 +44,9 @@ public class QbServiceImpl implements QbService{
         pageBean.setRows(list);
         return pageBean;
     }
+
+    @Override
+    public void addQb(int cid, int gid, String question, String answer) {
+        qbDao.addQb(cid,gid,question,answer);
+    }
 }

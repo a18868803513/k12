@@ -12,6 +12,6 @@ import java.util.List;
  */
 public interface QbService {
     Page selectByPage(int page,int rows,int gid,int cid);
-
+    void addQb(int cid,int gid,String question,String answer);
 
 }

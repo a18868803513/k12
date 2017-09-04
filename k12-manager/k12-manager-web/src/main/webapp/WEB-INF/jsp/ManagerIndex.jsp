@@ -6,8 +6,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>首页</title>
   <!-- 导入easyui的样式表 -->
-  <link rel="stylesheet" href="/k12/js/jquery-easyui-1.5/themes/bootstrap/easyui.css">
-  <link rel="stylesheet" href="/k12/js/jquery-easyui-1.5/themes/icon.css">
+  <link rel="stylesheet" href="js/jquery-easyui-1.5/themes/bootstrap/easyui.css">
+  <link rel="stylesheet" href="js/jquery-easyui-1.5/themes/icon.css">
+  <link rel="stylesheet" href="css/common.css">
 </head>
 <body class="easyui-layout">
 <div data-options="region:'north'" style="height:70px;padding-left:10px;">
@@ -20,7 +21,7 @@
   <div id="menu" class="easyui-accordion">
     <div title="题库管理" data-options="selected:true,iconCls:'icon-tip'" style="padding:10px 0;">
       <ul class="easyui-tree">
-        <li data-options="attributes:{'href':'item-add'}">新增题目</li>
+        <li data-options="attributes:{'href':'qb-add'}">新增题目</li>
         <li data-options="attributes:{'href':'qb-list'}">查询题目</li>
         <li data-options="attributes:{'href':'item-param-list'}">规格参数</li>
       </ul>
@@ -65,10 +66,10 @@
   </div>
 </div>
 <!-- jquery -->
-<script src="/k12/js/jquery-easyui-1.5/jquery.min.js"></script>
+<script src="js/jquery-easyui-1.5/jquery.min.js"></script>
 <!-- jquery easyui -->
-<script src="/k12/js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
-<script src="/k12/js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
+<script src="js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
+<script src="js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
 <!-- 自定义脚本 -->
 <script src="js/common.js"></script>
 <!-- 自定义js -->
@@ -76,12 +77,15 @@
       $(function(){
           $("#menu .easyui-tree").tree({
               onClick: function(node){
-                  $('#tab').tabs('add', {
-                      title: node.text,
-                      href: node.attributes.href,
-                      closable: false
+                $('#tab').tabs('close', 1);
+
+                $('#tab').tabs('add', {
+                    title: node.text,
+                    href: node.attributes.href,
+                    closable: true
                   });
-            }
+                }
+
           });
      });
 </script>

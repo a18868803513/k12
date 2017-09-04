@@ -23,4 +23,10 @@ public class QbController {
         return qbService.selectByPage(page,rows,gid,cid);
 
     }
+    @RequestMapping("addQb")
+    public String test2(int grade,int course,String question,String answer){
+        qbService.addQb(grade,course,question,answer);
+        return "ManagerIndex";
+
+    }
 }
