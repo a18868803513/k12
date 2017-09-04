@@ -14,8 +14,8 @@
 
 <table id="dg"></table>
 
-<input id="cc" name="grade" value="-年级-">
-<input id="dd" name="course" value="-课程-">
+<input id="cc" name="grade" value="年级">
+<input id="dd" name="course" value="课程">
 <button id="bg">查询</button>
 <script>
   var toolbar = [{
@@ -42,7 +42,16 @@
           for(var i=0;i<rows.length;i++){
             ids.push(rows[i].id);
           }
-          console.log(ids);
+          $.ajax({
+            type: "post",
+            url: "removeQb?ids="+ids,
+
+            success: function() {
+              $('#dg').datagrid('reload');
+            }
+
+          });
+          /*window.location="removeQb?ids="+ids;*/
         }
       });
     }
@@ -56,20 +65,78 @@
     iconCls: 'icon-up',
     text: '上架',
     handler: function () {
-      console.log('up');
+      var rows = $('#dg').datagrid('getSelections');
+      console.log(rows);
+      //未选中任何记录时
+      if(rows.length == 0){
+        $.messager.alert('消息','未选中任何记录','info');
+        return;
+      }
+      //选中记录的时候
+      $.messager.confirm('确认','您确认想要删除记录吗？',function(r){
+        if (r){
+          var ids = [];
+          for(var i=0;i<rows.length;i++){
+            ids.push(rows[i].id);
+          }
+          $.ajax({
+            type: "post",
+            url: "upQb?ids="+ids,
+
+            success: function() {
+              $('#dg').datagrid('reload');
+            }
+
+          });
+          /*window.location="removeQb?ids="+ids;*/
+        }
+      });
     }
   },{
     iconCls: 'icon-down',
     text: '下架',
     handler: function () {
-      console.log('down');
+      var rows = $('#dg').datagrid('getSelections');
+      console.log(rows);
+      //未选中任何记录时
+      if(rows.length == 0){
+        $.messager.alert('消息','未选中任何记录','info');
+        return;
+      }
+      //选中记录的时候
+      $.messager.confirm('确认','您确认想要删除记录吗？',function(r){
+        if (r){
+          var ids = [];
+          for(var i=0;i<rows.length;i++){
+            ids.push(rows[i].id);
+          }
+          $.ajax({
+            type: "post",
+            url: "downQb?ids="+ids,
+
+            success: function() {
+              $('#dg').datagrid('reload');
+            }
+
+          });
+          /*window.location="removeQb?ids="+ids;*/
+        }
+      });
     }
   }];
 
   $("#bg").click(function(){
     var gidNum=$('#cc').combobox("getValue");
+    if (gidNum=="年级"){
+      gidNum="";
+    }
+
     var cidNum=$('#dd').combobox("getValue");
+    if(cidNum=="课程"){
+      cidNum="";
+    }
     var url="qbList?gid="+gidNum+"&cid="+cidNum;
+
     $('#dg').datagrid({
       toolbar: toolbar,
       url: url,
@@ -79,8 +146,12 @@
         {field: 'ck', checkbox:true },
         {field: 'id', title: 'ID', width: 100},
         {field: 'question', title: '问题', width: 100},
-        {field: 'answer', title: '答案', width: 100, align: 'right'}
+        {field: 'answer', title: '答案', width: 100,},
+        {field: 'grade', title: '年级', width: 100,},
+        {field: 'course', title: '课程', width: 100,},
+        {field: 'statusName', title: '状态', width: 100, align: 'right'}
       ]]
+
      /* toolbar: [
         {
           text: '删除', iconCls: 'icon-remove', handler: function () {

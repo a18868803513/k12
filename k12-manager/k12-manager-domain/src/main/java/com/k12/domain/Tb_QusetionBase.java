@@ -10,7 +10,33 @@ public class Tb_QusetionBase {
     private String answer;
     private Tb_Grade tb_grade;
     private Tb_Course tb_course;
-    private int cc;
+    private String statusName;
+    private String grade;
+    private String course;
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getStatusName() {
+        return statusName;
+    }
+
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
+    }
 
     public Tb_Grade getTb_grade() {
         return tb_grade;
@@ -60,8 +86,11 @@ public class Tb_QusetionBase {
                 "id=" + id +
                 ", question='" + question + '\'' +
                 ", answer='" + answer + '\'' +
-                ", Tb_grade=" + tb_grade +
+                ", tb_grade=" + tb_grade +
                 ", tb_course=" + tb_course +
+                ", statusName='" + statusName + '\'' +
+                ", grade='" + grade + '\'' +
+                ", course='" + course + '\'' +
                 '}';
     }
 }
