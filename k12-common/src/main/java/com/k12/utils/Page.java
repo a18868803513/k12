@@ -12,6 +12,9 @@ public class Page {
 
 
 
+
+
+
     private int total;//总数
 
     public int getPageSize() {
