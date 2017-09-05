@@ -26,7 +26,7 @@ public interface QbDao {
             @Result(property = "tb_course.id",column = "cid"),
             @Result(property = "tb_course.course",column = "course")
     })
-    List<Tb_QusetionBase> selectByPage(int first,int last,Tb_Grade tb_grade,Tb_Course tb_course,Order order);
+    List<Tb_QusetionBase> selectByPage(int first,int last,Tb_Grade tb_grade,Tb_Course tb_course,Order order,int statusId,String question);
     @Insert("insert into tb_questionbase (cid,gid,question,answer,createtime) values(#{arg0},#{arg1},#{arg2},#{arg3},now())")
     void addQb(int cid,int gid,String question,String answer);
     @Update("update tb_questionbase set status=3 where id=#{id}")

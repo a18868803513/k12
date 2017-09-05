@@ -20,9 +20,9 @@ public class QbController {
     QbService qbService;
     @RequestMapping("qbList")
     @ResponseBody
-    public Page test1(int page,int rows,String gid, String cid,Order order){
+    public Page test1(int page,int rows,String gid, String cid,Order order,int statusId,String question){
         System.out.println("========="+order);
-        return qbService.selectByPage(page,rows,gid,cid,order);
+        return qbService.selectByPage(page,rows,gid,cid,order,statusId,question);
 
     }
     @RequestMapping("addQb")
