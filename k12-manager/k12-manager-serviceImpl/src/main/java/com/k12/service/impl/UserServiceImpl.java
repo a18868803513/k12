@@ -1,6 +1,7 @@
 package com.k12.service.impl;
 
 import com.k12.dao.UserDao;
+import com.k12.domain.Tb_User;
 import com.k12.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -15,16 +16,15 @@ import org.springframework.transaction.annotation.Transactional;
 @Scope("prototype")
 public class UserServiceImpl implements UserService {
     @Autowired
-    UserDao userDao;
+    private UserDao userDao;
 
     @Override
-    public boolean login(String username, String password) {
-        if (userDao.login(username,password)>0){
-            return true;
+    public Tb_User login(String username, String password) {
+        Tb_User u = userDao.login(username, password);
+        if (u == null) {
+            return null;
         }else {
-            return false;
+            return u;
         }
-
-
     }
 }

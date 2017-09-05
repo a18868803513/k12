@@ -42,8 +42,8 @@
     </div>
     <div title="商品管理" data-options="selected:true,iconCls:'icon-tip'" style="padding:10px 0;">
       <ul class="easyui-tree">
-        <li data-options="attributes:{'href':'item-add'}">新增商品</li>
-        <li data-options="attributes:{'href':'item-list'}">查询商品</li>
+        <li data-options="attributes:{'href':'product-add'}">新增商品</li>
+        <li data-options="attributes:{'href':'product-list'}">查询商品</li>
         <li data-options="attributes:{'href':'item-param-list'}">规格参数</li>
       </ul>
     </div>

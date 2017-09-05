@@ -4,7 +4,11 @@ import com.k12.domain.Tb_QusetionBase;
 import com.k12.sql.QbSql;
 import com.k12.domain.Tb_Course;
 import com.k12.domain.Tb_Grade;
+
+
 import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.mapping.FetchType;
+
 import java.util.List;
 
 /**
