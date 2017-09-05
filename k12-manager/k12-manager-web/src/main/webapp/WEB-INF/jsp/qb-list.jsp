@@ -122,6 +122,8 @@
 
 
 
+
+
           });
           /*window.location="removeQb?ids="+ids;*/
         }
