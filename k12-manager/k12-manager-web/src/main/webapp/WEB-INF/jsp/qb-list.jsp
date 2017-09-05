@@ -118,6 +118,8 @@
               $('#dg').datagrid('reload');
             }
 
+
+
           });
           /*window.location="removeQb?ids="+ids;*/
         }
