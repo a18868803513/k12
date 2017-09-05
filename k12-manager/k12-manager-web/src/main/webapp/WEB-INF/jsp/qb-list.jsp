@@ -148,14 +148,30 @@
       url: url,
       pagination: true,
       fit: true,
+      multiSort:true,
       columns: [[
         {field: 'ck', checkbox:true },
-        {field: 'id', title: 'ID', width: 100},
-        {field: 'question', title: '问题', width: 100},
-        {field: 'answer', title: '答案', width: 100,},
-        {field: 'grade', title: '年级', width: 100,},
-        {field: 'course', title: '课程', width: 100,},
-        {field: 'statusName', title: '状态', width: 100, align: 'right'}
+        {field: 'id', title: 'ID', width: 100,sortable:true},
+        {field: 'question', title: '问题', width: 100,sortable:true},
+        {field: 'answer', title: '答案', width: 100,sortable:true},
+        {field: 'tb_grade', title: '年级', width: 100,sortable:true,formatter:function(value){
+
+          return value.grade;
+        }},
+        {field: 'tb_course', title: '课程', width: 100,sortable:true,formatter:function(value){
+          return value.course;
+        }},
+        {field:'updateTime',title:'修改时间',width:100,sortable:true,formatter:function(value){
+          if(value!=null) {
+            return moment(value).format("dddd, MMMM Do YYYY, h:mm:ss a");
+          }
+        }},
+        {field:'createTime',title:'创建时间',width:100,sortable:true,formatter:function(value){
+          if(value!=null) {
+            return moment(value).format("dddd, MMMM Do YYYY, h:mm:ss a");
+          }
+        }},
+        {field: 'statusName', title: '状态', width: 100, align: 'right',sortable:true}
       ]]
 
      /* toolbar: [

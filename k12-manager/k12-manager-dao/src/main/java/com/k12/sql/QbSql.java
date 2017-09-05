@@ -3,6 +3,7 @@ package com.k12.sql;
 
 import com.k12.domain.Tb_Course;
 import com.k12.domain.Tb_Grade;
+import com.k12.utils.Order;
 import org.apache.ibatis.annotations.Case;
 import org.apache.ibatis.jdbc.SQL;
 
@@ -10,7 +11,7 @@ import org.apache.ibatis.jdbc.SQL;
  * Created by Administrator on 2017/9/2/002.
  */
 public class QbSql {
-    public String selectByPage(int first,int end,Tb_Grade tb_grade,Tb_Course tb_course){
+    public String selectByPage(int first,int end,Tb_Grade tb_grade,Tb_Course tb_course,Order order){
         String sql= new SQL(){
             {
                 SELECT("q.*,g.grade grade,c.course course, case q.status when 1 then '正常' when 2 then '下架' when 3 then '删除' end as statusName");
@@ -20,13 +21,21 @@ public class QbSql {
                 if (tb_grade != null) {
                     WHERE("q.gid=#{arg2.id}");
                 }
-                    if (tb_course != null) {
+                if (tb_course != null) {
                         WHERE("q.cid=#{arg3.id}");
                     }
+                /*if(order!=null && order.getSort()!=null && order.getOrder()!=null){
+                    System.out.println("==========++===="+order);
+                    ORDER_BY(" {param5.sort}");
+                }*/
 
                 }
 
+
         }.toString();
+        if(order!=null && order.getSort()!=null && order.getOrder()!=null){
+            sql+=" order by "+order.getOrderStr();
+        }
         if (first>-1&&end>0){
             sql+=" limit #{arg0},#{arg1}";
         }
