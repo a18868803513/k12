@@ -86,6 +86,8 @@ public class VideoController {
     //批量删除 实则就是批量修改
     @RequestMapping("/removeVideo")
     public String test1(@Param("ids") String ids) {
+
+
         System.out.println("+++++");
         String[] arr = ids.split(",");
         List<String> list = Arrays.asList(arr);
