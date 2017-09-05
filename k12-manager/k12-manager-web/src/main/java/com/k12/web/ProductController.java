@@ -21,7 +21,6 @@ public class ProductController {
     public Page selectByPage(int page, int rows, String gid, String cid) {
         System.out.println(productService.selectByPage(page, rows, gid, cid));
         return productService.selectByPage(page, rows, gid, cid);
-
     }
 
 
