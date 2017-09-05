@@ -1,5 +1,6 @@
 package com.k12.dao;
 
+import com.k12.domain.Tb_User;
 import org.apache.ibatis.annotations.Select;
 
 /**
@@ -7,5 +8,5 @@ import org.apache.ibatis.annotations.Select;
  */
 public interface UserDao {
     @Select("select * from User where username=#{arg0} and password=#{arg1}")
-    int login(String username,String password);
+    Tb_User login(String username,String password);
 }

@@ -52,15 +52,12 @@ public class QbServiceImpl implements QbService{
         return pageBean;
     }
 
+
+
     @Override
     public void addQb(int cid, int gid, String question, String answer) {
 
         qbDao.addQb(cid,gid,question,answer);
-    }
-
-    @Override
-    public void removeQb(int id) {
-        qbDao.removeQb(id);
     }
 
     @Override
@@ -72,4 +69,11 @@ public class QbServiceImpl implements QbService{
     public void downQb(int id) {
         qbDao.downQb(id);
     }
+
+    @Override
+    public void removeQb(int id) {
+        qbDao.removeQb(id);
+    }
+
+
 }

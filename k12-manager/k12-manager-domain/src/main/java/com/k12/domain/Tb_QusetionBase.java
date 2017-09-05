@@ -10,7 +10,34 @@ public class Tb_QusetionBase {
     private String answer;
     private Tb_Grade tb_grade;
     private Tb_Course tb_course;
-    private int cc;
+    private String grade;
+    private String course;
+    private String statusName;
+
+
+    public String getCourse() {
+        return course;
+    }
+
+    public String getStatusName() {
+        return statusName;
+    }
+
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
 
     public Tb_Grade getTb_grade() {
         return tb_grade;
