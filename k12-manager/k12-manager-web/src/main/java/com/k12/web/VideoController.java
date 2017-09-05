@@ -93,6 +93,7 @@ public class VideoController {
             videoService.removeVideo(Integer.parseInt(list.get(i)));
         }
         return "video1";
+
     }
     @RequestMapping("/upVideo")
     public String test2(@Param("ids") String ids) {
