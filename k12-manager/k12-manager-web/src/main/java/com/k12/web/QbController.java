@@ -20,8 +20,8 @@ public class QbController {
     QbService qbService;
     @RequestMapping("qbList")
     @ResponseBody
-    public Page test1(int page,int rows,String gid, String cid,Order order){
-        System.out.println("========="+order);
+    public Page test1(int page,int rows,String gid, String cid ,Order order){
+
         return qbService.selectByPage(page,rows,gid,cid,order);
 
     }
@@ -53,6 +53,5 @@ public class QbController {
         List<String> list= Arrays.asList(arr);
         list.forEach(n->qbService.downQb(Integer.parseInt(n)));
         return "ManagerIndex";
-
     }
 }

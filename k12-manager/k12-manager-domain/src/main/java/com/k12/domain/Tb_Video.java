@@ -8,6 +8,7 @@ public class Tb_Video {
     private  String name;
     private  String url;
     private  String introduction;//视频描述
+    private  int status;
     private  Tb_Course course;
     private Tb_Grade  grade;
 
@@ -57,6 +58,14 @@ public class Tb_Video {
 
     public void setGrade(Tb_Grade grade) {
         this.grade = grade;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     @Override
