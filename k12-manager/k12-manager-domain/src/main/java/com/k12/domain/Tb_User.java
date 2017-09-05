@@ -3,7 +3,7 @@ package com.k12.domain;
 /**
  * Created by Administrator on 2017/9/1/001.
  */
-public class User {
+public class Tb_User {
     private int id;
     private String username;
     private String password;
@@ -14,7 +14,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Tb_User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
