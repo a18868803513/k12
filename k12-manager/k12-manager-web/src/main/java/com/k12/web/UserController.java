@@ -19,7 +19,6 @@ public class UserController {
     }
     @RequestMapping("/{jn}")
     public String t1(@PathVariable String jn){
-
         return jn;
     }
 
