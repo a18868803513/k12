@@ -11,11 +11,7 @@ import java.util.List;
  * Created by Administrator on 2017/9/2/002.
  */
 public interface QbService {
-    Page selectByPage(int page,int rows,String gid,String cid);
+    Page selectByPage(int page,int rows,int gid,int cid);
     void addQb(int cid,int gid,String question,String answer);
-    void removeQb(int id);
-    void upQb(int id);
-    void downQb(int id);
-
 
 }

@@ -1,7 +1,5 @@
 package com.k12.web;
 
-import com.k12.domain.Tb_Course;
-import com.k12.domain.Tb_Grade;
 import com.k12.service.QbService;
 import com.k12.utils.Page;
 import org.springframework.beans.factory.annotation.Autowired;

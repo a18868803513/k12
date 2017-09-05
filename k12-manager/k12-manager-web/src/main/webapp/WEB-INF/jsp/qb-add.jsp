@@ -32,12 +32,8 @@
       valueField:'id',
       textField:'course'
     });
-
-
-
   });
 </script>
-
 
 </body>
 </html>
