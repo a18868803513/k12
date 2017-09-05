@@ -35,7 +35,7 @@
     </div>
     <div title="视频管理" data-options="selected:true,iconCls:'icon-tip'" style="padding:10px 0;">
       <ul class="easyui-tree">
-        <li data-options="attributes:{'href':'item-add'}">新增商品</li>
+        <li data-options="attributes:{'href':'addv'}">新增视频</li>
         <li data-options="attributes:{'href':'item-list'}">查询商品</li>
         <li data-options="attributes:{'href':'item-param-list'}">规格参数</li>
       </ul>
