@@ -17,9 +17,19 @@ public class Order {
         String orderStr="";
         for (int i=0;i<sortA.length;i++){
             if (i!=sortA.length-1) {
-                orderStr = orderStr+sortA[i] + " " + orderA[i] + ",";
+                if (isChinese.isChinese(sortA[i])){
+
+                    orderStr = orderStr + "CONVERT("+sortA[i] + " " + orderA[i]+"USING gbk)"+ ",";
+                }else {
+                    orderStr = orderStr + sortA[i] + " " + orderA[i] + ",";
+                }
             }else{
-                orderStr = orderStr+sortA[i] + " " + orderA[i];
+                if (isChinese.isChinese(sortA[i])){
+
+                    orderStr = orderStr + "CONVERT("+sortA[i] + " " + orderA[i]+"USING gbk)";
+                }else {
+                    orderStr = orderStr + sortA[i] + " " + orderA[i];
+                }
             }
         }
         System.out.println(orderStr);
