@@ -14,6 +14,33 @@ public class Tb_Product {
     private Tb_Course tb_course;
     private String grade;
     private String course;
+    private String statusName;
+    private String createTime;
+    private String updateTime;
+
+    public String getStatusName() {
+        return statusName;
+    }
+
+    public void setStatusName(String statusName) {
+        this.statusName = statusName;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
 
     public String getGrade() {
         return grade;

@@ -2,6 +2,7 @@ package com.k12.dao;
 
 import com.k12.domain.Tb_Product;
 import com.k12.sql.ProductSql;
+import com.k12.utils.Order;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -21,11 +22,22 @@ public interface ProductDao {
             @Result(property = "name", column = "name"),
             @Result(property = "price", column = "price"),
             @Result(property = "instrudction", column = "instrudction"),
-            @Result(property = "status", column = "status"),
+           /* @Result(property = "status", column = "status"),*/
             @Result(property = "grade", column = "grade"),
             @Result(property = "course", column = "course"),
             @Result(property = "tb_course.id", column = "cid"),
             @Result(property = "tb_grade.id", column = "gid")
     })
-    List<Tb_Product> selectByPage(int first, int end, String gid, String cid);
+    List<Tb_Product> selectByPage(int first, int end, String gid, String cid,Order order,int statusId,String name);
+    //删除
+    @Update("update tb_product set status=3 where id=#{id}")
+    void removeProduct(int id);
+    //下架
+    @Update("update tb_product set status=2 where id=#{id}")
+    void downProduct(int id);
+    //正常上架
+    @Update("update tb_product set status=1 where id=#{id}")
+    void upProduct(int id);
+
+
 }
