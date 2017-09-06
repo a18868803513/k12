@@ -21,7 +21,7 @@ public class QbController {
     @RequestMapping("qbList")
     @ResponseBody
     public Page test1(int page,int rows,String gid, String cid,Order order,int statusId,String question){
-        System.out.println("========="+order);
+        System.out.println("========="+order+"page"+page+"rows"+rows+"gid"+gid+"cid"+cid+"question"+question);
         return qbService.selectByPage(page,rows,gid,cid,order,statusId,question);
 
     }
