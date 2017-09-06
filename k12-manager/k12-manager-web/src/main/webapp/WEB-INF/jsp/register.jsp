@@ -20,9 +20,6 @@
     <script>
         $(function () {
             createCode();
-          /*  $("input",$("#t4").next("span")).blur(function(){
-                alert(2433);
-            })*/
             $('#t').textbox({
                 iconCls: 'icon-man',
                 label: '用户名：',
@@ -53,23 +50,31 @@
             $('#t4').textbox({
                 label: '验 证：',
                 labelPosition: 'top',
-                prompt: '请输入验证码'
+                prompt: '请输入验证码',
+            });
+            $('#t5').textbox({
+                label: '手机号码：',
+                labelPosition: 'top',
+                prompt: '请输入手机号码',
             });
             $('#sub').linkbutton({});
             $('#can').linkbutton({});
         });
     </script>
 </head>
-<body style="background: url(images/registerbk.jpg)no-repeat;background-size: cover">
+<body style="background: url(images/backl.jpg)no-repeat;background-size: cover">
+<form action="userRegister" method="post" >
 <div align="center" style="background-color: #cccccc;opacity: 0.7;margin-top:10%;width: 60%;margin-left: 20%">
     <h1 align="center">K12注册</h1>
+    <span>${registermessage}</span>
     <div>
-        <input id="t" type="text" style="width:300px">
-        <input id="t1" type="password" style="width:300px">
-        <input id="t2" type="password" style="width:300px">
-        <input id="t3" type="text" style="width:300px">
-        <span id="s"></span>
-        <input id="t4" type="text" style="width:300px" data-options="events:{blur:validateCode},required:true,validType:'t4'" >
+        <input id="t" type="text" name="username" style="width:300px">
+        <input id="t1" type="password" name="password" style="width:300px">
+        <input id="t2" type="password" name="vpassword" style="width:300px">
+        <input id="t3" type="text" name="email" style="width:300px">
+        <input id="t5" type="text" name="tel" style="width:300px">
+        <input id="t4" type="text" style="width:300px" data-options="events:{blur:validateCode},required:true,validType:'t4',placehold:'输入验证码'" >
+        <br><span id="s"></span>
     </div><br>
     <div >
         <div style="margin-left: 200px">
@@ -77,11 +82,12 @@
             <input type="button" value="看不清楚" onclick="createCode()" style="margin-right: 45%">
         </div><br>
         <div>
-                <a id="sub"style="width: 60px"><font style="font-weight: bold">提交</font></a>
+                <input type="submit" value="注册">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                 <a id="can"style="width:60px"><font style="font-weight: bold">取消</font></a>
+                 <input type="button" onclick="exittologin()" value="取消">
         </div>
     </div>
 </div>
+</form>
 </body>
 </html>

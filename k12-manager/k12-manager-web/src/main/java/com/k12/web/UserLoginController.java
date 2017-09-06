@@ -35,4 +35,21 @@ public class UserLoginController {
                 return "login";
             }
     }
+    @RequestMapping("/userRegister")
+    public String register(Tb_User user,HttpServletRequest request){
+        boolean u = userService.selectUser(user.getUsername());
+       if (!u){
+            request.setAttribute("registermessage","用户名已将存在！");
+           return "register";
+       }else{
+            boolean b=userService.register(user);
+           if(b){
+               return "login";
+           }else{
+               request.setAttribute("registermessage","注册失败！");
+               return "register";
+           }
+       }
+    }
+
 }

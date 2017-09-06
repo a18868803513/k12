@@ -22,16 +22,20 @@ function validateCode()
 	var inputCode=document.getElementById("t4").value;
 	if(inputCode.length <= 0)
 	{
-		$('#s').innerText="请输入验证码！";
+
+		$('#s').text("请输入验证码！");
+		return false;
 	}
 	else if(inputCode.toUpperCase() != code.toUpperCase())
 	{
-		$("#s").innerText="验证码输入错误!";
+
+		$("#s").text("验证码输入错误!");
 		createCode();
+		return false;
 	}
 	else
 	{
-		$("#s").innerText="验证码输入正确!";
+		$("#s").text("验证码输入正确!");
+		return true;
 	}
-
 }
