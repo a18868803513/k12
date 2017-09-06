@@ -3,7 +3,6 @@ package com.k12.web;
 import com.k12.service.QbService;
 import com.k12.utils.Order;
 import com.k12.utils.Page;
-import com.k12.utils.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +20,9 @@ public class QbController {
     QbService qbService;
     @RequestMapping("qbList")
     @ResponseBody
-    public Page test1(int page,int rows,String gid, String cid,Order order,int statusId,Select sel){
-        return qbService.selectByPage(page,rows,gid,cid,order,statusId,sel);
+    public Page test1(int page,int rows,String gid, String cid,Order order,int statusId,String question){
+        System.out.println("========="+order);
+        return qbService.selectByPage(page,rows,gid,cid,order,statusId,question);
 
     }
     @RequestMapping("addQb")
@@ -35,9 +35,6 @@ public class QbController {
     public String  test3(String ids){
         String[] arr=ids.split(",");
         List<String> list= Arrays.asList(arr);
-        for(int i=0;i<arr.length;i++){
-            qbService.removeQb(Integer.parseInt(arr[i]));
-        }
         list.forEach(n->qbService.removeQb(Integer.parseInt(n)));
         return "ManagerIndex";
 

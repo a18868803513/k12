@@ -8,14 +8,8 @@ public class Page {
     private int pageSize; //一页的数目
     private List<?> rows;//一页的内容
     private int page;//当前页
-
-
-
-
-
-
-
     private int total;//总数
+
 
     public int getPageSize() {
         return pageSize;

@@ -1,8 +1,8 @@
 package com.k12.service;
 
 import com.k12.domain.Tb_Video;
-
-import java.util.List;
+import com.k12.utils.PageBean;
+import com.k12.utils.Result;
 
 /**
  * Created by LB on 2017/9/3.
@@ -10,6 +10,13 @@ import java.util.List;
 
 public interface VideoService {
       boolean add(Tb_Video video);
-      List<Tb_Video> queryAll();
+      Result<Tb_Video> queryAllByPage(PageBean pageBean);
+
+      //批量更新
+      void removeVideo(int id);
+      void upVideo(int id);
+      void downVideo(int id);
+
+
 
 }
