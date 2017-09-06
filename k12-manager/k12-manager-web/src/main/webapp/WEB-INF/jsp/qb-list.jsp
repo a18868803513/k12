@@ -28,11 +28,12 @@
     <button id="bg" type="button" class="easyui-linkbutton">搜索</button>
   </div>
   <div>
-    <button onclick="add()" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">新增</button>
-    <button onclick="edit()" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">编辑</button>
+    <button id="add" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">新增</button>
+    <button id="edit" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">编辑</button>
     <button id="remove" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</button>
     <button id="down" class="easyui-linkbutton" data-options="iconCls:'icon-down',plain:true">下架</button>
     <button id="up" class="easyui-linkbutton" data-options="iconCls:'icon-up',plain:true">上架</button>
+    <button id="save" class="easyui-linkbutton">保存</button>
   </div>
 </div>
 
@@ -119,6 +120,24 @@
         }
       });
     })
+  $('#edit').click(function () {
+    var row = $('#dg').datagrid('getSelected');
+    var rowIndex = $('#dg').datagrid('getRowIndex', row);
+
+      $('#dg').datagrid("beginEdit", rowIndex);
+  })
+  $('#save').click(function(){
+
+    /*var question=$('.datagrid-cell datagrid-cell-c1-question').val();
+    alert(question)*/
+    /*var answer=;*/
+    $('#dg').datagrid('saveRow',{
+      url:'qbSave'
+    });
+  })
+  $('#add').click(function(){
+    k12.addTab("新增题目","qb-add");
+  })
   $("#bg").click(function(){
     var question=$('#question').textbox("getValue");
     var statusId=$('#status').combobox("getValue");
@@ -141,8 +160,8 @@
       columns: [[
         {field: 'ck', checkbox:true },
         {field: 'id', title: 'ID', width: 100,sortable:true},
-        {field: 'question', title: '问题', width: 100,sortable:true},
-        {field: 'answer', title: '答案', width: 100,sortable:true},
+        {field: 'question', title: '问题', width: 100,sortable:true,editor:"text"},
+        {field: 'answer', title: '答案', width: 100,sortable:true,editor:"text"},
         {field: 'tb_grade', title: '年级', width: 100,sortable:true,formatter:function(value){
 
           return value.grade;
@@ -179,6 +198,14 @@
       valueField:'id',
       textField:'course'
     });
+   /* $('#dg').datagrid({
+      onDblClickCell: function(index,field,value){
+        $(this).datagrid('beginEdit', index);
+        /!*var ed = $(this).datagrid('getEditor', {index:index,field:field});
+        $(ed.target).focus();*!/
+      }
+    });*/
+
 
 
   });
