@@ -50,10 +50,10 @@
               <a href="#">购物车</a>
             </li>
             <li>
-              <a href="#">注册</a>
+              <a href="register">注册</a>
             </li>
             <li>
-              <a href="#">登录</a>
+              <a href="login">登录</a>
             </li>
           </ul>
         </div>

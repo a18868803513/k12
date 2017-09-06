@@ -31,7 +31,7 @@
         #d2{
             margin-left: 470px;
             margin-top: 200px;
-            background-color: #F2F2F2;
+            background-color: #c4c4c4;
             width: 30%;
             height: 300px;
             opacity: 0.7;
@@ -44,7 +44,7 @@
     }
     </script>
 </head>
-<body style="background: url(images/loginback.jpg);">
+<body style="background:url(images/login.jpg) no-repeat;background-size: cover;">
 <div id="d2">
 <form class="main_form" action="login">
     <div id="d1">

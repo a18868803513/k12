@@ -24,10 +24,10 @@ public class UserLoginController {
             }else if(username.equals(u.getUsername())&&password.equals(u.getPassword())){
 
                 if (u.getRole()==1){
-                    request.setAttribute("userManager",u.getUsername());
+                    request.setAttribute("userManager",u);
                     return "ManagerIndex";
                 }else{
-                    request.setAttribute("user",u.getUsername());
+                    request.getSession().setAttribute("user",u);
                     return "index";
                 }
             }else{
