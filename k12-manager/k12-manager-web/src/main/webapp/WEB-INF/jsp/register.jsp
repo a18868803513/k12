@@ -62,12 +62,13 @@
         });
     </script>
 </head>
-<body style="background: url(images/backl.jpg)no-repeat;background-size: cover">
+<body style="background: url(images/register_back.png)no-repeat;background-size: cover">
 <form action="userRegister" method="post" >
-<div align="center" style="background-color: #cccccc;opacity: 0.7;margin-top:10%;width: 60%;margin-left: 20%">
-    <h1 align="center">K12注册</h1>
-    <span>${registermessage}</span>
-    <div>
+<div align="center" style="background-color: #cccccc;opacity: 0.6;margin-top:10%;width: 60%;margin-left: 20%">
+
+
+    <div style="height: 400px">
+        <h1 align="center">K12注册</h1>
         <input id="t" type="text" name="username" style="width:300px">
         <input id="t1" type="password" name="password" style="width:300px">
         <input id="t2" type="password" name="vpassword" style="width:300px">
@@ -82,9 +83,11 @@
             <input type="button" value="看不清楚" onclick="createCode()" style="margin-right: 45%">
         </div><br>
         <div>
+            <span>${registermessage}</span>
                 <input type="submit" value="注册">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                  <input type="button" onclick="exittologin()" value="取消">
+
         </div>
     </div>
 </div>

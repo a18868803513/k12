@@ -42,6 +42,7 @@ public class UserLoginController {
             request.setAttribute("registermessage","用户名已将存在！");
            return "register";
        }else{
+
             boolean b=userService.register(user);
            if(b){
                return "login";
