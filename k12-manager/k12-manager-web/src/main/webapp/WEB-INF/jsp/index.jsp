@@ -123,7 +123,7 @@
           <div class="col-md-3 column">
             <ul class="nav navbar-nav navbar-left">
               <li>
-                <a href="#">在线题库</a>
+                <a href="qb-user-index">在线题库</a>
               </li>
               </ul>
           </div>

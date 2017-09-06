@@ -7,6 +7,7 @@ import com.k12.domain.Tb_Course;
 import com.k12.domain.Tb_Grade;
 import com.k12.domain.Tb_QusetionBase;
 import com.k12.service.QbService;
+import com.k12.utils.Order;
 import com.k12.utils.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -30,7 +31,7 @@ public class QbServiceImpl implements QbService{
     GradeDao gradeDao;
 
     @Override
-    public Page selectByPage(int page, int rows, String gid, String cid) {
+    public Page selectByPage(int page, int rows, String gid, String cid,Order order,int statusId,String question) {
         Page pageBean =new Page();
         Tb_Course tb_course=null;
         Tb_Grade tb_grade=null;
@@ -43,10 +44,8 @@ public class QbServiceImpl implements QbService{
 
 
 
-        int total=qbDao.selectByPage(0,888,tb_grade,tb_course).size();
-        List<Tb_QusetionBase> list=qbDao.selectByPage((page - 1) * rows, rows, tb_grade, tb_course);
-
-        System.out.print("-----------"+list);
+        int total=qbDao.selectByPage(0,-1,tb_grade,tb_course,order,statusId, question).size();
+        List<Tb_QusetionBase> list=qbDao.selectByPage((page - 1) * rows, rows, tb_grade, tb_course,order,statusId,question);
         pageBean.setTotal(total);
         pageBean.setRows(list);
         return pageBean;

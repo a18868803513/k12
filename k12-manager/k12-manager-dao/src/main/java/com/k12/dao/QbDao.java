@@ -6,7 +6,9 @@ import com.k12.domain.Tb_Course;
 import com.k12.domain.Tb_Grade;
 
 
+import com.k12.utils.*;
 import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.mapping.FetchType;
 
 import java.util.List;
@@ -20,15 +22,13 @@ public interface QbDao {
             @Result(id=true,property = "id",column = "id"),
             @Result(property = "question",column = "question"),
             @Result(property = "answer",column = "answer"),
-            @Result(property = "grade",column="grade"),
             @Result(property = "tb_grade.id",column = "gid"),
-            /*@Result(property = "tb_grade.grade",column = "grade"),*/
-            @Result(property = "course",column = "course"),
+            @Result(property = "tb_grade.grade",column = "grade"),
             @Result(property = "tb_course.id",column = "cid"),
-           /* @Result(property = "tb_course.course",column = "course")*/
+            @Result(property = "tb_course.course",column = "course")
     })
-    List<Tb_QusetionBase> selectByPage(int first,int last,Tb_Grade tb_grade,Tb_Course tb_course);
-    @Insert("insert into tb_questionbase (cid,gid,question,answer) values(#{arg0},#{arg1},#{arg2},#{arg3})")
+    List<Tb_QusetionBase> selectByPage(int first,int last,Tb_Grade tb_grade,Tb_Course tb_course,Order order,int statusId, String question);
+    @Insert("insert into tb_questionbase (cid,gid,question,answer,createtime) values(#{arg0},#{arg1},#{arg2},#{arg3},now())")
     void addQb(int cid,int gid,String question,String answer);
     @Update("update tb_questionbase set status=3 where id=#{id}")
     void removeQb(int id);

@@ -10,14 +10,19 @@ public class Tb_QusetionBase {
     private String answer;
     private Tb_Grade tb_grade;
     private Tb_Course tb_course;
-    private String grade;
-    private String course;
     private String statusName;
+    private String createTime;
+    private String updateTime;
 
-
-    public String getCourse() {
-        return course;
+    public String getCreateTime() {
+        return createTime;
     }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+
 
     public String getStatusName() {
         return statusName;
@@ -27,17 +32,8 @@ public class Tb_QusetionBase {
         this.statusName = statusName;
     }
 
-    public void setCourse(String course) {
-        this.course = course;
-    }
 
-    public String getGrade() {
-        return grade;
-    }
 
-    public void setGrade(String grade) {
-        this.grade = grade;
-    }
 
     public Tb_Grade getTb_grade() {
         return tb_grade;
@@ -87,8 +83,11 @@ public class Tb_QusetionBase {
                 "id=" + id +
                 ", question='" + question + '\'' +
                 ", answer='" + answer + '\'' +
-                ", Tb_grade=" + tb_grade +
+                ", tb_grade=" + tb_grade +
                 ", tb_course=" + tb_course +
+                ", statusName='" + statusName + '\'' +
+                ", createTime='" + createTime + '\'' +
+                ", updateTime='" + updateTime + '\'' +
                 '}';
     }
 }
