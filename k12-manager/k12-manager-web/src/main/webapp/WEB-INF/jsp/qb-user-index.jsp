@@ -22,14 +22,16 @@
 <div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;">
   <div id="toolbar">
     <div style="padding: 5px; background-color: #fff;">
-      <label>题目：</label>
-      <input class="easyui-textbox" type="text" id="question">
-      <label>商品状态：</label>
-      <input id="cc" name="grade" value="年级">
-      <input id="dd" name="course" value="课程">
+      <input id="cc" name="gid" value="年级">
+      <input id="dd" name="cid" value="课程">
+      <select id="testSize" name="testSize" class="easyui-combobox" >
+        <option value="5">5道题目</option>
+        <option value="10">10道题目</option>
+        <option value="20">20道题目</option>
+      </select>
       <!--http://www.cnblogs.com/wisdomoon/p/3330856.html-->
       <!--注意：要加上type="button",默认行为是submit-->
-      <button id="bg" type="button" class="easyui-linkbutton">搜索</button>
+      <button id="bg" type="button" class="easyui-linkbutton">生成题目</button>
     </div>
 
   </div>
@@ -47,19 +49,16 @@
   moment.locale('zh-cn');
 </script>
 <script>
-  $("#bg").click(function(){
-    alert('aaa');
-    var question=$('#question').textbox("getValue");
-    var gidNum=$('#cc').combobox("getValue");
-    alert(gidNum)
-    if (gidNum=="年级"){
-      gidNum="";
-    }
-    var cidNum=$('#dd').combobox("getValue");
-    if(cidNum=="课程"){
-      cidNum="";
-    }
-    var url="qbList?gid="+gidNum+"&cid="+cidNum+"&question="+question;
+  $("#bg").click(function() {
+    var gid=$('#cc').combobox("getValue");
+    var cid=$('#dd').combobox("getValue");
+    var testSize=$('#testSize').combobox('getValue');
+    var url="textPaper?gid="+gid+"&cid="+cid+"&testSize="+testSize;
+   /* $('#table').datagrid('load',{
+      gid: $('#cc').combobox('getValue'),
+      cid:  $('#dd').combobox('getValue'),
+      testSize:$('#testSize').combobox('getValue')
+    });*/
 
     $('#dg').datagrid({
       toolbar: '#toolbar',
@@ -67,14 +66,19 @@
       pagination: true,
       fit: true,
       columns: [[
-        {field: 'ck', checkbox:true },
+        {field: 'ck', checkbox: true},
         {field: 'id', title: 'ID', width: 100},
-        {field: 'question', title: '问题', width: 100}
+        {field: 'question', title: '问题', width: 100},
+        {field: 'a', title: '答案', width: 100, editor:'text'}
       ]]
     })
 
+
   });
-  $(function () {
+
+
+
+/*  $(function () {*/
     $('#cc').combobox({
       url: 'gradeList',
       valueField: 'id',
@@ -86,9 +90,18 @@
       valueField: 'id',
       textField: 'course'
     });
-
-
+  $('#dg').datagrid({
+    onClickRow: function(index,field,value){
+      $(this).datagrid('beginEdit', index);
+      /*var ed = $(this).datagrid('getEditor', {index:index,field:field});
+      $(ed.target).focus();*/
+    }
   });
+
+
+  /*  });*/
+
+
 
 </script>
 </body>

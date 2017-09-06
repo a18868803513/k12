@@ -78,20 +78,7 @@
 </script>
 <!-- 自定义js -->
 <script>
-      $(function(){
-          $("#menu .easyui-tree").tree({
-              onClick: function(node){
-                $('#tab').tabs('close', 1);
-
-                $('#tab').tabs('add', {
-                    title: node.text,
-                    href: node.attributes.href,
-                    closable: true
-                  });
-                }
-
-          });
-     });
+  k12.registerMenuEvent();
 </script>
 </body>
 </html>
