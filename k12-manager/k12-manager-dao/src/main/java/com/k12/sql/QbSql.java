@@ -4,6 +4,7 @@ package com.k12.sql;
 import com.k12.domain.Tb_Course;
 import com.k12.domain.Tb_Grade;
 import com.k12.utils.Order;
+import com.k12.utils.Select;
 import org.apache.ibatis.annotations.Case;
 import org.apache.ibatis.jdbc.SQL;
 
@@ -11,7 +12,7 @@ import org.apache.ibatis.jdbc.SQL;
  * Created by Administrator on 2017/9/2/002.
  */
 public class QbSql {
-    public String selectByPage(int first,int end,Tb_Grade tb_grade,Tb_Course tb_course,Order order,int statusId,String question){
+    public String selectByPage(int first,int end,Tb_Grade tb_grade,Tb_Course tb_course,Order order,int statusId,Select sel){
         String sql= new SQL(){
             {
                 SELECT("q.*,g.grade grade,c.course course, case q.status when 1 then '正常' when 2 then '下架' when 3 then '删除' end as statusName");
@@ -31,8 +32,8 @@ public class QbSql {
                     System.out.println("==========++===="+order);
                     ORDER_BY(" {param5.sort}");
                 }*/
-                if (question!=null && question.length()>0){
-                    WHERE("q.question like  CONCAT('%', #{arg6},'%')");
+                if (sel!=null && sel.getQuestion()!=null){
+                    WHERE("q.question like  CONCAT('%', #{arg6.question},'%')");
                 }
 
                 }
