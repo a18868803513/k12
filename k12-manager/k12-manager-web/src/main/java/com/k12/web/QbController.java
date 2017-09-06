@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,8 +21,8 @@ public class QbController {
     QbService qbService;
     @RequestMapping("qbList")
     @ResponseBody
-    public Page test1(int page,int rows,String gid, String cid,Order order,int statusId,String question){
-        System.out.println("========="+order+"page"+page+"rows"+rows+"gid"+gid+"cid"+cid+"question"+question);
+    public Page test1(int page,int rows,String gid, String cid,Order order,int statusId,String question) throws UnsupportedEncodingException {
+        question= new String(question.getBytes("ISO8859_1"),"utf-8");
         return qbService.selectByPage(page,rows,gid,cid,order,statusId,question);
 
     }
