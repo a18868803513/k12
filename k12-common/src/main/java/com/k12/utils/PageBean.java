@@ -28,4 +28,11 @@ public class PageBean {
         return (page-1)*rows;
     }
 
+    @Override
+    public String toString() {
+        return "PageBean{" +
+                "page=" + page +
+                ", rows=" + rows +
+                '}';
+    }
 }

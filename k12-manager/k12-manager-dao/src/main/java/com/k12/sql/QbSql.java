@@ -12,15 +12,17 @@ import org.apache.ibatis.jdbc.SQL;
  * Created by Administrator on 2017/9/2/002.
  */
 public class QbSql {
-    public String selectByPage(int first,int end,Tb_Grade tb_grade,Tb_Course tb_course,Order order,int statusId,String question){
+    public String selectByPage(int first,int end,Tb_Grade tb_grade,Tb_Course tb_course,Order order,String statusId,String question){
         String sql= new SQL(){
             {
                 SELECT("q.*,g.grade grade,c.course course, case q.status when 1 then '正常' when 2 then '下架' when 3 then '删除' end as statusName");
                 FROM("tb_questionbase q");
                 LEFT_OUTER_JOIN("tb_grade g on q.gid=g.id");
                 LEFT_OUTER_JOIN("tb_course c on q.cid=c.id");
-                if (statusId!=0) {
-                    WHERE("q.status=#{arg5}");
+                if (statusId!=null&&statusId.length()>0) {
+                    if (Integer.parseInt(statusId)!=0) {
+                        WHERE("q.status=#{arg5}");
+                    }
                 }
                 if (tb_grade != null) {
                     WHERE("q.gid=#{arg2.id}");

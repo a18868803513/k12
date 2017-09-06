@@ -7,14 +7,15 @@ import com.k12.domain.Tb_Course;
 import com.k12.domain.Tb_Grade;
 import com.k12.domain.Tb_QusetionBase;
 import com.k12.service.QbService;
-import com.k12.utils.Order;
-import com.k12.utils.Page;
+import com.k12.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/9/2/002.
@@ -31,7 +32,7 @@ public class QbServiceImpl implements QbService{
     GradeDao gradeDao;
 
     @Override
-    public Page selectByPage(int page, int rows, String gid, String cid,Order order,int statusId,String question) {
+    public Page selectByPage(int page, int rows, String gid, String cid,Order order,String statusId,String question) {
         Page pageBean =new Page();
         Tb_Course tb_course=null;
         Tb_Grade tb_grade=null;
@@ -72,6 +73,18 @@ public class QbServiceImpl implements QbService{
     @Override
     public void removeQb(int id) {
         qbDao.removeQb(id);
+    }
+
+    @Override
+    public Result selectByTestPaper(PageBean page, TestPaper testPaper) {
+        Map<String,Object> map=new HashMap<>();
+        map.put("page",page);
+        map.put("testPaper",testPaper);
+        List<Tb_QusetionBase> list=qbDao.selectByTestPaper(map);
+        Result result=new Result();
+        result.setTotal(testPaper.getTestSize());
+        result.setRows(list);
+        return result;
     }
 
 

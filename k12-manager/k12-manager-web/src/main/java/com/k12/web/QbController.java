@@ -1,8 +1,7 @@
 package com.k12.web;
 
 import com.k12.service.QbService;
-import com.k12.utils.Order;
-import com.k12.utils.Page;
+import com.k12.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,10 +20,17 @@ public class QbController {
     QbService qbService;
     @RequestMapping("qbList")
     @ResponseBody
-    public Page test1(int page,int rows,String gid, String cid,Order order,int statusId,String question) throws UnsupportedEncodingException {
+    public Page test1(int page,int rows,String gid, String cid,Order order,String statusId,String question) throws UnsupportedEncodingException {
         question= new String(question.getBytes("ISO8859_1"),"utf-8");
         return qbService.selectByPage(page,rows,gid,cid,order,statusId,question);
 
+    }
+    @RequestMapping("textPaper")
+    @ResponseBody
+    public Result test4(PageBean page,TestPaper testPaper){
+        System.out.println(testPaper);
+        System.out.println(page);
+        return qbService.selectByTestPaper(page,testPaper);
     }
     @RequestMapping("addQb")
     public String test2(int grade,int course,String question,String answer){

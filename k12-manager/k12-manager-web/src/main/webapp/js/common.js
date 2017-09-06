@@ -19,22 +19,33 @@
  }
  });*/
 
-var ttshop = {
+var k12 = {
+
+    //响应导航树上的动作
     registerMenuEvent: function () {
+        var _this = this;
         $('#menu .easyui-tree').tree({
             onClick: function (node) {
-                console.log(node);
                 var href = node.attributes.href;
-                $('#tab').tabs('close', 1);
-                $('#tab').tabs('add', {
-                    title: node.text,
-                    href: href,
-                    closable: true
-                });
+                _this.addTab(node.text,href);
             }
         });
+    },
+    //添加选项卡
+    addTab:function(title,href){
+        if($('#tab').tabs('exists',title)){
+            $('#tab').tabs('select',title)
+        }else{
+            $('#tab').tabs('add', {
+                title: title,
+                href: href,
+                closable: true
+            });
+        }
     }
 };
+
+
 
 
 
