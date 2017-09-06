@@ -44,7 +44,7 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#">${username}1</a>
+              <a href="#">${user.username}</a>
             </li>
             <li>
               <a href="#">购物车</a>
