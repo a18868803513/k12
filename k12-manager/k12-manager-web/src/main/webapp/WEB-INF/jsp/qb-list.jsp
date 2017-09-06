@@ -131,9 +131,9 @@
     /*var question=$('.datagrid-cell datagrid-cell-c1-question').val();
     alert(question)*/
     /*var answer=;*/
-    $('#dg').datagrid('saveRow',{
-      url:'qbSave'
-    });
+    var row = $('#dg').datagrid('getSelected');
+    var rowIndex = $('#dg').datagrid('getRowIndex', row);
+    $('#dg').datagrid('saveRow',rowIndex);
   })
   $('#add').click(function(){
     k12.addTab("新增题目","qb-add");
