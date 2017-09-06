@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,14 +23,14 @@ public class ProductController {
 
     @RequestMapping("productList")
     @ResponseBody
-    public Page selectByPage(int page, int rows, String gid, String cid,Order order,int statusId,String name) {
-
+    public Page selectByPage(int page, int rows, String gid, String cid,Order order,int statusId,String name) throws UnsupportedEncodingException {
+        name= new String(name.getBytes("ISO8859_1"),"utf-8");
+        System.out.println(name+"---------");
         return productService.selectByPage(page, rows, gid, cid,order,statusId,name);
     }
 
     @RequestMapping("removeProduct")
     public String remove(String ids){
-        System.out.println("============="+ids);
         String[] a=ids.split(",");
         List<String> list= Arrays.asList(a);
         list.forEach(n->productService.removeProduct(Integer.parseInt(n)));
