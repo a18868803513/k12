@@ -7,4 +7,6 @@ import com.k12.domain.Tb_User;
  */
 public interface UserService {
     Tb_User login(String username,String password);
+    boolean selectUser(String username);
+    boolean register(Tb_User user);
 }

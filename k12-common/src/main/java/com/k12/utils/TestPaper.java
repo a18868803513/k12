@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 package com.k12.utils;
 
 /**
  * Created by dwy on 2017/9/6.
  */
 public class TestPaper {
+=======
+
+        package com.k12.utils;
+
+/**
+ * Created by LB on 2017/9/6.
+ */
+public class TestPaper {
+
+>>>>>>> origin/master
     private int gid;
     private int cid;
 
@@ -43,3 +54,7 @@ public class TestPaper {
 
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master

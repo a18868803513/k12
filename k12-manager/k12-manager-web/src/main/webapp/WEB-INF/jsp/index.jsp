@@ -44,16 +44,16 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#">${username}1</a>
+              <a href="#">${user.username}</a>
             </li>
             <li>
               <a href="#">购物车</a>
             </li>
             <li>
-              <a href="#">注册</a>
+              <a href="register">注册</a>
             </li>
             <li>
-              <a href="#">登录</a>
+              <a href="login">登录</a>
             </li>
           </ul>
         </div>
