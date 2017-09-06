@@ -1,11 +1,7 @@
 package com.k12.service;
 
-import com.k12.domain.Tb_Course;
-import com.k12.domain.Tb_Grade;
-import com.k12.domain.Tb_QusetionBase;
-import com.k12.utils.*;
-
-import java.util.List;
+import com.k12.utils.Order;
+import com.k12.utils.Page;
 
 /**
  * Created by Administrator on 2017/9/2/002.
@@ -16,5 +12,6 @@ public interface QbService {
     void upQb(int id);
     void downQb(int id);
     void removeQb(int id);
-     Result selectByTestPaper(PageBean page, TestPaper testPaper);
+
+
 }
