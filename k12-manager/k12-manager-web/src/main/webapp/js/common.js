@@ -1,38 +1,24 @@
-/*$('#menu .easyui-tree').tree({
- onClick: function(node){
-
- var tab = $('#tab').tabs('getTab', node.text);
- console.log(tab);
-
- if(!tab){
- //å¦???æ²¡æ??å°±å??å»?
- $('#tab').tabs('add',{
- title: node.text,
- closable: true
- });
-
- }else{
- //å¦?????å°±é??ä¸?
- $('#tab').tabs('select', node.text);
- }
-
- }
- });*/
-
-var ttshop = {
+var k12 = {
     registerMenuEvent: function () {
+        var _this = this;
         $('#menu .easyui-tree').tree({
             onClick: function (node) {
-                console.log(node);
                 var href = node.attributes.href;
-                $('#tab').tabs('close', 1);
-                $('#tab').tabs('add', {
-                    title: node.text,
-                    href: href,
-                    closable: true
-                });
+                _this.addTab(node.text, href)
+
             }
         });
+    },
+    addTab: function (title, href) {
+        if ($('#tab').tabs('exists', title)) {
+            $('#tab').tabs('select', title)
+        } else {
+            $('#tab').tabs('add', {
+                title: title,
+                href: href,
+                closable: true
+            });
+        }
     }
 };
 

@@ -180,7 +180,13 @@
             ]]
         })
     });
+    function add() {
+        ttshop.addTab('新增商品','product-add');
+    }
 
+    function edit() {
+        console.log('edit');
+    }
     $(function () {
         $('#cc').combobox({
             url: 'gradeList',
