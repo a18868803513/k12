@@ -65,7 +65,6 @@
           }
 
         });
-        /*window.location="removeQb?ids="+ids;*/
       }
     });
   })
@@ -120,20 +119,27 @@
         }
       });
     })
+  var row;
+  var rowIndex;
   $('#edit').click(function () {
-    var row = $('#dg').datagrid('getSelected');
-    var rowIndex = $('#dg').datagrid('getRowIndex', row);
+     row = $('#dg').datagrid('getSelected');
+     rowIndex = $('#dg').datagrid('getRowIndex', row);
 
       $('#dg').datagrid("beginEdit", rowIndex);
   })
   $('#save').click(function(){
+      //保存时结束当前编辑的行，自动触发onAfterEdit事件如果要与后台交互可将数据通过Ajax提交后台
+    $('#dg').datagrid("endEdit", rowIndex);
+    $.ajax({
+      type: "post",
+      url: "updateQb?question="+row.question+"&answer="+row.answer+"&id="+row.id,
 
-    /*var question=$('.datagrid-cell datagrid-cell-c1-question').val();
-    alert(question)*/
-    /*var answer=;*/
-    var row = $('#dg').datagrid('getSelected');
-    var rowIndex = $('#dg').datagrid('getRowIndex', row);
-    $('#dg').datagrid('saveRow',rowIndex);
+      success: function() {
+        $('#dg').datagrid('reload');
+      }
+
+    });
+
   })
   $('#add').click(function(){
     k12.addTab("新增题目","qb-add");
@@ -186,7 +192,7 @@
   });
 
 
-  $(function() {
+
     $('#cc').combobox({
       url:'gradeList',
       valueField:'id',
@@ -208,7 +214,7 @@
 
 
 
-  });
+
 </script>
 
 </body>

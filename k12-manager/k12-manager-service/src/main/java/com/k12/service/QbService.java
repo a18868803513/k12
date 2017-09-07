@@ -16,5 +16,7 @@ public interface QbService {
     void upQb(int id);
     void downQb(int id);
     void removeQb(int id);
-     Result selectByTestPaper(PageBean page, TestPaper testPaper);
+    Result selectByTestPaper(PageBean page, Paper testPaper);
+
+    void updateQb(UpQb upQb);
 }

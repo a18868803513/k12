@@ -41,5 +41,6 @@ public interface QbDao {
     @Select("(SELECT * FROM tb_questionbase  AS t1  JOIN (SELECT ROUND(RAND() * (SELECT MAX(id) FROM tb_questionbase)) AS id) AS t2 WHERE t1.id >= t2.id\n" +
             "and gid=#{testPaper.gid} and cid=#{testPaper.cid} LIMIT #{testPaper.testSize}) LIMIT #{page.counts},#{page.rows}")
     List<Tb_QusetionBase> selectByTestPaper(Map map);
-
+    @Update("update tb_questionbase set question =#{question},answer=#{answer} where id=#{id}")
+    void upDate(UpQb upQb);
 }

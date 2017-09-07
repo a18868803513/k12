@@ -27,7 +27,7 @@ public class QbController {
     }
     @RequestMapping("textPaper")
     @ResponseBody
-    public Result test4(PageBean page,TestPaper testPaper){
+    public Result test4(PageBean page,Paper testPaper){
         System.out.println(testPaper);
         System.out.println(page);
         return qbService.selectByTestPaper(page,testPaper);
@@ -61,5 +61,10 @@ public class QbController {
         list.forEach(n->qbService.downQb(Integer.parseInt(n)));
         return "ManagerIndex";
 
+    }
+    @RequestMapping("updateQb")
+    public String test6(UpQb upQb){
+        qbService.updateQb(upQb);
+        return "ManagerIndex";
     }
 }

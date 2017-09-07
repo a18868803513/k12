@@ -76,7 +76,7 @@ public class QbServiceImpl implements QbService{
     }
 
     @Override
-    public Result selectByTestPaper(PageBean page, TestPaper testPaper) {
+    public Result selectByTestPaper(PageBean page, Paper testPaper) {
         Map<String,Object> map=new HashMap<>();
         map.put("page",page);
         map.put("testPaper",testPaper);
@@ -85,6 +85,11 @@ public class QbServiceImpl implements QbService{
         result.setTotal(testPaper.getTestSize());
         result.setRows(list);
         return result;
+    }
+
+    @Override
+    public void updateQb(UpQb upQb) {
+        qbDao.upDate(upQb);
     }
 
 
