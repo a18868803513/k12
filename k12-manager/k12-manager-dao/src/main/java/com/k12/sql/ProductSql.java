@@ -24,7 +24,7 @@ public class ProductSql {
                     WHERE("p.status=#{arg5}");
                 }
                 if (name!=null&&name.length()>0){
-                    WHERE("p.name like concat(concat('%',#{arg6}),'%')");
+                    WHERE("p.name like CONCAT('%',#{arg6},'%')");
                 }
             }
         }.toString();
