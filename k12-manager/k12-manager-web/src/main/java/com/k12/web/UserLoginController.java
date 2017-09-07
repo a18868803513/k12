@@ -24,10 +24,10 @@ public class UserLoginController {
             }else if(username.equals(u.getUsername())&&password.equals(u.getPassword())){
 
                 if (u.getRole()==1){
-                    request.setAttribute("userManager",u.getUsername());
+                    request.setAttribute("userManager",u);
                     return "ManagerIndex";
                 }else{
-                    request.setAttribute("user",u.getUsername());
+                    request.getSession().setAttribute("user",u);
                     return "index";
                 }
             }else{
@@ -35,4 +35,22 @@ public class UserLoginController {
                 return "login";
             }
     }
+    @RequestMapping("/userRegister")
+    public String register(Tb_User user,HttpServletRequest request){
+        boolean u = userService.selectUser(user.getUsername());
+       if (!u){
+            request.setAttribute("registermessage","用户名已将存在！");
+           return "register";
+       }else{
+
+            boolean b=userService.register(user);
+           if(b){
+               return "login";
+           }else{
+               request.setAttribute("registermessage","注册失败！");
+               return "register";
+           }
+       }
+    }
+
 }
