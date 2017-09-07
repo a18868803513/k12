@@ -10,13 +10,47 @@ public class Tb_Product {
     private String img;
     private String instrudction;
     private int status;
+    private int num;
+    private String barcode;
     private Tb_Grade tb_grade;
     private Tb_Course tb_course;
-    private String grade;
-    private String course;
     private String statusName;
     private String createTime;
     private String updateTime;
+    private String grade;
+    private String course;
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public String getBarcode() {
+        return barcode;
+    }
+
+    public void setBarcode(String barcode) {
+        this.barcode = barcode;
+    }
+
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
 
     public String getStatusName() {
         return statusName;
@@ -42,21 +76,7 @@ public class Tb_Product {
         this.updateTime = updateTime;
     }
 
-    public String getGrade() {
-        return grade;
-    }
 
-    public void setGrade(String grade) {
-        this.grade = grade;
-    }
-
-    public String getCourse() {
-        return course;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
-    }
 
     public Tb_Grade getTb_grade() {
         return tb_grade;
@@ -122,6 +142,7 @@ public class Tb_Product {
         this.instrudction = instrudction;
     }
 
+
     @Override
     public String toString() {
         return "Tb_Product{" +
@@ -131,8 +152,13 @@ public class Tb_Product {
                 ", img='" + img + '\'' +
                 ", instrudction='" + instrudction + '\'' +
                 ", status=" + status +
+                ", num=" + num +
+                ", barcode='" + barcode + '\'' +
                 ", tb_grade=" + tb_grade +
                 ", tb_course=" + tb_course +
+                ", statusName='" + statusName + '\'' +
+                ", createTime='" + createTime + '\'' +
+                ", updateTime='" + updateTime + '\'' +
                 ", grade='" + grade + '\'' +
                 ", course='" + course + '\'' +
                 '}';

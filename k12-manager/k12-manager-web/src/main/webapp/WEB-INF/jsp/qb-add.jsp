@@ -18,7 +18,6 @@
 答案<input type="text" name="answer"/>
   <input type="submit"/>
 </form>
-
 <script>
 
   $(function() {
