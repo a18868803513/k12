@@ -5,7 +5,7 @@
   Time: 21:25
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
 <html>
 <head>
     <title></title>
@@ -116,7 +116,7 @@
         });
     })
     $("#bg").click(function () {
-        var name=$('#name').textbox("getValue");
+        var name=$('#name').val();
         var statusId=$('#status').combobox("getValue");
         var gidNum = $('#cc').combobox("getValue");
         if (gidNum == "年级") {
@@ -180,7 +180,13 @@
             ]]
         })
     });
+    function add() {
+        ttshop.addTab('新增商品','product-add');
+    }
 
+    function edit() {
+        console.log('edit');
+    }
     $(function () {
         $('#cc').combobox({
             url: 'gradeList',

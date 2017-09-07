@@ -1,4 +1,23 @@
+/*$('#menu .easyui-tree').tree({
+ onClick: function(node){
 
+ var tab = $('#tab').tabs('getTab', node.text);
+ console.log(tab);
+
+ if(!tab){
+ //å¦???æ²¡æ??å°±å??å»?
+ $('#tab').tabs('add',{
+ title: node.text,
+ closable: true
+ });
+
+ }else{
+ //å¦?????å°±é??ä¸?
+ $('#tab').tabs('select', node.text);
+ }
+
+ }
+ });*/
 
 var k12 = {
 
