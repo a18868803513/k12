@@ -64,7 +64,7 @@ public interface VideoDao {
     @ResultType(Tb_Video.class)
     void removeVideo(int id);
     //批量上架
-    @Update("update tb_video set status=1,updatetime=now() where id=#{id}")
+    @Update("update tb_video set status=4,updatetime=now() where id=#{id}")
     @ResultType(Tb_Video.class)
     void upVideo(int id);
 
@@ -72,9 +72,4 @@ public interface VideoDao {
     @Update("update tb_video set status=2,updatetime=now() where id=#{id}")
     @ResultType(Tb_Video.class)
     void downVideo(int id);
-
-    //编辑
-    @Update("update tb_video set name =#{name},introduction=#{introduction},updatetime=now() where id=#{id}")
-    void update(Tb_Video tb_video);
-
 }

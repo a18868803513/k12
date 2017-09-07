@@ -3,14 +3,14 @@ package com.k12.service.impl;
 import com.k12.dao.VideoDao;
 import com.k12.domain.Tb_Video;
 import com.k12.service.VideoService;
-import com.k12.utils.Order;
 import com.k12.utils.PageBean;
 import com.k12.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import java.util.List;
 
+
+import java.util.List;
 
 /**
  * Created by LB on 2017/9/3.
@@ -47,21 +47,12 @@ public class VideoServiceImpl implements VideoService {
         videoDao.removeVideo(id);
     }
 
-//模糊查询或者分页，
     @Override
-    public Result<Tb_Video> queryAllByPage(PageBean pageBean, String gid, String cid, Order order, String statusId, String name) {
+    public Result<Tb_Video> queryAllByPage(PageBean pageBean) {
         System.out.println("???");
-        //推荐使用这种，将参数封装到Map集合 dao和service都传参数为Map集合
-      /*  Map<String,Object> map = new HashMap<String,Object>();
-        map.put("pageBean",pageBean);
-        map.put("order",order);
-        map.put("course",course);
-        map.put("grade",grade);
-        map.put("statusId",statusId);
-        map.put("name",name);*/
-        List<Tb_Video> list =  videoDao.selectByPage(pageBean,gid,cid,order,statusId,name);
+        List<Tb_Video> list =  videoDao.selectAll(pageBean);
         System.out.println(list.size());
-        int counts =  videoDao.countVideos(pageBean,gid,cid,order,statusId,name);
+        int counts =  videoDao.countVideo();
         System.out.println(counts);
         Result<Tb_Video> result = new Result<>();
         result.setTotal(counts);
@@ -69,4 +60,3 @@ public class VideoServiceImpl implements VideoService {
         return result;
     }
 }
-

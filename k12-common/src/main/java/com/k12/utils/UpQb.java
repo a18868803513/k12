@@ -1,5 +1,7 @@
 package com.k12.utils;
 
+import java.io.UnsupportedEncodingException;
+
 /**
  * Created by Administrator on 2017/9/7/007.
  */
@@ -17,7 +19,10 @@ public class UpQb {
     }
 
     public String getQuestion() {
+
         return question;
+
+
     }
 
     public void setQuestion(String question) {

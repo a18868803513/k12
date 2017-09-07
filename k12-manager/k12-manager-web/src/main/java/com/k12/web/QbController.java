@@ -1,7 +1,8 @@
 package com.k12.web;
 
 import com.k12.service.QbService;
-import com.k12.utils.*;
+import com.k12.utils.Order;
+import com.k12.utils.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,15 +26,16 @@ public class QbController {
         return qbService.selectByPage(page,rows,gid,cid,order,statusId,question);
 
     }
-
+<<<<<<< HEAD
     @RequestMapping("textPaper")
     @ResponseBody
-    public Result test4(PageBean page,TestPaper testPaper){
+    public Result test4(PageBean page,Paper testPaper){
         System.out.println(testPaper);
         System.out.println(page);
         return qbService.selectByTestPaper(page,testPaper);
     }
-
+=======
+>>>>>>> github/master
     @RequestMapping("addQb")
     public String test2(int grade,int course,String question,String answer){
         qbService.addQb(grade,course,question,answer);

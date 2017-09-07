@@ -7,15 +7,14 @@ import com.k12.domain.Tb_Course;
 import com.k12.domain.Tb_Grade;
 import com.k12.domain.Tb_QusetionBase;
 import com.k12.service.QbService;
-import com.k12.utils.*;
+import com.k12.utils.Order;
+import com.k12.utils.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Administrator on 2017/9/2/002.
@@ -75,9 +74,9 @@ public class QbServiceImpl implements QbService{
         qbDao.removeQb(id);
     }
 
-
+<<<<<<< HEAD
     @Override
-    public Result selectByTestPaper(PageBean page, TestPaper testPaper) {
+    public Result selectByTestPaper(PageBean page, Paper testPaper) {
         Map<String,Object> map=new HashMap<>();
         map.put("page",page);
         map.put("testPaper",testPaper);
@@ -93,5 +92,7 @@ public class QbServiceImpl implements QbService{
         qbDao.upDate(upQb);
     }
 
+=======
+>>>>>>> github/master
 
 }
