@@ -24,80 +24,108 @@
         <!--注意：要加上type="button",默认行为是submit-->
         <button id="bg" type="button" class="easyui-linkbutton">搜索</button>
     </div>
-    <div>
-        <button id="add" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">新增</button>
-        <button id="edit" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">编辑</button>
-        <button id="remove" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</button>
-        <button id="down" class="easyui-linkbutton" data-options="iconCls:'icon-down',plain:true">下架</button>
-        <button id="up" class="easyui-linkbutton" data-options="iconCls:'icon-up',plain:true">上架</button>
-        <button id="save" class="easyui-linkbutton">保存</button>
-    </div>
+
+    <button id="add" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">新增</button>
+    <button onclick="edit()" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">编辑</button>
+    <button onclick="remove()" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</button>
+    <button onclick="down()" class="easyui-linkbutton" data-options="iconCls:'icon-down',plain:true">下架</button>
+    <button onclick="up()" class="easyui-linkbutton" data-options="iconCls:'icon-up',plain:true">上架</button>
+    <button id="save" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true">保存</button>
+</div>
 </div>
 <table id="dg"></table>
 <script>
 
-    $('#dg').datagrid({
-        //这里使用的是RESTful的URL，动态获取使用的是items
-        url: 'queryAllByPage',
-        //默认是post类型的请求
-        //method:"get",
-        toolbar: "#toolbar",
-        pagination: true,
-        rownumbers: true,
-        fit: true,
-        pageSize: 10,
-        columns: [[
-            {field: 'ck', checkbox: true},
-            {field: 'id', title: '视频Id'},
-            {field: 'name', title: '视频名称'},
-            {field: 'introduction', title: '视频描述'},
-            {
-                field: 'status', title: '状态', formatter: function (value, row, index) {
-                //value就是当前取到的值，row代表一个行记录，index代表索引号
-                switch (value) {
-                    case 1:
-                        return '正常';
-                        break;
-                    case 2:
-                        return '下架';
-                        break;
-                    case 3:
-                        return '删除';
-                        break;
-                    case 4:
-                        return '上架';
-                        break;
-                    default :
-                        return '未知';
-                        break;
+
+    $("#bg").click(function () {
+        var name = $('#name').textbox("getValue");
+        var statusId = $('#status').combobox("getValue");
+        var gidNum = $('#cc').combobox("getValue");
+        if (gidNum == "年级") {
+            gidNum = "";
+        }
+        var cidNum = $('#dd').combobox("getValue");
+        if (cidNum == "课程") {
+            cidNum = "";
+        }
+        var url = "queryAllByPage?gid=" + gidNum + "&cid=" + cidNum + "&statusId=" + statusId + "&name=" + name;
+
+        $('#dg').datagrid({
+            //这里使用的是RESTful的URL，动态获取使用的是items
+            url: url,
+            //默认是post类型的请求
+            //method:"get",
+            toolbar: "#toolbar",
+            pagination: true,
+            rownumbers: true,
+            fit: true,
+            multiSort: true,
+            pageSize: 10,
+            columns: [[
+                {field: 'ck', checkbox: true},
+                {field: 'id', title: '视频Id', sortable: true},
+                {field: 'name', title: '视频名称', sortable: true},
+                {field: 'introduction', title: '视频描述'},
+                {
+                    field: 'statusName', title: '状态', /* formatter: function (value, row, index) {
+                 //value就是当前取到的值，row代表一个行记录，index代表索引号 用与前端处理
+                 switch (value) {
+                 case 1:
+                 return '正常';
+                 break;
+                 case 2:
+                 return '下架';
+                 break;
+                 case 3:
+                 return '删除';
+                 break;
+                 case 4:
+                 return '上架';
+                 break;
+                 default :
+                 return '未知';
+                 break;
+                 }
+                 }*/
+                },
+                {field: 'url', title: 'url地址'},
+                {
+                    field: 'grade', title: '年级', formatter: function (value) {
+
+                    return value.grade;
                 }
-            }
-            },
-            {field: 'url', title: 'url地址'},
-            {
-                field: 'grade', title: '年级', formatter: function (value) {
+                },
+                {
+                    field: 'course', title: '课程', formatter: function (value) {
 
-                return value.grade;
-            }
-            },
-            {
-                field: 'course', title: '课程', formatter: function (value) {
-
-                return value.course;
-            }
-            },
-        ]]
+                    return value.course;
+                }
+                },
+                {
+                    field: 'createTime', title: '创建时间', formatter: function (value) {
+                    if (value != null) {
+                        return moment(value).format("dddd, MMMM Do YYYY, h:mm:ss a");
+                    }
+                }
+                }, {
+                    field: 'updateTime', title: '修改时间', formatter: function (value) {
+                        if (value != null) {
+                            return moment(value).format("dddd, MMMM Do YYYY, h:mm:ss a");
+                        }
+                    }
+                }
+            ]]
+        });
     });
-
-    $('#add').click(function(){
-        k12.addTab("新增视频","addvideo");
+    $('#add').click(function () {
+        k12.addTab("新增视频", "add-video");
     })
     function edit() {
         console.log('edit');
     }
-    function save() {
+    $('#save').click(function () {
         console.log('save');
-    }
+    })
 
     function remove() {
         var rows = $('#dg').datagrid('getSelections');
@@ -175,17 +203,17 @@
         });
     }
 
-    $(function() {
+    $(function () {
         $('#cc').combobox({
-            url:'gradeList',
-            valueField:'id',
-            textField:'grade'
+            url: 'gradeList',
+            valueField: 'id',
+            textField: 'grade'
         });
 
         $('#dd').combobox({
-            url:'courseList',
-            valueField:'id',
-            textField:'course'
+            url: 'courseList',
+            valueField: 'id',
+            textField: 'course'
         });
     });
 </script>

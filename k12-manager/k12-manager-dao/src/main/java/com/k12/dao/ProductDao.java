@@ -38,8 +38,6 @@ public interface ProductDao {
     //正常上架
     @Update("update tb_product set status=1 where id=#{id}")
     void upProduct(int id);
-    //增加
-    @Insert("insert into tb_product(name,price,img,instrudction,gid,cid,createTime,barcode,num) value(#{name},#{price},#{img},#{instrudction},#{tb_grade.id},#{tb_course.id},now(),#{barcode},#{num})")
-    int addProduct(Tb_Product product);
+
 
 }

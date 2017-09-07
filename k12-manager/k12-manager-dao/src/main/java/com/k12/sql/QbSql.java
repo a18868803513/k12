@@ -4,8 +4,6 @@ package com.k12.sql;
 import com.k12.domain.Tb_Course;
 import com.k12.domain.Tb_Grade;
 import com.k12.utils.Order;
-import com.k12.utils.Select;
-import org.apache.ibatis.annotations.Case;
 import org.apache.ibatis.jdbc.SQL;
 
 /**
@@ -51,7 +49,6 @@ public class QbSql {
         return sql;
 
     }
-
 
     }
 
