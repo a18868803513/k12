@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 package com.k12.utils;
-=======
-
-        package com.k12.utils;
->>>>>>> origin/master
 
 /**
  * Created by LB on 2017/9/6.
@@ -49,7 +44,3 @@ public class TestPaper {
 
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
