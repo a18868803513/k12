@@ -63,7 +63,9 @@ public class QbController {
 
     }
     @RequestMapping("updateQb")
-    public String test6(UpQb upQb){
+    public String test6(UpQb upQb) throws UnsupportedEncodingException {
+       upQb.setQuestion(new String(upQb.getQuestion().getBytes("ISO8859_1"),"utf-8"));
+        upQb.setAnswer(new String(upQb.getAnswer().getBytes("ISO8859_1"),"utf-8"));
         qbService.updateQb(upQb);
         return "ManagerIndex";
     }

@@ -10,9 +10,8 @@ public class UpQb {
     String answer;
     String id;
 
-    public String getAnswer() throws UnsupportedEncodingException {
-        return  answer= new String(answer.getBytes("ISO8859_1"),"utf-8");
-
+    public String getAnswer() {
+        return answer;
     }
 
     public void setAnswer(String answer) {
