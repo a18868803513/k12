@@ -92,4 +92,12 @@ public class ProductController {
         return "ManagerIndex";
     }
 
+    @RequestMapping("updateProduct")
+    public String updateProduct(Tb_Product product) throws UnsupportedEncodingException {
+        product.setName(new String(product.getName().getBytes("ISO8859_1"),"utf-8"));
+        product.setInstrudction(new String(product.getInstrudction().getBytes("ISO8859_1"), "utf-8"));
+        productService.updateProduct(product);
+        return "ManagerIndex";
+    }
+
 }

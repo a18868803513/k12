@@ -1,8 +1,5 @@
 package com.k12.utils;
 
-
-
-
 public class TestPaper {
 
     private int gid;
@@ -44,3 +41,4 @@ public class TestPaper {
 
     }
 }
+

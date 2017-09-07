@@ -14,4 +14,5 @@ public interface ProductService {
     void downProduct(int id);
     void removeProduct(int id);
     boolean addProduct(Tb_Product product);
+    void updateProduct(Tb_Product tb_product);
 }

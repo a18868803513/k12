@@ -41,5 +41,7 @@ public interface ProductDao {
     //增加
     @Insert("insert into tb_product(name,price,img,instrudction,gid,cid,createTime,barcode,num) value(#{name},#{price},#{img},#{instrudction},#{tb_grade.id},#{tb_course.id},now(),#{barcode},#{num})")
     int addProduct(Tb_Product product);
-
+    //修改
+    @Update("update tb_product set name=#{name},price=#{price},instrudction=#{instrudction},updateTime=now() where id=#{id}")
+    void updateProduct(Tb_Product tb_product);
 }
