@@ -18,6 +18,8 @@ public interface VideoService {
       void upVideo(int id);
       void downVideo(int id);
 
+      void updateVideo(Tb_Video tb_video);
+
 
 
 }

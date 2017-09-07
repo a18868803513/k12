@@ -80,10 +80,10 @@ public class VideoController {
 
     @RequestMapping("/queryAllByPage")
     @ResponseBody
-    public Result<Tb_Video> queryAllByPage(PageBean pageBean,String gid, String cid,Order order,String statusId, String name) throws UnsupportedEncodingException {
-        name= new String(name.getBytes("ISO8859_1"),"utf-8");
-        System.out.println(videoService.queryAllByPage(pageBean,gid,cid,order,statusId,name));
-        return videoService.queryAllByPage(pageBean,gid,cid,order,statusId,name);
+    public Result<Tb_Video> queryAllByPage(PageBean pageBean, String gid, String cid, Order order, String statusId, String name) throws UnsupportedEncodingException {
+        name = new String(name.getBytes("ISO8859_1"), "utf-8");
+        System.out.println(videoService.queryAllByPage(pageBean, gid, cid, order, statusId, name));
+        return videoService.queryAllByPage(pageBean, gid, cid, order, statusId, name);
     }
 
     //批量删除 实则就是批量修改
@@ -99,6 +99,7 @@ public class VideoController {
         return "video-list";
 
     }
+
     @RequestMapping("/upVideo")
     public String test2(@Param("ids") String ids) {
         System.out.println("+++++");
@@ -108,8 +109,10 @@ public class VideoController {
             videoService.upVideo(Integer.parseInt(list.get(i)));
         }
         return "video-list";
-    } @RequestMapping("/downVideo")
-      public String test3(@Param("ids") String ids) {
+    }
+
+    @RequestMapping("/downVideo")
+    public String test3(@Param("ids") String ids) {
         System.out.println("+++++");
         String[] arr = ids.split(",");
         List<String> list = Arrays.asList(arr);
@@ -118,6 +121,16 @@ public class VideoController {
         }
         return "video-list";
     }
+
+    @RequestMapping("/Uvideo")
+    public String test4(Tb_Video tb_video) throws UnsupportedEncodingException {
+        tb_video.setName(new String(tb_video.getName().getBytes("ISO8859_1"),"utf-8"));
+        tb_video.setIntroduction(new String(tb_video.getIntroduction().getBytes("ISO8859_1"), "utf-8"));
+
+        videoService.updateVideo(tb_video);
+        return "ManagerIndex";
+    }
 }
+
 
 

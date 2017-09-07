@@ -7,3 +7,12 @@
 .icon-save{
     background:url('../images/filesave.png') no-repeat center center;
 }
+form table .label{
+    width: 20%;
+    text-align: right;
+}
+
+form table td{
+    border: 1px solid #eeeeee;
+    padding: 3px;
+}

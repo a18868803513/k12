@@ -35,6 +35,11 @@ public class VideoServiceImpl implements VideoService {
         videoDao.downVideo(id);
     }
 
+    @Override
+    public void updateVideo(Tb_Video tb_video) {
+        videoDao.update(tb_video);
+    }
+
 //批量修改
 
     @Override
