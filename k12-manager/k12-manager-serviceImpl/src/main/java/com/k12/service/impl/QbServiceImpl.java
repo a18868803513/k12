@@ -75,7 +75,6 @@ public class QbServiceImpl implements QbService{
         qbDao.removeQb(id);
     }
 
-
     @Override
     public Result selectByTestPaper(PageBean page, TestPaper testPaper) {
         Map<String,Object> map=new HashMap<>();

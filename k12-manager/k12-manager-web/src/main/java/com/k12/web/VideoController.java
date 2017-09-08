@@ -4,7 +4,6 @@ import com.k12.domain.Tb_Course;
 import com.k12.domain.Tb_Grade;
 import com.k12.domain.Tb_Video;
 import com.k12.service.VideoService;
-import com.k12.utils.Order;
 import com.k12.utils.PageBean;
 import com.k12.utils.Result;
 import org.apache.ibatis.annotations.Param;
@@ -20,7 +19,6 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -75,20 +73,20 @@ public class VideoController {
 
     @RequestMapping("/addv")
     public String addv() {
-        return "add-video";
+        return "addvideo";
     }
 
     @RequestMapping("/queryAllByPage")
     @ResponseBody
-    public Result<Tb_Video> queryAllByPage(PageBean pageBean, String gid, String cid, Order order, String statusId, String name) throws UnsupportedEncodingException {
-        name = new String(name.getBytes("ISO8859_1"), "utf-8");
-        System.out.println(videoService.queryAllByPage(pageBean, gid, cid, order, statusId, name));
-        return videoService.queryAllByPage(pageBean, gid, cid, order, statusId, name);
+    public Result<Tb_Video> queryAllByPage(PageBean pageBean) {
+        System.out.println(pageBean);
+        return videoService.queryAllByPage(pageBean);
     }
 
     //批量删除 实则就是批量修改
     @RequestMapping("/removeVideo")
     public String test1(@Param("ids") String ids) {
+
 
         System.out.println("+++++");
         String[] arr = ids.split(",");
@@ -96,10 +94,9 @@ public class VideoController {
         for (int i = 0; i < list.size(); i++) {
             videoService.removeVideo(Integer.parseInt(list.get(i)));
         }
-        return "video-list";
+        return "video1";
 
     }
-
     @RequestMapping("/upVideo")
     public String test2(@Param("ids") String ids) {
         System.out.println("+++++");
@@ -108,27 +105,17 @@ public class VideoController {
         for (int i = 0; i < list.size(); i++) {
             videoService.upVideo(Integer.parseInt(list.get(i)));
         }
-        return "video-list";
-    }
-
-    @RequestMapping("/downVideo")
-    public String test3(@Param("ids") String ids) {
+        return "video1";
+    } @RequestMapping("/downVideo")
+      public String test3(@Param("ids") String ids) {
         System.out.println("+++++");
         String[] arr = ids.split(",");
         List<String> list = Arrays.asList(arr);
         for (int i = 0; i < list.size(); i++) {
             videoService.downVideo(Integer.parseInt(list.get(i)));
         }
-        return "video-list";
-    }
-
-    @RequestMapping("/Uvideo")
-    public String test4(Tb_Video tb_video) {
-
-        videoService.updateVideo(tb_video);
-        return "ManagerIndex";
+        return "video1";
     }
 }
-
 
 

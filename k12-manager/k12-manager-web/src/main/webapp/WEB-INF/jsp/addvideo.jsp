@@ -6,32 +6,42 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>最新视频</title>
     <%--<meta http-equiv="Content-Type" content="multipart/form-data; charset=utf-8" />--%>
+  <%-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3"/>--%>
     <link href="css/css.css" type="text/css" rel="stylesheet"/>
-    <script type="text/javascript" src="../../js/jquery.form.js"></script>
-    <script src="../../js/jquery-3.2.1.min.js" type="text/javascript"
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="/js/tiny_mce.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"
             charset="utf-8"></script>
-    <script type="text/javascript">
+    <%--<script type="text/javascript">
         $(document).ready(function () {
             /** 表单提交的校验 */
             $("#btn").click(function () {
-                var name = $("#name").val();
+                var title = $("#title").val();
                 var file = $("#file").val();
 
                 if ($.trim(title).length <= 2) {
                     alert("请输入两个字符以上的标题");
                     return;
                 } else if (!file) {
-                    alert("请上传视频！");
+                    alert("请上传文档！");
                     return;
                 }
                 $("#documentForm").submit();
+
             })
         });
-    </script>
+    </script>--%>
 </head>
 <body>
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -63,7 +73,7 @@
 
                     <tr>
                         <td class="font3 fftd">年&nbsp;&nbsp;&nbsp;级：
-                            <input id="cc" name="grade1" value="-年级-"><br/>
+                           <input id="cc" name="grade1" value="-年级-"><br/>
                         </td>
                     </tr>
                     <tr>
@@ -72,30 +82,24 @@
 
                     <tr>
                         <td class="font3 fftd">课&nbsp;&nbsp;&nbsp;程：
-                            <input id="dd" name="course1" value="-课程-"><br/>
+                           <input id="dd" name="course1" value="-课程-"><br/>
                         </td>
                     </tr>
                     <tr>
                         <td class="main_tdbor"></td>
                     </tr>
 
-                    <%-- <tr>
-                         <td class="font3 fftd">主要描述：<br/>
-                             <textarea name="introduction" cols="88" rows="11" id="content"></textarea>
-                         </td>
-                     </tr>--%>
                     <tr>
-                        <td colspan="2">
-                            <!-- 加载编辑器的容器 -->
-                            <script id="container" name="introduction" type="text/plain">视频描述</script>
+                        <td class="font3 fftd">主要描述：<br/>
+                            <textarea name="introduction" cols="88" rows="11" id="content"></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td class="main_tdbor"></td>
                     </tr>
                     <tr>
-                        <td class="font3 fftd">视频：　
-                            <input type="file" name="file" id="file" size="30"/>
+                     <td class="font3 fftd">视频：　
+                            <input type="file" name="file" id="file" size="30" />
                         </td>
                     </tr>
                     <tr>
@@ -130,12 +134,6 @@
             valueField: 'id',
             textField: 'course'
         });
-    });
-
-    //实例化编辑器
-    var ue = UE.getEditor('container', {
-        initialFrameWidth: '80%',
-        initialFrameHeight: '200'
     });
 </script>
 </body>

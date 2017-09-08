@@ -25,7 +25,6 @@ public class QbController {
         return qbService.selectByPage(page,rows,gid,cid,order,statusId,question);
 
     }
-
     @RequestMapping("textPaper")
     @ResponseBody
     public Result test4(PageBean page,TestPaper testPaper){
@@ -33,7 +32,6 @@ public class QbController {
         System.out.println(page);
         return qbService.selectByTestPaper(page,testPaper);
     }
-
     @RequestMapping("addQb")
     public String test2(int grade,int course,String question,String answer){
         qbService.addQb(grade,course,question,answer);
@@ -65,7 +63,9 @@ public class QbController {
 
     }
     @RequestMapping("updateQb")
-    public String test6(UpQb upQb){
+    public String test6(UpQb upQb) throws UnsupportedEncodingException {
+       upQb.setQuestion(new String(upQb.getQuestion().getBytes("ISO8859_1"),"utf-8"));
+        upQb.setAnswer(new String(upQb.getAnswer().getBytes("ISO8859_1"),"utf-8"));
         qbService.updateQb(upQb);
         return "ManagerIndex";
     }

@@ -9,18 +9,6 @@ public class Tb_Video {
     private  String url;
     private  String introduction;//视频描述
     private  int status;
-    private String statusName;//status的别名
-    private String createTime;
-    private String updateTime;
-
-    public String getStatusName() {
-        return statusName;
-    }
-
-    public void setStatusName(String statusName) {
-        this.statusName = statusName;
-    }
-
     private  Tb_Course course;
     private Tb_Grade  grade;
 
@@ -78,22 +66,6 @@ public class Tb_Video {
 
     public void setStatus(int status) {
         this.status = status;
-    }
-
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
     }
 
     @Override
