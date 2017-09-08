@@ -73,7 +73,7 @@
 
         $('#dg').datagrid("beginEdit", rowIndex);
     })
-    $('#sava').click(function () {
+    $('#save').click(function () {
         $('#dg').datagrid("endEdit", rowIndex);
         $.ajax({
             type: "post",
