@@ -11,10 +11,15 @@
     <meta charset="utf-8">
     <title>Bootstrap 实例 - 简单的轮播（Carousel）插件</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/video-js.css" rel="stylesheet" type="text/css">
+    <script src="js/video.min.js"></script>
+    <script src="js/videojs-ie8.min.js"></script>
+    <script>
+        videojs.options.flash.swf = "video/video-js.swf";
+    </script>
 </head>
 <body>
+
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
@@ -59,6 +64,12 @@
     </div>
     <div class="row clearfix">
         <div class="col-md-3 column">
+            <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
+                   poster="http://video-js.zencoder.com/oceans-clip.png"
+                   data-setup="{}">
+               <source src="video/1.MP4" type='video/mp4' />
+
+            </video>
             第一个视频
         </div>
         <div class="col-md-3 column">
@@ -69,7 +80,11 @@
         </div>
         <div class="col-md-3 column">
             第一个视频
+
+            <video src="video/1.MP4"></video>
+            <video src="http://www.w3cschool.cc/try/demo_source/mov_bbb.mp4"></video>
         </div>
+
     </div>
 </div>
 
