@@ -49,4 +49,9 @@ public class ProductServiceImpl implements ProductService {
     public boolean addProduct(Tb_Product product) {
         return productDao.addProduct(product)>0?true:false;
     }
+
+    @Override
+    public void updateProduct(Tb_Product tb_product) {
+        productDao.updateProduct(tb_product);
+    }
 }
