@@ -1,6 +1,5 @@
 package com.k12.service;
 
-import com.k12.domain.Tb_Product;
 import com.k12.utils.Order;
 import com.k12.utils.Page;
 
@@ -13,6 +12,4 @@ public interface ProductService {
     void upProduct(int id);
     void downProduct(int id);
     void removeProduct(int id);
-    boolean addProduct(Tb_Product product);
-    void updateProduct(Tb_Product tb_product);
 }

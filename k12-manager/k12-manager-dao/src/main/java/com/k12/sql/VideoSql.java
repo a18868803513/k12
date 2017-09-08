@@ -16,7 +16,7 @@ public class VideoSql {
     public String selectByPage(PageBean pageBean, String gid, String cid, Order order, String statusId, String name) {
         String sql = new SQL() {
             {
-                SELECT("v.*,g.grade grade,c.course course,case v.status when 1 then '正常' when 2 then '下架' when 3 then '删除' end as statusName");
+                SELECT("v.*,g.grade grade,c.course course,case v.status when 1 then '正常' when 2 then '下架' when 3 then '删除'end as statusName");
                 FROM("tb_video v");
                 LEFT_OUTER_JOIN("tb_grade g on v.gid=g.id");
                 LEFT_OUTER_JOIN("tb_course c on v.cid=c.id");

@@ -205,20 +205,8 @@
       valueField:'id',
       textField:'course'
     });
-<<<<<<< HEAD
-   /* $('#dg').datagrid({
-      onDblClickCell: function(index,field,value){
-        $(this).datagrid('beginEdit', index);
-        /!*var ed = $(this).datagrid('getEditor', {index:index,field:field});
-        $(ed.target).focus();*!/
-      }
-    });*/
 
 
-
-
-=======
->>>>>>> github/master
 </script>
 
 </body>
