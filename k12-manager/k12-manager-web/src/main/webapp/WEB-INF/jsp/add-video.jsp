@@ -118,6 +118,7 @@
 <div style="height:10px;"></div>
 </div>
 <script>
+
     $(function () {
         $('#cc').combobox({
             url: 'gradeList',

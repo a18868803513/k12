@@ -35,7 +35,7 @@ public class VideoController {
 
     @ModelAttribute("dir")
     public File pre(HttpServletRequest request) {
-        File dir = new File(new File(request.getServletContext().getRealPath("/")).getParent(), "my_video");
+        File dir = new File(new File(request.getServletContext().getRealPath("/")), "my_video");
         // 验证文件夹是否存在，不存在就新建
         if (!dir.exists()) {
             dir.mkdirs();
@@ -45,7 +45,7 @@ public class VideoController {
     }
 
     @RequestMapping("/addvideo")
-    public String addVideo(@RequestParam(name = "file", required = false) MultipartFile mfile, @ModelAttribute("dir") File dir
+    public String addVideo(@RequestParam(name = "file", required = false) MultipartFile mfile, @ModelAttribute(value = "dir") File dir
             , Tb_Video video, int grade1, int course1) throws IOException {
         System.out.println("grade=" + grade1 + "course=" + course1);
         Tb_Grade tb_grade = new Tb_Grade();
@@ -123,8 +123,11 @@ public class VideoController {
     }
 
     @RequestMapping("/Uvideo")
-    public String test4(Tb_Video tb_video) {
-
+    public String test4(Tb_Video tb_video,String name,String introduction) throws UnsupportedEncodingException {
+        name = new String(name.getBytes("ISO8859_1"), "utf-8");
+        introduction = new String(introduction.getBytes("ISO8859_1"), "utf-8");
+        tb_video.setIntroduction(introduction);
+        tb_video.setName(name);
         videoService.updateVideo(tb_video);
         return "ManagerIndex";
     }

@@ -62,13 +62,14 @@
         </div>
     </div>
     <div class="row clearfix">
-        <div class="col-md-3 column">
-            <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
+      <div class="col-md-3 column">
+           <%-- <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
                    poster="http://video-js.zencoder.com/oceans-clip.png"
                    data-setup="{}">
-               <source src="video/1.MP4" type='video/mp4' />
+               <source src="my_video/a.mp4" type="video/mp4"    />
 
-            </video>
+            </video>--%>
+          <video src="my_video/a.mp4" controls></video>
             第一个视频
         </div>
         <div class="col-md-3 column">
@@ -80,7 +81,6 @@
         <div class="col-md-3 column">
             第一个视频
 
-            <video src="video/1.MP4"></video>
             <video src="http://www.w3cschool.cc/try/demo_source/mov_bbb.mp4"></video>
         </div>
 
