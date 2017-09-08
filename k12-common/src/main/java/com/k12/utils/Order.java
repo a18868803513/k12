@@ -1,12 +1,14 @@
 package com.k12.utils;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Administrator on 2017/9/5/005.
  */
 public class Order {
     private String sort;
     private String order;
-
 
     public String getOrderStr() {
         String sortA[]=sort.split(",");

@@ -11,8 +11,8 @@
     <title></title>
 </head>
 <body>
-
-<video src="http://www.zhangxinxu.com/study/media/cat.mp4" width="352" height="264" controls autobuffer></video>
-
+<%--
+<video src="http://www.zhangxinxu.com/study/media/cat.mp4" width="352" height="264" controls autobuffer></video>--%>
+<video src="${url}" width="352" height="264" controls autobuffer></video>
 </body>
 </html>
