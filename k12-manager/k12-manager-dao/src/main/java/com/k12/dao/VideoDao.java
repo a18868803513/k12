@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * Created by LB on 2017/9/2.
  */
+
 public interface VideoDao {
         //添加视频
     @Insert("insert into tb_video(name,url,introduction,gid,cid,createtime,imgpath) values(#{name},#{url},#{introduction},#{grade.id},#{course.id},now(),#{imgpath})")
