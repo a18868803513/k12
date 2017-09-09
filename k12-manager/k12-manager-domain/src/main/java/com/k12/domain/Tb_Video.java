@@ -13,7 +13,6 @@ public class Tb_Video {
     private String createTime;
     private String updateTime;
     private String imgpath;
-
     public String getImgpath() {
         return imgpath;
     }
