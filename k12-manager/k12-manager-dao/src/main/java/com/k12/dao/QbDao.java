@@ -43,4 +43,6 @@ public interface QbDao {
     List<Tb_QusetionBase> selectByTestPaper(Map map);
     @Update("update tb_questionbase set question =#{question},answer=#{answer} where id=#{id}")
     void upDate(UpQb upQb);
+    @Select("select * from tb_questionbase where gid=${gid} and cid=${cid}  ORDER BY RAND() LIMIT ${testSize}")
+    List<Tb_QusetionBase> selectQb(TestPaper testPaper);
 }

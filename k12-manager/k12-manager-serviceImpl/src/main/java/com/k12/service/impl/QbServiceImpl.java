@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -90,6 +91,12 @@ public class QbServiceImpl implements QbService{
     @Override
     public void updateQb(UpQb upQb) {
         qbDao.upDate(upQb);
+    }
+
+    @Override
+    public List<Tb_QusetionBase> selectQb(TestPaper testPaper) {
+
+        return qbDao.selectQb(testPaper);
     }
 
 

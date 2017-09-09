@@ -1,5 +1,6 @@
 package com.k12.web;
 
+import com.k12.domain.Tb_QusetionBase;
 import com.k12.service.QbService;
 import com.k12.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +26,17 @@ public class QbController {
         return qbService.selectByPage(page,rows,gid,cid,order,statusId,question);
 
     }
-    @RequestMapping("textPaper")
+    /*@RequestMapping("textPaper")
     @ResponseBody
     public Result test4(PageBean page,TestPaper testPaper){
         System.out.println(testPaper);
         System.out.println(page);
         return qbService.selectByTestPaper(page,testPaper);
+    }*/
+    @RequestMapping("textPaper")
+    @ResponseBody
+    public List<Tb_QusetionBase> test5(TestPaper testPaper){
+        return qbService.selectQb(testPaper);
     }
     @RequestMapping("addQb")
     public String test2(int grade,int course,String question,String answer){

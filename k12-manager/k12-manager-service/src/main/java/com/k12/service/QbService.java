@@ -19,4 +19,6 @@ public interface QbService {
     Result selectByTestPaper(PageBean page, TestPaper testPaper);
 
     void updateQb(UpQb upQb);
+
+    List<Tb_QusetionBase> selectQb(TestPaper testPaper);
 }
