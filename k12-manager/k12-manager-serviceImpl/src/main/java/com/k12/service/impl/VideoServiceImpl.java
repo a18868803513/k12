@@ -74,6 +74,7 @@ public class VideoServiceImpl implements VideoService {
         return videoDao.selectAll();
     }
 
+
     @Override
     public Tb_Video queryById(int id) {
         return videoDao.selectById(id);
