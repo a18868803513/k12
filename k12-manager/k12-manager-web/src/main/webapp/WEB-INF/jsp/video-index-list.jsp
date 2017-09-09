@@ -6,6 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script type="text/javascript" src="js/video.min.js"></script>
+<script type="text/javascript" src="js/videojs-ie8.min.js"></script>
 <html>
 <head>
     <meta charset="utf-8">
@@ -17,10 +20,21 @@
     <script>
         videojs.options.flash.swf = "video/video-js.swf";
     </script>
+    <style>
+        .row {
+            margin-left: 20%;
+            margin-top: 80px;
+            border-bottom-color: #0030ce;
+            width: 700px;
+            position: fixed;
+
+        }
+
+    </style>
 </head>
 <body>
 <div class="container">
-    <div class="row clearfix">
+    <div class="row_clearfix">
         <div class="col-md-12 column">
             <ul class="nav nav-tabs">
                 <li class="active">
@@ -47,103 +61,20 @@
                 <li class="disabled">
                     <a href="#">其他</a>
                 </li>
-                <li class="dropdown pull-right">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">下拉<strong class="caret"></strong></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">登陆</a>
-                        </li>
-                        <li>
-                            <a href="#">注册</a>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </div>
     <div class="row clearfix">
-      <div class="col-md-3 column">
-           <%-- <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
-                   poster="http://video-js.zencoder.com/oceans-clip.png"
-                   data-setup="{}">
-               <source src="my_video/a.mp4" type="video/mp4"    />
-
-            </video>--%>
-          <video src="my_video/a.mp4" controls></video>
-            第一个视频
-        </div>
         <div class="col-md-3 column">
-            第一个视频
-        </div>
-        <div class="col-md-3 column">
-            第一个视频
-        </div>
-        <div class="col-md-3 column">
-            第一个视频
-
-            <video src="http://www.w3cschool.cc/try/demo_source/mov_bbb.mp4"></video>
-        </div>
-
-    </div>
-</div>
-
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <ul class="pagination">
-                <li>
-                    <a href="#">Prev</a>
-                </li>
-                <li>
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#">4</a>
-                </li>
-                <li>
-                    <a href="#">5</a>
-                </li>
-                <li>
-                    <a href="#">Next</a>
-                </li>
-            </ul>
+            <video src="my_video/${tb_video.url}#t=02:29" controls height="400px" onclick="a()" id="aa"></video>
         </div>
     </div>
 </div>
-<%--
-<table width="80%" align="center">
-    <c:forEach items="${pages.list}" var="p" varStatus="vs">
-        <c:if test="${(vs.count-1)%3==0 }">
-            <tr>
-        </c:if>
-        <td>
-            <div class="dv1" onclick="downImg('${p.path}')">
-                <img alt="来自片库的问候" src="../pk_images/${p.path}" width="200px"
-                     height="200px" /><br />
-                视频描述:${p.distruction }<br />
-            </div>
-        </td>
-        <c:if test="${(vs.count-1)%3==2 }">
-            </tr>
-        </c:if>
-    </c:forEach>
-    <tfoot>
-    <tr>
-        <td colspan="3" align="center">
-            <div class="zxf_pagediv"></div>
-            <input type="hidden" id="pt" value="${pages.pageTotal }" /> <input
-                type="hidden" id="pg" value="${pages.page }" />
-        </td>
-    </tr>
-    </tfoot>
-</table>
---%>
-
+<script>
+    function a() {
+        document.getElementById("aa").pause();
+        //document.getElementById("aa").palyer();
+    }
+</script>
 </body>
 </html>

@@ -12,6 +12,15 @@ public class Tb_Video {
     private String statusName;//status的别名
     private String createTime;
     private String updateTime;
+    private String imgpath;
+
+    public String getImgpath() {
+        return imgpath;
+    }
+
+    public void setImgpath(String imgpath) {
+        this.imgpath = imgpath;
+    }
 
     public String getStatusName() {
         return statusName;

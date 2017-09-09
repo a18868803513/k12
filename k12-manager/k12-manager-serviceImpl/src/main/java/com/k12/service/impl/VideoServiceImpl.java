@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
-
 /**
  * Created by LB on 2017/9/3.
  */
@@ -67,6 +66,17 @@ public class VideoServiceImpl implements VideoService {
         result.setTotal(counts);
         result.setRows(list);
         return result;
+    }
+
+    @Override
+    public List<Tb_Video> queryAll() {
+
+        return videoDao.selectAll();
+    }
+
+    @Override
+    public Tb_Video queryById(int id) {
+        return videoDao.selectById(id);
     }
 }
 

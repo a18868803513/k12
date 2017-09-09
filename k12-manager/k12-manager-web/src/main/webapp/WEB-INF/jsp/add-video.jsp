@@ -95,12 +95,23 @@
                     </tr>
                     <tr>
                         <td class="font3 fftd">视频：　
-                            <input type="file" name="file" id="file" size="30"/>
+                            <input type="file" name="file" id="file1" size="30"/>
                         </td>
                     </tr>
                     <tr>
                         <td class="main_tdbor"></td>
                     </tr>
+
+                    <tr>
+                        <td class="font3 fftd">图片：　
+                            <input type="file" name="file" id="file2" size="30"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="main_tdbor"></td>
+                    </tr>
+
+
                     <tr>
                         <td class="font3 fftd" align="left">
                             <input type="submit" id="btn" value="上传">

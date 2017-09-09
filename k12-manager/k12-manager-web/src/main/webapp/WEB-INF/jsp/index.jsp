@@ -137,7 +137,7 @@
           <div class="col-md-3 column">
             <ul class="nav navbar-nav navbar-left">
               <li>
-                <a href="video-index-list">在线视频</a>
+                <a href="showAllVideo">在线视频</a>
               </li>
             </ul>
           </div>
