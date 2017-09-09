@@ -220,7 +220,7 @@
                 <td id="tid">
 
                     <div id="divpath">
-                        <a href="showVideo?id=${v.id}"><img src="my_video/${v.imgpath}" width="115" height="129"
+                        <a href="showVideo?id=${v.id}"><img src="my_video/${v.imgpath}" width="200" height="150"
                                                             border="0"/>
                         </a>
                     </div>
