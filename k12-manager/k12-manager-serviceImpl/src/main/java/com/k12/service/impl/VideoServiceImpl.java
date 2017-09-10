@@ -9,6 +9,7 @@ import com.k12.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 /**
@@ -23,7 +24,7 @@ public class VideoServiceImpl implements VideoService {
     public boolean add(Tb_Video video) {
         return videoDao.save(video)>0?true:false;
     }
-//上架
+    //上架
     @Override
     public void upVideo(int id) {
         videoDao.upVideo(id);
@@ -46,7 +47,7 @@ public class VideoServiceImpl implements VideoService {
         videoDao.removeVideo(id);
     }
 
-//模糊查询或者分页，
+    //模糊查询或者分页，
     @Override
     public Result<Tb_Video> queryAllByPage(PageBean pageBean, String gid, String cid, Order order, String statusId, String name) {
         System.out.println("???");
@@ -58,9 +59,9 @@ public class VideoServiceImpl implements VideoService {
         map.put("grade",grade);
         map.put("statusId",statusId);
         map.put("name",name);*/
-        List<Tb_Video> list =  videoDao.selectByPage(pageBean,gid,cid,order,statusId,name);
+        List<Tb_Video> list =  videoDao.selectByPage(pageBean, gid, cid, order, statusId, name);
         System.out.println(list.size());
-        int counts =  videoDao.countVideos(pageBean,gid,cid,order,statusId,name);
+        int counts =  videoDao.countVideos(pageBean, gid, cid, order, statusId, name);
         System.out.println(counts);
         Result<Tb_Video> result = new Result<>();
         result.setTotal(counts);

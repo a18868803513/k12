@@ -5,7 +5,8 @@
   Time: 19:10
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <html>
 <head>
     <title>添加商品</title>
@@ -94,7 +95,13 @@
                  data-options="validType:'length[0,30]'">
         </td>
       </tr></br></br>
-      商品描述: <textarea name="instrudction" cols="40" rows="8" id="content"></textarea><br/></br>
+      <tr>
+        <td colspan="2">
+          <!-- 加载编辑器的容器 -->
+          <script id="container" name="instrudction" type="text/plain">商品描述</script>
+        </td>
+      </tr>
+<%--      商品描述: <textarea name="instrudction" cols="40" rows="8" id="content"></textarea><br/></br>--%>
       商品图片：<input type="file" name="file" id="file" size="30" />
   <button type="submit">提交</button>
   </form>
@@ -121,7 +128,12 @@
       }
     });
   }
-*/
+*/ UE.delEditor('container');
+  //实例化富文本编辑器
+  var ue = UE.getEditor('container', {
+    initialFrameWidth: '100%',
+    initialFrameHeight: '400'
+  });
 
   $(function() {
     $('#cc').combobox({

@@ -41,9 +41,7 @@
 
 
 <%--<button id="bg">查询</button>--%>
-
 <script>
-
   $("#remove").click(function () {
     var rows = $('#dg').datagrid('getSelections');
     //未选中任何记录时
@@ -116,6 +114,7 @@
             success: function() {
               $('#dg').datagrid('reload');
             }
+
           });
         }
       });
@@ -205,10 +204,20 @@
       valueField:'id',
       textField:'course'
     });
+   /* $('#dg').datagrid({
+      onDblClickCell: function(index,field,value){
+        $(this).datagrid('beginEdit', index);
+        /!*var ed = $(this).datagrid('getEditor', {index:index,field:field});
+        $(ed.target).focus();*!/
+      }
+    });*/
+
+
 
 
 </script>
 
 </body>
+
 
 </html>

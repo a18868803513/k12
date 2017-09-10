@@ -4,6 +4,7 @@ import com.k12.domain.Tb_Video;
 import com.k12.utils.Order;
 import com.k12.utils.PageBean;
 import com.k12.utils.Result;
+
 import java.util.List;
 
 /**
@@ -17,9 +18,9 @@ public interface VideoService {
 
       //批量更新
       void removeVideo(int id);
-
+      //上架
       void upVideo(int id);
-
+      //下架
       void downVideo(int id);
 
       //编辑
@@ -29,7 +30,6 @@ public interface VideoService {
       List<Tb_Video> queryAll();
 
       //通过id查询
-
       Tb_Video queryById (int id);
 
 }

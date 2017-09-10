@@ -12,7 +12,7 @@ import java.util.List;
  * Created by LB on 2017/9/2.
  */
 public interface VideoDao {
-        //添加视频
+    //添加视频
     @Insert("insert into tb_video(name,url,introduction,gid,cid,createtime,imgpath) values(#{name},#{url},#{introduction},#{grade.id},#{course.id},now(),#{imgpath})")
     @Options(keyProperty="id",useGeneratedKeys=true)
     int save(Tb_Video video);
@@ -46,7 +46,7 @@ public interface VideoDao {
             @Result(property="grade.id",column="gid"),
             @Result(property="grade.grade",column="grade"),
     })
-   List<Tb_Video> selectByPage(PageBean pageBean,String gid,String cid,Order order,String statusId, String name);
+    List<Tb_Video> selectByPage(PageBean pageBean,String gid,String cid,Order order,String statusId, String name);
     // List<Tb_Video> selectByPage(Map<String ,Object> map);
 
     //查询数量
@@ -93,7 +93,6 @@ public interface VideoDao {
             @Result(property="grade.grade",column="grade"),
     })
     List<Tb_Video> selectAll();
-
 
     //
     @Select("select v.*,c.*,g.* from tb_video v left join tb_course c on v.cid=c.id left join tb_grade g on v.gid=g.id where v.id=#{id} ")

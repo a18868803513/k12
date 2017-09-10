@@ -17,7 +17,7 @@
         .container{
             width: 100%;
             margin-top: 8px;
-             margin-bottom: 50px;
+            margin-bottom: 50px;
             background-color: #75D2D9;
         }
         #tab{
@@ -29,12 +29,12 @@
             margin-top: -100px;
         }
 
-         #tid{
-             margin-top: 20px;
-             width: 500px;
-             height: 400px;
-             color: red;
-         }
+        #tid{
+            margin-top: 20px;
+            width: 500px;
+            height: 400px;
+            color: red;
+        }
         .divlisttitle{
             padding-top: 12px;
         }
@@ -215,23 +215,23 @@
     <table id="tab" >
         <c:forEach items="${requestScope.list}" var="v" varStatus="vs">
             <c:if test="${(vs.count-1)%4==0 }">
-            <tr id="trd">
+                <tr id="trd">
             </c:if>
-                <td id="tid">
+            <td id="tid">
 
-                    <div id="divpath">
-                        <a href="showVideo?id=${v.id}"><img src="my_video/${v.imgpath}" width="200" height="150"
-                                                            border="0"/>
-                        </a>
-                    </div>
-                    <div class="divlisttitle">
-                        <a href="showVideo?id=${v.id}">说明：${v.name }<br/>
-                            描述：${v.introduction}
-                        </a>
-                    </div>
-                </td>
+                <div id="divpath">
+                    <a href="showVideo?id=${v.id}"><img src="my_video/${v.imgpath}" width="200" height="150"
+                                                        border="0"/>
+                    </a>
+                </div>
+                <div class="divlisttitle">
+                    <a href="showVideo?id=${v.id}">说明：${v.name }<br/>
+                        描述：${v.introduction}
+                    </a>
+                </div>
+            </td>
             <c:if test="${(vs.count-1)%4==3 }">
-            </tr>
+                </tr>
             </c:if>
         </c:forEach>
     </table>

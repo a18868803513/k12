@@ -75,7 +75,7 @@ public class VideoController {
     }*/
 
     @RequestMapping("/addvideo")
-    public String addVideo(@RequestParam(name = "file", required = false) CommonsMultipartFile [] mfiles, @ModelAttribute(value = "dir") File dir
+    public String addVideo(@RequestParam(name = "file", required = false) CommonsMultipartFile[] mfiles, @ModelAttribute(value = "dir") File dir
             , Tb_Video video, int grade1, int course1) throws IOException {
         System.out.println("grade=" + grade1 + "course=" + course1);
         Tb_Grade tb_grade = new Tb_Grade();
@@ -87,7 +87,7 @@ public class VideoController {
 
             if (!mfiles[i].isEmpty() && mfiles[i].getSize() > 0) {
                 // 获取上传的文件的名称
-                if (mfiles[i].getOriginalFilename().endsWith(".mp4")||mfiles[i].getOriginalFilename().endsWith(".MP4")){
+                if (mfiles[i].getOriginalFilename().endsWith(".mp4") || mfiles[i].getOriginalFilename().endsWith(".MP4")) {
                     String fileName = mfiles[i].getOriginalFilename();
                     // 设置文件存储位置--->当前项目的平级目录下
                     // 限制文件名称最长位50，若超出截取后面部分
@@ -98,14 +98,14 @@ public class VideoController {
                     File file1 = new File(dir, System.currentTimeMillis() + "_" + fileName);
                     mfiles[i].transferTo(file1);
                     video.setUrl(file1.getName());
-                }else {
+                } else {
                     String fileName1 = mfiles[i].getOriginalFilename();
-                    System.out.println(fileName1+"???");
+                    System.out.println(fileName1 + "???");
                     if (fileName1.length() > 50) {
                         fileName1 = fileName1.substring(fileName1.length() - 51);
                     }
-                    File file2= new File(dir, System.currentTimeMillis() + "_" + fileName1);
-                    System.out.println(file2+"?????");
+                    File file2 = new File(dir, System.currentTimeMillis() + "_" + fileName1);
+                    System.out.println(file2 + "?????");
                     mfiles[i].transferTo(file2);
                     video.setImgpath(file2.getName());
                 }
@@ -186,9 +186,9 @@ public class VideoController {
     }
 
     @RequestMapping("/showVideo")
-    public String test6(Model model,String id) {
-      int id1 = Integer.parseInt(id);
-        model.addAttribute("tb_video",videoService.queryById(id1));
+    public String test6(Model model, String id) {
+        int id1 = Integer.parseInt(id);
+        model.addAttribute("tb_video", videoService.queryById(id1));
         System.out.println(videoService.queryById(id1));
         return "video-index-list";
     }
