@@ -77,7 +77,7 @@ public class QbServiceImpl implements QbService{
     }
 
     @Override
-    public Result selectByTestPaper(PageBean page, TestPaper testPaper) {
+    public Result selectByTestPaper(PageBean page, Paper testPaper) {
         Map<String,Object> map=new HashMap<>();
         map.put("page",page);
         map.put("testPaper",testPaper);
@@ -94,7 +94,7 @@ public class QbServiceImpl implements QbService{
     }
 
     @Override
-    public List<Tb_QusetionBase> selectQb(TestPaper testPaper) {
+    public List<Tb_QusetionBase> selectQb(Paper testPaper) {
 
         return qbDao.selectQb(testPaper);
     }

@@ -5,7 +5,7 @@ import com.k12.utils.PageBean;
 import org.apache.ibatis.jdbc.SQL;
 
 /**
- * ¶¯Ì¬sqlÊµÏÖÄ£ºý²éÑ¯
+ * ï¿½ï¿½Ì¬sqlÊµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½Ñ¯
  * Created by LB on 2017/9/6.
  */
 
@@ -13,10 +13,10 @@ import org.apache.ibatis.jdbc.SQL;
 public class VideoSql {
     //select v.*,c.*,g.* from tb_video v left join tb_course c on v.cid=c.id
     // left join tb_grade g on v.gid=g.id limit #{counts},#{rows}
-    public String selectByPage(PageBean pageBean, String gid, String cid, Order order, String statusId, String name) {
+    public String selectByPage(PageBean pageBean, final String gid, final String cid, Order order, final String statusId, final String name) {
         String sql = new SQL() {
             {
-                SELECT("v.*,g.grade grade,c.course course,case v.status when 1 then 'Õý³£' when 2 then 'ÏÂ¼Ü' when 3 then 'É¾³ý'end as statusName");
+                SELECT("v.*,g.grade grade,c.course course,case v.status when 1 then 'ï¿½ï¿½ï¿½ï¿½' when 2 then 'ï¿½Â¼ï¿½' when 3 then 'É¾ï¿½ï¿½'end as statusName");
                 FROM("tb_video v");
                 LEFT_OUTER_JOIN("tb_grade g on v.gid=g.id");
                 LEFT_OUTER_JOIN("tb_course c on v.cid=c.id");

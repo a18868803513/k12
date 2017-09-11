@@ -10,7 +10,7 @@ import com.k12.utils.*;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.mapping.FetchType;
+
 
 import java.util.List;
 import java.util.Map;
@@ -44,5 +44,5 @@ public interface QbDao {
     @Update("update tb_questionbase set question =#{question},answer=#{answer} where id=#{id}")
     void upDate(UpQb upQb);
     @Select("select * from tb_questionbase where gid=${gid} and cid=${cid}  ORDER BY RAND() LIMIT ${testSize}")
-    List<Tb_QusetionBase> selectQb(TestPaper testPaper);
+    List<Tb_QusetionBase> selectQb(Paper testPaper);
 }
