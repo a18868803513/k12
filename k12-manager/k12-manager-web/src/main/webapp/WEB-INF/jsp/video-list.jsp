@@ -11,7 +11,6 @@
     <div style="padding: 5px; background-color: #fff;">
         <label>标题：</label>
         <input class="easyui-textbox" type="text" id="name">
-
         <input id="cc" name="grade" value="年级">
         <input id="dd" name="course" value="课程">
         <label>商品状态：</label>
@@ -119,7 +118,7 @@
     });
     $('#add').click(function () {
         k12.addTab("新增视频", "add-video");
-    })
+    });
     var row;
     var rowIndex;
     function edit() {

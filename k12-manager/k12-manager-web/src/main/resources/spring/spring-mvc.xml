@@ -42,6 +42,7 @@
     <mvc:resources mapping="/css/**" location="/css/"/>
     <mvc:resources mapping="/images/**" location="/images/"/>
     <mvc:resources mapping="/my_video/**" location="/my_video/"/>
-    <mvc:resources mapping="/fonts/**" location="/fonts/"/>
+    <mvc:resources mapping="/a/**" location="/a/"/>
+    <mvc:resources mapping="/video/**" location="/video/"/>
 
 </beans>
