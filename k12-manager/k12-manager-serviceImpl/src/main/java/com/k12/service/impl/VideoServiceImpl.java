@@ -80,6 +80,11 @@ public class VideoServiceImpl implements VideoService {
     public Tb_Video queryById(int id) {
         return videoDao.selectById(id);
     }
+
+    @Override
+    public List<Tb_Video> listVideosById(int gid, int cid) {
+        return videoDao.findAllById(gid,cid);
+    }
 }
 
 

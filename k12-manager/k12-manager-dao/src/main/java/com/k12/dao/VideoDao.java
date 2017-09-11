@@ -110,4 +110,16 @@ public interface VideoDao {
             @Result(property="grade.grade",column="grade"),
     })
     Tb_Video selectById(int id);
+
+    @SelectProvider(type = VideoSql.class,method = "selectByVideo")
+    @Results({
+            @Result(id=true,property="id",column="id"),
+            @Result(property="name",column="name"),
+            @Result(property="url",column="url"),
+            @Result(property="introduction",column="introduction"),
+            @Result(property="status",column="status"),
+            @Result(property="gid",column="cid"),
+            @Result(property="cid",column="gid"),
+    })
+         List<Tb_Video>  findAllById(int gid,int cid);
 }

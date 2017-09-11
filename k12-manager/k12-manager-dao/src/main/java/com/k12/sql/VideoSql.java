@@ -11,8 +11,6 @@ import org.apache.ibatis.jdbc.SQL;
 
 
 public class VideoSql {
-    //select v.*,c.*,g.* from tb_video v left join tb_course c on v.cid=c.id
-    // left join tb_grade g on v.gid=g.id limit #{counts},#{rows}
     public String selectByPage(PageBean pageBean, String gid, String cid, Order order, String statusId, String name) {
         String sql = new SQL() {
             {
@@ -44,6 +42,23 @@ public class VideoSql {
         if (pageBean != null) {
             sql += " limit #{arg0.counts},#{arg0.rows}";
         }
+        return sql;
+    }
+
+    public String selectByVideo(int gid, int cid) {
+        String sql = new SQL() {
+            {
+                SELECT("*");
+                FROM("tb_video v");
+                if (gid != 0 && gid> 0) {
+                    WHERE("v.gid=#{arg0}");
+                }
+                if (cid != 0 && cid> 0) {
+                    WHERE("v.cid=#{arg1}");
+                }
+            }
+
+        }.toString();
         return sql;
     }
 }
