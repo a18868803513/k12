@@ -5,4 +5,5 @@ package com.k12.domain;
  */
 public class Tb_ShoppingCar {
     private int id;
+    private Tb_User tb_user;
 }
