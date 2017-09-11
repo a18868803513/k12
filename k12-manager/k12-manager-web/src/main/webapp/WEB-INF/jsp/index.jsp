@@ -156,6 +156,7 @@
     </div>
   </div>
 </div>
+<%--<iframe style="display:none;" src="tencent://message/?uin=2477149597&Site=&menu=yes"></iframe>--%>
 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2477149597&site=qq&menu=yes"><img border="0" src="images/qq.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
 </body>
 </html>
