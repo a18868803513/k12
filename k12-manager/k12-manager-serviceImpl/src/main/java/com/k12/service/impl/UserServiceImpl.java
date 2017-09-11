@@ -25,24 +25,27 @@ public class UserServiceImpl implements UserService {
         Tb_User u = userDao.login(username, password);
         if (u == null) {
             return null;
+
         }else {
             return u;
         }
     }
 
     @Override
-    public boolean selectUser(String username) {
-        String i=userDao.selectUser(username);
-        if(i!=null) {
-            return false;
-        }else{
-            return true;
-        }
+    public Tb_User selectUser(String username) {
+        Tb_User i=userDao.selectUser(username);
+        return i;
     }
 
     @Override
     public boolean register(Tb_User user) {
         int i=userDao.register(user);
+        return i>0?true:false;
+    }
+
+    @Override
+    public boolean useredit(Tb_User user) {
+        int i = userDao.useredit(user);
         return i>0?true:false;
     }
 }
