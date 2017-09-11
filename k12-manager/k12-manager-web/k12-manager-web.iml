@@ -11,6 +11,8 @@
         </webroots>
       </configuration>
     </facet>
+<<<<<<< HEAD
+=======
     <facet type="Spring" name="Spring">
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
@@ -20,6 +22,7 @@
         </fileset>
       </configuration>
     </facet>
+>>>>>>> origin/master
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -45,9 +48,13 @@
       <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
 <<<<<<< HEAD
+          <root url="jar://E:/jdk/lib/jconsole.jar!/" />
+=======
+<<<<<<< HEAD
           <root url="jar://C:/Program Files/Java/jdk1.8.0_131/lib/jconsole.jar!/" />
 =======
           <root url="jar://F:/Java-all/JDK/jdk1.8.0_131/lib/jconsole.jar!/" />
+>>>>>>> origin/master
 >>>>>>> origin/master
         </CLASSES>
         <JAVADOC />
@@ -58,9 +65,13 @@
       <library name="Maven: com.alibaba:tools:1.8.0">
         <CLASSES>
 <<<<<<< HEAD
+          <root url="jar://E:/jdk/lib/tools.jar!/" />
+=======
+<<<<<<< HEAD
           <root url="jar://C:/Program Files/Java/jdk1.8.0_131/lib/tools.jar!/" />
 =======
           <root url="jar://F:/Java-all/JDK/jdk1.8.0_131/lib/tools.jar!/" />
+>>>>>>> origin/master
 >>>>>>> origin/master
         </CLASSES>
         <JAVADOC />

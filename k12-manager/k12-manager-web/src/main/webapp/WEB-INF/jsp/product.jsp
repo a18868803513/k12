@@ -152,7 +152,7 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index">Home</a></li>
           <li><a href="category.html">Category</a></li>
           <li><a href="#">Samsung Galaxy</a></li>
         </ul>

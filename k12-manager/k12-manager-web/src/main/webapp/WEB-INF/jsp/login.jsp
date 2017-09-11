@@ -65,7 +65,7 @@
 
         <p class="input_container">
             <font style="font-weight:bold;font-style:italic;" size="4px">密&nbsp&nbsp&nbsp&nbsp码:</font><input
-                type="text" name="password" label="密码：" labelPosition="top">
+                type="password" name="password" label="密码：" labelPosition="top">
         </p>
         <p class="input_container">
             <table width="100%">

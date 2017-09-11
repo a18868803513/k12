@@ -44,10 +44,10 @@
 
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#">${user.username}</a>
+              <a href="useredit">${user.username}</a>
             </li>
             <li>
-              <a href="#">购物车</a>
+              <a href="cart">购物车</a>
             </li>
             <li>
               <a href="register">注册</a>
