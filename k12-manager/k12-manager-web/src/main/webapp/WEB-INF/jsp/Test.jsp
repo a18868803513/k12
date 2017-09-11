@@ -11,6 +11,13 @@
     <title></title>
 </head>
 <body>
+<%--<video width="320" height="240" controls="controls">
+   <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg">
+  <source src="my_video/ogg-19M.ogg" type="video/ogg">
+</video>--%>
+<video src="my_video/a.mp4" controls></video>
+
+
 <%--
 <video src="http://www.zhangxinxu.com/study/media/cat.mp4" width="352" height="264" controls autobuffer></video>--%>
 <video src="${url}" width="352" height="264" controls autobuffer></video>

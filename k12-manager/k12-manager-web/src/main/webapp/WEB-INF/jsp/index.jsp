@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Bootstrap 实例 - 简单的轮播（Carousel）插件</title>
+  <title>K12教育网</title>
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -137,19 +137,18 @@
           <div class="col-md-3 column">
             <ul class="nav navbar-nav navbar-left">
               <li>
-                <a href="video_list">在线视频</a>
+                <a href="showAllVideo">在线视频</a>
               </li>
             </ul>
           </div>
           <div class="col-md-3 column">
             <ul class="nav navbar-nav navbar-left">
               <li>
-                <a href="#">教育商城</a>
+                <a href="product-user-list">教育商城</a>
               </li>
             </ul>
 
           </div>
-
 
         </div>
         </div>
@@ -157,7 +156,5 @@
     </div>
   </div>
 </div>
-
-
 </body>
 </html>

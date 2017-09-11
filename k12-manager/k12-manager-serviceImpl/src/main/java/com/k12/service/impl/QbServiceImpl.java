@@ -99,5 +99,4 @@ public class QbServiceImpl implements QbService{
         return qbDao.selectQb(testPaper);
     }
 
-
 }
