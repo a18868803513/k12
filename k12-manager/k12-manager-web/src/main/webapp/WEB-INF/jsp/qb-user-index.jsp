@@ -68,6 +68,7 @@
 </div>
 
 <script>
+  var qArr=new Array();
   $('#bg').click(function(){
 
     var gid=$('#cc').combobox("getValue");
@@ -85,11 +86,11 @@
 
         for(var i=0;i< length;i++){
           html2=html2+"<tr><th>"+ e[i].question+"</th><th><input id='a"+i+"'  type='text'/></th><th><div id=d"+i+"><div></th><th><input type='hidden' class='rk' id=rk"+i+" value="+e[i].answer+"></th></tr>"
+          /*qArr.add()*/
         }
         html3="</table><tr><button onclick='submit("+length+")'>提交</button><div id='lookrk'></div>"
         html2=html1+html2+html3;
         document.getElementById("text").innerHTML=html2;
-      /*  $('#text').innerHTML=html2;*/
 
 
       }
@@ -108,8 +109,19 @@
           document.getElementById("d"+i).innerHTML="错误";
         }
     }
+
     var html="<button id='bb' onclick='bb()'>查看正确答案</button>";
     document.getElementById("lookrk").innerHTML=html;
+    /*var qArr=new Array();
+    var aArr=new Array();
+    var statusArr=new Array();
+    for(var i=0;i<length;i++){
+      qArr.add()
+    }*/
+    $.ajax({
+      url:'',
+      type:"post"
+    })
   }
   $('#cc').combobox({
     url: 'gradeList',
@@ -122,10 +134,7 @@
     valueField: 'id',
     textField: 'course'
   });
-  $('#bb').click(function(){
-    alert('请充值');
-    $('.rk').attr('type','text');
-  })
+
   function bb(){
     alert('请充值');
     $('.rk').attr('type','text');
