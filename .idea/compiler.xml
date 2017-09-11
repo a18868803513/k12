@@ -17,19 +17,12 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for k12-manager-serviceImpl" enabled="true">
+      <profile default="false" name="Annotation profile for k12-common" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="k12-manager-serviceImpl" />
-      </profile>
-      <profile default="false" name="Annotation profile for k12-manager-dao" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="k12-manager-dao" />
+        <module name="k12-common" />
       </profile>
       <profile default="false" name="Annotation profile for k12-manager-web" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
@@ -38,12 +31,12 @@
         <processorPath useClasspath="true" />
         <module name="k12-manager-web" />
       </profile>
-      <profile default="false" name="Annotation profile for k12-manager-domain" enabled="true">
+      <profile default="false" name="Annotation profile for k12-manager-serviceImpl" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="k12-manager-domain" />
+        <module name="k12-manager-serviceImpl" />
       </profile>
       <profile default="false" name="Annotation profile for k12-manager-service" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
@@ -52,15 +45,22 @@
         <processorPath useClasspath="true" />
         <module name="k12-manager-service" />
       </profile>
-      <profile default="false" name="Annotation profile for k12-common" enabled="true">
+      <profile default="false" name="Annotation profile for k12-manager-dao" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="k12-common" />
+        <module name="k12-manager-dao" />
+      </profile>
+      <profile default="false" name="Annotation profile for k12-manager-domain" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="k12-manager-domain" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="k12-common" target="1.8" />
       <module name="k12-manager" target="1.8" />
       <module name="k12-manager-dao" target="1.8" />
@@ -70,8 +70,5 @@
       <module name="k12-manager-web" target="1.8" />
       <module name="k12-parent" target="1.8" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding UTF-8" />
   </component>
 </project>
