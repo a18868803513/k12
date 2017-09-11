@@ -1,6 +1,8 @@
 package com.k12.web;
 
+import com.k12.domain.Tb_ShoppingCar;
 import com.k12.domain.Tb_User;
+import com.k12.service.ShoppingCarService;
 import com.k12.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,6 +20,8 @@ import java.io.IOException;
 public class UserLoginController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private ShoppingCarService shoppingCarService;
     @RequestMapping("/login")
     public String login(String username,String password,HttpServletRequest request){
         Tb_User u= userService.login(username, password);
@@ -40,12 +44,19 @@ public class UserLoginController {
     }
     @RequestMapping("/userRegister")
     @ResponseBody
-    public void register(Tb_User user,HttpServletResponse response) throws IOException {
-        Tb_User u = userService.selectUser(user.getUsername());
+    public void register(Tb_User tb_user,HttpServletResponse response) throws IOException {
+        Tb_User u = userService.selectUser(tb_user.getUsername());
         if (u!=null){
             response.getWriter().write("用户名已经存在!");
         }else{
-            boolean b=userService.register(user);
+            System.out.println(tb_user);
+            Tb_ShoppingCar shoppingCar=new Tb_ShoppingCar();
+            tb_user.setShoppingCar(shoppingCar);
+            boolean b=userService.register(tb_user);
+            Tb_User use=userService.selectUser(tb_user.getUsername());
+            shoppingCarService.addShoppingCar(use);
+
+
             if(b){
                 response.getWriter().write("注册成功!");
             }else{
