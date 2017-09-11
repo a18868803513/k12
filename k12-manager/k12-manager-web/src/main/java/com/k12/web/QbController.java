@@ -35,7 +35,7 @@ public class QbController {
     }*/
     @RequestMapping("textPaper")
     @ResponseBody
-    public List<Tb_QusetionBase> test5(TestPaper testPaper){
+    public List<Tb_QusetionBase> test5(Paper testPaper){
         return qbService.selectQb(testPaper);
     }
     @RequestMapping("addQb")
