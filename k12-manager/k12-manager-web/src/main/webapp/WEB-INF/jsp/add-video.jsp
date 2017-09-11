@@ -50,7 +50,8 @@
     <tr valign="top">
         <td>
 
-            <form id="documentForm" name="documentForm" action="addvideo"
+           <%-- <form id="documentForm" name="documentForm" action="addvideo"--%>
+            <form class="itemForm" id="itemAddForm" name="itemAddForm"
                   enctype="multipart/form-data" method="post">
                 <table width="100%" border="0" cellpadding="0" cellspacing="10" class="main_tab">
                     <tr>
@@ -112,12 +113,24 @@
                     </tr>
 
 
-                    <tr>
+                    <%--<tr>
                         <td class="font3 fftd" align="left">
                             <input type="submit" id="btn" value="上传">
                             <input type="reset" value="重置">
                         </td>
+                    </tr>--%>
+
+                    <tr>
+                        <td colspan="2" align="left">
+                            <button  onclick="submitForm()" class="easyui-linkbutton" type="button"
+                                    data-options="iconCls:'icon-ok'">上传
+                            </button>
+                            <button onclick="clearForm()" class="easyui-linkbutton" type="button"
+                                    data-options="iconCls:'icon-undo'">重置
+                            </button>
+                        </td>
                     </tr>
+
                     <tr>
                         <td class="main_tdbor"></td>
                     </tr>
@@ -129,7 +142,6 @@
 <div style="height:10px;"></div>
 </div>
 <script>
-
     $(function () {
         $('#cc').combobox({
             url: 'gradeList',
@@ -145,10 +157,29 @@
     });
 
     //实例化编辑器
+    UE.delEditor('container');
     var ue = UE.getEditor('container', {
         initialFrameWidth: '80%',
         initialFrameHeight: '200'
     });
+
+    //提交表单
+    function submitForm() {
+        $('#itemAddForm').form('submit', {
+            //提交表单动作的URL地址
+            url: 'addvideo',
+            //在表单提交成功以后触发
+            success: function (data) {
+                k12.closeTab('新增视频');
+                $.messager.alert('消息', '添加成功！');
+            }
+        });
+    }
+    //表单的重置功能
+    function clearForm() {
+        $('#itemAddForm').form('reset');
+        ue.setContent('视频描述');
+    }
 
 </script>
 </body>

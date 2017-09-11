@@ -118,12 +118,6 @@ public class VideoController {
         return "ManagerIndex";
     }
 
-
-    @RequestMapping("/addv")
-    public String addv() {
-        return "add-video";
-    }
-
     @RequestMapping("/queryAllByPage")
     @ResponseBody
     public Result<Tb_Video> queryAllByPage(PageBean pageBean, String gid, String cid, Order order, String statusId, String name) throws UnsupportedEncodingException {
@@ -182,7 +176,7 @@ public class VideoController {
     public String test5(Model model) {
         model.addAttribute("list", videoService.queryAll());
         System.out.println(videoService.queryAll().size());
-        return "index-video-list";
+        return "video-index";
     }
 
     @RequestMapping("/showVideo")
@@ -190,9 +184,14 @@ public class VideoController {
         int id1 = Integer.parseInt(id);
         model.addAttribute("tb_video", videoService.queryById(id1));
         System.out.println(videoService.queryById(id1));
-        return "video-index-list";
+        return "play-video";
     }
-
+    @RequestMapping("/lookVideo")
+    //@ResponseBody
+    public String test7(Model model, String gid,String cid){
+        model.addAttribute("list",videoService.listVideosById(Integer.parseInt(gid),Integer.parseInt(cid)));
+        return "video-index";
+    }
 }
 
 

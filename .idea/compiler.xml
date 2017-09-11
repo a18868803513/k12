@@ -17,40 +17,72 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
+<<<<<<< HEAD
       <profile default="false" name="Annotation profile for k12-common" enabled="true">
+=======
+      <profile default="false" name="Annotation profile for k12-manager-web" enabled="true">
+>>>>>>> origin/master
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+<<<<<<< HEAD
         <module name="k12-common" />
       </profile>
       <profile default="false" name="Annotation profile for k12-manager-web" enabled="true">
-        <sourceOutputDir name="target\generated-sources\annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
+=======
         <module name="k12-manager-web" />
       </profile>
       <profile default="false" name="Annotation profile for k12-manager-serviceImpl" enabled="true">
+>>>>>>> origin/master
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+<<<<<<< HEAD
+        <module name="k12-manager-web" />
+      </profile>
+      <profile default="false" name="Annotation profile for k12-manager-serviceImpl" enabled="true">
+=======
         <module name="k12-manager-serviceImpl" />
       </profile>
       <profile default="false" name="Annotation profile for k12-manager-service" enabled="true">
+>>>>>>> origin/master
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+<<<<<<< HEAD
+        <module name="k12-manager-serviceImpl" />
+      </profile>
+      <profile default="false" name="Annotation profile for k12-manager-service" enabled="true">
+=======
         <module name="k12-manager-service" />
       </profile>
       <profile default="false" name="Annotation profile for k12-manager-dao" enabled="true">
+>>>>>>> origin/master
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+<<<<<<< HEAD
+        <module name="k12-manager-service" />
+      </profile>
+      <profile default="false" name="Annotation profile for k12-manager-dao" enabled="true">
+=======
         <module name="k12-manager-dao" />
+      </profile>
+      <profile default="false" name="Annotation profile for k12-manager-domain" enabled="true">
+>>>>>>> origin/master
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+<<<<<<< HEAD
+        <module name="k12-manager-dao" />
+=======
+        <module name="k12-manager-domain" />
+>>>>>>> origin/master
       </profile>
       <profile default="false" name="Annotation profile for k12-manager-domain" enabled="true">
         <sourceOutputDir name="target\generated-sources\annotations" />
@@ -60,7 +92,11 @@
         <module name="k12-manager-domain" />
       </profile>
     </annotationProcessing>
+<<<<<<< HEAD
     <bytecodeTargetLevel target="1.8">
+=======
+    <bytecodeTargetLevel target="1.7">
+>>>>>>> origin/master
       <module name="k12-common" target="1.8" />
       <module name="k12-manager" target="1.8" />
       <module name="k12-manager-dao" target="1.8" />
