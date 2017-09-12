@@ -134,6 +134,7 @@
     textField: 'course'
   });
 
+
   function bb(){
     alert('请充值');
     $('.rk').attr('type','text');

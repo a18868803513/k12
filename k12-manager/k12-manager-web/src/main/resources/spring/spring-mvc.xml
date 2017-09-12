@@ -43,5 +43,11 @@
     <mvc:resources mapping="/images/**" location="/images/"/>
     <mvc:resources mapping="/my_video/**" location="/my_video/"/>
     <mvc:resources mapping="/fonts/**" location="/fonts/"/>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <bean class="com.k12.web.LoginInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>
