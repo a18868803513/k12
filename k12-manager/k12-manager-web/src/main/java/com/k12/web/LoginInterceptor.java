@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by Administrator on 2017/9/12/012.
  */
 public class LoginInterceptor implements HandlerInterceptor {
-    private String[] arr={"login"};
+    private String[] arr={"login","register"};
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         String url=httpServletRequest.getRequestURI();
@@ -20,9 +20,13 @@ public class LoginInterceptor implements HandlerInterceptor {
                 return true;
             }
         }
+        if (url.equals("/k12/")){
+            return true;
+        }
+        System.out.println(url);
         Tb_User user=(Tb_User)httpServletRequest.getSession().getAttribute("user");
         if (user==null){
-            httpServletRequest.getRequestDispatcher("login.jsp").forward(httpServletRequest,httpServletResponse);
+            httpServletRequest.getRequestDispatcher("login").forward(httpServletRequest,httpServletResponse);
         }else {
             return true;
         }
