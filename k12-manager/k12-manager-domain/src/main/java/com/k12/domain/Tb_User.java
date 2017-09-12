@@ -11,21 +11,20 @@ public class Tb_User {
     private int role;
     private String tel;
     private String email;
+    private String registertime;
+    private String lastlogintime;
+    private Tb_ShoppingCar shoppingCar;
 
-    @Override
-    public String toString() {
-        return "Tb_User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", status=" + status +
-                ", role=" + role +
-                ", tel='" + tel + '\'' +
-                ", email='" + email + '\'' +
-                ", registertime='" + registertime + '\'' +
-                ", lastlogintime='" + lastlogintime + '\'' +
-                '}';
+
+
+    public Tb_ShoppingCar getShoppingCar() {
+        return shoppingCar;
     }
+
+    public void setShoppingCar(Tb_ShoppingCar shoppingCar) {
+        this.shoppingCar = shoppingCar;
+    }
+
 
     public int getId() {
         return id;
@@ -99,6 +98,19 @@ public class Tb_User {
         this.lastlogintime = lastlogintime;
     }
 
-    private String registertime;
-    private String lastlogintime;
+    @Override
+    public String toString() {
+        return "Tb_User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", status=" + status +
+                ", role=" + role +
+                ", tel='" + tel + '\'' +
+                ", email='" + email + '\'' +
+                ", registertime='" + registertime + '\'' +
+                ", lastlogintime='" + lastlogintime + '\'' +
+                ", shoppingCar=" + shoppingCar +
+                '}';
+    }
 }

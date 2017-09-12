@@ -19,6 +19,10 @@ var k12 = {
                 closable: true
             });
         }
+    },
+    //¹Ø±ÕÑ¡Ïî¿¨
+    closeTab:function(title){
+        $('#tab').tabs('close',title);
     }
 };
 

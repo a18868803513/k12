@@ -13,6 +13,25 @@ public class Tb_Video {
     private String createTime;
     private String updateTime;
     private String imgpath;
+    private int gid;
+    private int cid;
+
+    public int getGid() {
+        return gid;
+    }
+
+    public void setGid(int gid) {
+        this.gid = gid;
+    }
+
+    public int getCid() {
+        return cid;
+    }
+
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
+
     public String getImgpath() {
         return imgpath;
     }

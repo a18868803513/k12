@@ -31,5 +31,7 @@ public interface VideoService {
 
       //通过id查询
       Tb_Video queryById (int id);
+      //通过课程id和年级id查询
+      List<Tb_Video> listVideosById (int gid,int cid);
 
 }

@@ -65,7 +65,7 @@
 <header class="container">
   <div class="row">
     <div class="col-md-4">
-      <div id="logo"><img src="images/logo.png" /></div>
+      <div id="logo"><img src="images/k12logo.png" /></div>
     </div>
     <div class="col-md-4">
       <form class="form-search">
@@ -86,7 +86,7 @@
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="product-user-list">Home</a></li>
+        <li><a href="index">Home</a></li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PC Computers</a>
           <div class="dropdown-menu">
             <div class="dropdown-inner">
@@ -150,7 +150,7 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="product-user-list">Home</a></li>
           <li><a href="cart.html">Cart</a></li>
         </ul>
       </div>
@@ -243,7 +243,7 @@
     <div class="wrap-footer">
       <div class="row">
         <div class="col-md-3 col-footer footer-1">
-          <img src="images/logofooter.png" />
+          <img src="images/k12logo.png" />
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         </div>
         <div class="col-md-3 col-footer footer-2">
