@@ -16,6 +16,9 @@ public interface ProductDao {
     @ResultType(Tb_Product.class)
     List<Tb_Product> selectAll();
 
+    @Select("select * from tb_product where id=#{id}")
+    Tb_Product selectById(int id);
+
     @SelectProvider(type = ProductSql.class, method = "selectByPage")
     @Results({
             @Result(id = true, property = "id", column = "id"),

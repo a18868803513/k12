@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Mobile Shop</title>
+  <title>所有图书</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
@@ -37,7 +38,8 @@
 </head>
 <body>
 <!--Top-->
-<nav id="top">
+<jsp:include page="head.jsp" />
+<%--<nav id="top">
   <div class="container">
     <div class="row">
       <div class="col-xs-6">
@@ -60,7 +62,7 @@
       </div>
     </div>
   </div>
-</nav>
+</nav>--%>
 <!--Header-->
 <header class="container">
   <div class="row">
@@ -74,7 +76,7 @@
       </form>
     </div>
     <div class="col-md-4">
-      <div id="cart"><a class="btn btn-1" href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>CART : 0 ITEM</a></div>
+      <div id="cart"><a class="btn btn-1" href="cart"><span class="glyphicon glyphicon-shopping-cart"></span>CART : 0 ITEM</a></div>
     </div>
   </div>
 </header>
@@ -86,16 +88,16 @@
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="index">Home</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PC Computers</a>
-          <div class="dropdown-menu">
+        <li><a href="index">主页</a></li>
+        <li class="dropdown"><a href="allProduct">所有图书</a>
+          <%--<div class="dropdown-menu">
             <div class="dropdown-inner">
               <ul class="list-unstyled">
                 <li><a href="category.html">Window</a></li>
                 <li><a href="category.html">MacBook</a></li>
               </ul>
             </div>
-          </div>
+          </div>--%>
         </li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptops &amp; Notebooks</a>
           <div class="dropdown-menu">
@@ -151,8 +153,8 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="breadcrumb">
-          <li><a href="product-user-list">Home</a></li>
-          <li><a href="category.html">Category : Mobile</a></li>
+          <li><a href="product-user-list">商城主页</a></li>
+          <li><a href="category.html">类型 : 书籍</a></li>
         </ul>
       </div>
     </div>
@@ -161,22 +163,34 @@
         <div class="row">
           <div class="col-md-12">
             <div class="products">
+              <c:forEach items="${requestScope.product}" var="v" varStatus="vs">
+                <c:if test="${(vs.count-1)%3==0}">
+                  <tr id="trd">
+                </c:if>
+                    <td>
               <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="product">
-                  <div class="image"><a href="product.html"><img src="images/iphone.png" /></a></div>
+                  <div class="image"><a href="oneProduct?id=${v.id}"><img src="images/${v.img}" /></a></div>
                   <div class="buttons">
                     <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                     <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
                     <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
                   </div>
                   <div class="caption">
-                    <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
-                    <div class="price">$122<span>$98</span></div>
+                    <div class="name"><h3><a href="oneProduct?id=${v.id}">${v.name}</a></h3></div>
+                    <div class="price">${v.price}</div>
                     <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-4 col-xs-12">
+                    </td>
+                <c:if test="${(vs.count-1)%3==2}">
+                  </tr>
+                </c:if>
+              </c:forEach>
+
+
+              <%--<div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="product">
                   <div class="image"><a href="product.html"><img src="images/galaxy-s4.jpg" /></a></div>
                   <div class="buttons">
@@ -203,13 +217,13 @@
                     <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
                     <div class="price">$122<span>$98</span></div>
                     <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-                  </div>
+                  </div>--%>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
+       <%-- <div class="row">
           <div class="col-md-12">
             <div class="products">
               <div class="col-lg-4 col-md-4 col-xs-12">
@@ -310,8 +324,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row text-center">
+        </div>--%>
+        <%--<div class="row text-center">
           <ul class="pagination">
             <li class="active"><a href="#">1</a></li>
             <li><a href="#">2</a></li>
@@ -399,7 +413,17 @@
       </div>
     </div>
   </div>
-</div>
+</div>--%>
+
+    <div class="row text-center">
+      <ul class="pagination">
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+      </ul>
+    </div>
 <footer>
   <div class="container">
     <div class="wrap-footer">

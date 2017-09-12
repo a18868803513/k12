@@ -12,6 +12,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by dwy on 2017/9/4.
  */
@@ -28,6 +30,16 @@ public class ProductServiceImpl implements ProductService {
         page1.setRows(productDao.selectByPage((page-1)*rows,rows,gid,cid,order,statusId,name));
         page1.setTotal(productDao.selectAll().size());
         return page1;
+    }
+
+    @Override
+    public List<Tb_Product> selectAll() {
+        return productDao.selectAll();
+    }
+
+    @Override
+    public Tb_Product selectById(int id) {
+        return productDao.selectById(id);
     }
 
     @Override
