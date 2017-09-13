@@ -15,7 +15,6 @@ public class Tb_User {
     private String lastlogintime;
     private Tb_ShoppingCar shoppingCar;
 
-
     public Tb_ShoppingCar getShoppingCar() {
         return shoppingCar;
     }
