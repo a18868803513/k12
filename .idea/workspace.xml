@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c13535a6-69aa-4266-85c8-4ec7955a929e" name="Default" comment="添加贴吧页面">
+    <list default="true" id="c13535a6-69aa-4266-85c8-4ec7955a929e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9f99db48-e206-472d-be92-3eb79a53ac75" name="Failed commit: Default" comment="添加编辑功能" />
@@ -380,7 +380,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -848,13 +848,7 @@
       <workItem from="1505191659515" duration="26112000" />
       <workItem from="1505226298248" duration="4587000" />
       <workItem from="1505263704931" duration="11622000" />
-      <workItem from="1505287332385" duration="1090000" />
-    </task>
-    <task id="LOCAL-00005" summary="修改实体类名">
-      <created>1504342777570</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1504342777570</updated>
+      <workItem from="1505287332385" duration="1135000" />
     </task>
     <task id="LOCAL-00006" summary="修改实体类名">
       <created>1504346584573</created>
@@ -1144,11 +1138,17 @@
       <option name="project" value="LOCAL" />
       <updated>1505288073638</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="添加贴吧页面">
+      <created>1505288430712</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1505288430713</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269320000" />
+    <option name="totallyTimeSpent" value="269365000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
