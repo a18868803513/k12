@@ -37,7 +37,8 @@
 </head>
 <body>
 <!--Top-->
-<nav id="top">
+<jsp:include page="head.jsp" />
+<%--<nav id="top">
   <div class="container">
     <div class="row">
       <div class="col-xs-6">
@@ -60,7 +61,7 @@
       </div>
     </div>
   </div>
-</nav>
+</nav>--%>
 <!--Header-->
 <header class="container">
   <div class="row">
@@ -86,16 +87,16 @@
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="index">Home</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PC Computers</a>
-          <div class="dropdown-menu">
+        <li><a href="index">主页</a></li>
+        <li class="dropdown"><a href="allProduct">所有图书</a>
+          <%--<div class="dropdown-menu">
             <div class="dropdown-inner">
               <ul class="list-unstyled">
                 <li><a href="category.html">Window</a></li>
                 <li><a href="category.html">MacBook</a></li>
               </ul>
             </div>
-          </div>
+          </div>--%>
         </li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptops &amp; Notebooks</a>
           <div class="dropdown-menu">
@@ -150,8 +151,8 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="breadcrumb">
-          <li><a href="product-user-list">Home</a></li>
-          <li><a href="cart.html">Cart</a></li>
+          <li><a href="product-user-list">商城主页</a></li>
+          <li><a href="cart">购物车</a></li>
         </ul>
       </div>
     </div>

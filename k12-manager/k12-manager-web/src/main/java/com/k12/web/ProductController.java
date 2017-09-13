@@ -8,6 +8,7 @@ import com.k12.utils.Order;
 import com.k12.utils.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -99,5 +100,21 @@ public class ProductController {
         productService.updateProduct(product);
         return "ManagerIndex";
     }
+
+    @RequestMapping("allProduct")
+    public String selectAll(Model model,Tb_Product tb_product){
+        List<Tb_Product> list=productService.selectAll();
+        model.addAttribute("product",list);
+        return "category";
+    }
+    @RequestMapping("oneProduct")
+    public String selectById(Model model,String id,Tb_Product tb_product){
+        int id1=Integer.parseInt(id);
+        tb_product=productService.selectById(id1);
+        model.addAttribute("oneProduct",tb_product);
+        return "product";
+    }
+
+
 
 }
