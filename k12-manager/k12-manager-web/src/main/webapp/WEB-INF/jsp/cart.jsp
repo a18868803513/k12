@@ -176,7 +176,7 @@
               </ul>
             </div>
             <div class="price">${v.tb_product.price}元</div>
-            <label>数量: </label> <input class="form-inline quantity" type="text" value="1"><a href="#" class="btn btn-2 ">更新数量</a>
+            <label>数量: </label> <input class="form-inline quantity" type="text" value="${v.counts}"><a href="#" class="btn btn-2 ">更新数量</a>
             <hr>
             <a href="#" class="btn btn-default pull-right">REMOVE</a>
           </div>
