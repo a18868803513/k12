@@ -16,7 +16,6 @@ public class Tb_User {
     private Tb_ShoppingCar shoppingCar;
 
 
-
     public Tb_ShoppingCar getShoppingCar() {
         return shoppingCar;
     }
