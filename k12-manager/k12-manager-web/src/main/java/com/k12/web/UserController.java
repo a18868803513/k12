@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 /**
  * Created by Administrator on 2017/9/1/001.
  */
@@ -15,11 +16,20 @@ public class UserController {
     UserService userService;
     @RequestMapping("/")
     public String t(){
-        return "index";
+        return "index.jsp";
     }
     @RequestMapping("/{jn}")
     public String t1(@PathVariable String jn){
-        return jn;
+            String[] arr={"xxxx","fic"};
+        for(int i=0;i<arr.length;i++){
+            if (jn.contains(arr[i])){
+                return "/fiction/"+jn+".html";
+            }
+        }
+            return jn+".jsp";
+
+
+
     }
 
   /*  @RequestMapping(value = "login/{username}/{password}",method = RequestMethod.GET)

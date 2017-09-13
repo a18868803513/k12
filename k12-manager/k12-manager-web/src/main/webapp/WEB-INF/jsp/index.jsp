@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <%@ taglib prefix="c"
+             uri="http://java.sun.com/jsp/jstl/core" %>
 
 
 </head>
@@ -43,18 +45,26 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="useredit">${user.username}</a>
-            </li>
+            <c:choose >
+              <c:when test="${user!=null}">
+                <li>
+                  <a href="useredit">${user.username}</a>
+                </li>
+              </c:when>
+              <c:otherwise>
+                <li>
+                  <a href="register">注册</a>
+                </li>
+                <li>
+                  <a href="login">登录</a>
+                </li>
+              </c:otherwise>
+            </c:choose>
+
             <li>
               <a href="cart">购物车</a>
             </li>
-            <li>
-              <a href="register">注册</a>
-            </li>
-            <li>
-              <a href="login">登录</a>
-            </li>
+
           </ul>
         </div>
 
@@ -130,7 +140,7 @@
           <div class="col-md-3 column">
             <ul class="nav navbar-nav navbar-left">
               <li>
-                <a href="#">在线书籍</a>
+                <a href="showFiction">在线书籍</a>
               </li>
             </ul>
           </div>
