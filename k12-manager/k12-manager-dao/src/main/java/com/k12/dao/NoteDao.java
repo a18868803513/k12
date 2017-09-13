@@ -10,7 +10,7 @@ import java.util.List;
  * Created by Administrator on 2017/9/12/012.
  */
 public interface NoteDao {
-    @Insert("insert into tb_note (title,content,authorId,Createtime) values(#{title},#{content},#{authorId},now())")
+    @Insert("insert into tb_note (title,content,authorId,Createtime) values(#{title},#{content},#{user.id},now())")
     void addNote(Tb_Note note);
     @Select("select * from tb_note")
     List<Tb_Note> queryAll();

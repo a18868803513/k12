@@ -16,7 +16,7 @@ public class MyTest {
     public static void main(String args[]) throws IOException {
 
 
-        Document doc = Jsoup.connect("http://ask.rednet.cn/question/132373").get();
+        Document doc = Jsoup.connect(" /question/132373").get();
         System.out.println(doc);
         /*System.out.println( doc.getElementsByClass("read-content j_readContent"));*/
 
