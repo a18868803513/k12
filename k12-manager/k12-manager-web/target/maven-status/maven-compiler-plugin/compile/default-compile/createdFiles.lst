@@ -1,0 +1,11 @@
+com\k12\web\NoteController.class
+com\k12\web\ProductController.class
+com\k12\web\ReversionController.class
+com\k12\web\UserController.class
+com\k12\web\QbController.class
+com\k12\web\GradeController.class
+com\k12\web\UserLoginController.class
+com\k12\web\CourseController.class
+com\k12\web\LoginInterceptor.class
+com\k12\web\TestPaperController.class
+com\k12\web\VideoController.class

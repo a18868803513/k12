@@ -1,0 +1,10 @@
+com\k12\service\impl\VideoServiceImpl.class
+com\k12\service\impl\ShoppingCarServiceImpl.class
+com\k12\service\impl\NoteServiceImpl.class
+com\k12\service\impl\GradeServiceImpl.class
+com\k12\service\impl\RevesionServiceImpl.class
+com\k12\service\impl\TestServiceImpl.class
+com\k12\service\impl\CourseServiceImpl.class
+com\k12\service\impl\UserServiceImpl.class
+com\k12\service\impl\ProductServiceImpl.class
+com\k12\service\impl\QbServiceImpl.class
