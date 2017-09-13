@@ -49,7 +49,7 @@
 </head>
 <body style="background:url(images/login.jpg) no-repeat;background-size: cover;">
 <div id="d2">
-<form class="main_form" action="login">
+<form class="main_form" action="login" method="post">
     <div id="d1">
         <p class="easyui-panel">
 
