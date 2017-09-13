@@ -1,12 +1,23 @@
 package com.k12.domain;
 
+import java.util.List;
+
 /**
  * Created by dwy on 2017/9/11.
  */
 public class Tb_ShoppingCar {
     private int id;
     private Tb_User tb_user;
+    private List<ShoppingItems> itemses;
     private int status;
+
+    public List<ShoppingItems> getItemses() {
+        return itemses;
+    }
+
+    public void setItemses(List<ShoppingItems> itemses) {
+        this.itemses = itemses;
+    }
 
     public int getId() {
         return id;

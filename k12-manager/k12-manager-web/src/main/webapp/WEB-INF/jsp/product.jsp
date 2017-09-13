@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Mobile Shop</title>
+  <title>商品详情</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
@@ -39,7 +39,8 @@
 </head>
 <body>
 <!--Top-->
-<nav id="top">
+<jsp:include page="head.jsp" />
+<%--<nav id="top">
   <div class="container">
     <div class="row">
       <div class="col-xs-6">
@@ -62,7 +63,7 @@
       </div>
     </div>
   </div>
-</nav>
+</nav>--%>
 <!--Header-->
 <header class="container">
   <div class="row">
@@ -88,16 +89,16 @@
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PC Computers</a>
-          <div class="dropdown-menu">
+        <li><a href="index.html">主页</a></li>
+        <li class="dropdown"><a href="allProduct">所有图书</a>
+          <%--<div class="dropdown-menu">
             <div class="dropdown-inner">
               <ul class="list-unstyled">
-                <li><a href="category.html">Window</a></li>
-                <li><a href="category.html">MacBook</a></li>
+                <li><a href="category">Window</a></li>
+                <li><a href="category">MacBook</a></li>
               </ul>
             </div>
-          </div>
+          </div>--%>
         </li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptops &amp; Notebooks</a>
           <div class="dropdown-menu">
@@ -152,9 +153,9 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="breadcrumb">
-          <li><a href="index">Home</a></li>
-          <li><a href="category.html">Category</a></li>
-          <li><a href="#">Samsung Galaxy</a></li>
+          <li><a href="product-user-list">商城主页</a></li>
+          <li><a href="allProduct">书籍</a></li>
+          <li><a href="#">${oneProduct.name}</a></li>
         </ul>
       </div>
     </div>
@@ -163,20 +164,20 @@
         <div class="product">
           <div class="col-md-6">
             <div class="image">
-              <img src="images/galaxy-note.jpg" />
+              <img src="images/${oneProduct.img}" />
               <div class="image-more">
                 <ul class="row">
                   <li class="col-lg-3 col-sm-3 col-xs-4">
-                    <a href="#"><img class="img-responsive" src="images/galaxy-note.jpg"></a>
+                    <a href="#"><img class="img-responsive" src="images/${oneProduct.img}"></a>
                   </li>
                   <li class="col-lg-3 col-sm-3 col-xs-4">
-                    <a href="#"><img class="img-responsive" src="images/galaxy-note-2.jpg"></a>
+                    <a href="#"><img class="img-responsive" src="images/${oneProduct.img}"></a>
                   </li>
                   <li class="col-lg-3 col-sm-3 col-xs-4">
-                    <a href="#"><img class="img-responsive" src="images/galaxy-note-3.jpg"></a>
+                    <a href="#"><img class="img-responsive" src="images/${oneProduct.img}"></a>
                   </li>
                   <li class="col-lg-3 col-sm-3 col-xs-4">
-                    <a href="#"><img class="img-responsive" src="images/galaxy-note-4.jpg"></a>
+                    <a href="#"><img class="img-responsive" src="images/${oneProduct.img}"></a>
                   </li>
                 </ul>
               </div>
@@ -184,24 +185,24 @@
           </div>
           <div class="col-md-6">
             <div class="caption">
-              <div class="name"><h3>Aliquam erat volutpat</h3></div>
+              <div class="name"><h3>中小学生必读书籍</h3></div>
               <div class="info">
                 <ul>
-                  <li>Brand: text</li>
-                  <li>ID: 0122222</li>
+                  <li>Brand: k12</li>
+                  <li>ID: ${oneProduct.id}</li>
                 </ul>
               </div>
-              <div class="price">$122<span>$98</span></div>
-              <div class="options">
+              <div class="price">${oneProduct.price}元</div>
+              <%--<div class="options">
                 AVAILABLE OPTIONS
                 <select>
                   <option value="" selected>----Please Select----</option>
                   <option value="red">RED</option>
                   <option value="black">BLACK</option>
                 </select>
-              </div>
-              <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-              <div class="well"><label>Qty: </label> <input class="form-inline quantity" type="text" value="1"><a href="#" class="btn btn-2 ">ADD</a></div>
+              </div>--%>
+              <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+              <div class="well"><label>购买数量: </label> <input class="form-inline quantity" type="text" value="1"><a href="#" class="btn btn-2 ">购买</a></div>
               <div class="share well">
                 <strong style="margin-right: 13px;">Share :</strong>
                 <a href="#" class="share-btn" target="_blank">
@@ -220,15 +221,19 @@
         </div>
         <div class="product-desc">
           <ul class="nav nav-tabs">
-            <li class="active"><a href="#description">Description</a></li>
-            <li><a href="#review">Review</a></li>
+            <li class="active"><a href="#description">商品描述</a></li>
+            <%--<li><a href="#review">Review</a></li>--%>
           </ul>
           <div class="tab-content">
             <div id="description" class="tab-pane fade in active">
-              <h4>Sample Lorem Ipsum Text</h4>
+              <h4>商品详情</h4>
+              ${oneProduct.instrudction}
+<%--
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula. Pellentesque aliquam quam vel dolor. Nunc adipiscing. Sed quam odio, tempus ac, aliquam molestie, varius ac, tellus. Vestibulum ut nulla aliquam risus rutrum interdum. Pellentesque lorem. Curabitur sit amet erat quis risus feugiat viverra. Pellentesque augue justo, sagittis et, lacinia at, venenatis non, arcu. Nunc nec libero. In cursus dictum risus. Etiam tristique nisl a</p>
-              <h4>Sample Lorem Ipsum Text</h4>
-              <p>Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque aliquet lacus vitae pede. Nullam mollis dolor ac nisi. Phasellus sit amet urna. Praesent pellentesque sapien sed lacus. Donec lacinia odio in odio. In sit amet elit. Maecenas gravida interdum urna. Integer pretium, arcu vitae imperdiet facilisis, elit tellus tempor nisi, vel feugiat ante velit sit amet mauris. Vivamus arcu. Integer pharetra magna ac lacus. Aliquam vitae sapien in nibh vehicula auctor. Suspendisse leo mauris, pulvinar sed, tempor et, consequat ac, lacus. Proin velit. Nulla semper lobortis mauris. Duis urna erat, ornare et, imperdiet eu, suscipit sit amet, massa. Nulla nulla nisi, pellentesque at, egestas quis, fringilla eu, diam.</p>
+--%>
+               <h4>k12商城介绍</h4>
+               <p>K12教育商城全程为个人用户和企业用户提供人性化的“亲情360”全方位服务，努力为用户创造亲切、轻松和愉悦的购物环境；不断丰富产品结构，以期最大化地满足消费者日趋多样的购物需求。相较于同类电子商务网站，京东商城拥有更为丰富的商品种类，并凭借更具竞争力的价格和逐渐完善的物流配送体系等各项优势，赢得市场占有率多年稳居行业首位的骄人成绩。
+                 京东商城以“产品、价格、服务”为核心，致力于为消费者提供质优的商品、优惠的价格，同时领先行业推出“211限时达”、“售后100分”、“全国上门取件”、“先行赔付”等多项专业服务。京东商城通过不断优化的服务引领网络零售市场，率先为中国电子商务行业树立了诚信经营的标杆。</p>
             </div>
             <div id="review" class="tab-pane fade">
               <div class="review-text">

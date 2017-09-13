@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +39,8 @@
 
 <body>
 <!--Top-->
-<nav id="top">
+<jsp:include page="head.jsp" />
+<%--<nav id="top">
   <div class="container">
     <div class="row">
       <div class="col-xs-6">
@@ -61,7 +63,7 @@
       </div>
     </div>
   </div>
-</nav>
+</nav>--%>
 <!--Header-->
 <header class="container">
   <div class="row">
@@ -88,15 +90,15 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
         <li><a href="index">主页</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PC Computers</a>
-          <div class="dropdown-menu">
+        <li class="dropdown"><a href="allProduct">所有图书</a>
+          <%--<div class="dropdown-menu">
             <div class="dropdown-inner">
               <ul class="list-unstyled">
                 <li><a href="category">Window</a></li>
                 <li><a href="category">MacBook</a></li>
               </ul>
             </div>
-          </div>
+          </div>--%>
         </li>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Laptops &amp; Notebooks</a>
           <div class="dropdown-menu">
@@ -146,6 +148,7 @@
 <!--//////////////////////////////////////////////////-->
 <!--///////////////////HomePage///////////////////////-->
 <!--//////////////////////////////////////////////////-->
+
 <div id="page-content" class="home-page">
   <div class="container">
     <div class="row">
@@ -210,64 +213,66 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <div class="heading"><h2>SPECIAL PRODUCTS</h2></div>
+        <div class="heading"><h2>精品图书</h2></div>
         <div class="products">
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="product">
-              <div class="image"><a href="product"><img src="images/antusheng.jpg" /></a></div>
+
+              <div class="image"><a href="oneProduct?id=1"><img src="images/antusheng.jpg" /></a></div>
               <div class="buttons">
                 <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
                 <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
               </div>
               <div class="caption">
-                <div class="name"><h3><a href="product">安徒生童话</a></h3></div>
-                <div class="price">$122<span>$98</span></div>
-                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                <div class="name"><h3><a href="oneProduct?id=1">安徒生童话</a></h3></div>
+                <div class="price">20元<span>28元</span></div>
+                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="product">
+              <div class="image"><a href="oneProduct?id=12"><img src="images/bainian.jpg" /></a></div>
+              <div class="buttons">
+                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
+              </div>
+              <div class="caption">
+                <div class="name"><h3><a href="oneProduct?id=12">百年孤独</a></h3></div>
+                <div class="price">20元<span>28元</span></div>
+                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="product">
-              <div class="image"><a href="product"><img src="images/bainian.jpg" /></a></div>
+              <div class="image"><a href="oneProduct?id=18"><img src="images/bingyuhuo.jpg" /></a></div>
               <div class="buttons">
                 <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
                 <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
               </div>
               <div class="caption">
-                <div class="name"><h3><a href="product">百年孤独</a></h3></div>
-                <div class="price">$122<span>$98</span></div>
-                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                <div class="name"><h3><a href="oneProduct?id=18">冰与火之歌</a></h3></div>
+                <div class="price">23元<span>31元</span></div>
+                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="product">
-              <div class="image"><a href="product"><img src="images/bingyuhuo.jpg" /></a></div>
+              <div class="image"><a href="oneProduct?id=13"><img src="images/halibote.jpg" /></a></div>
               <div class="buttons">
                 <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
                 <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
               </div>
               <div class="caption">
-                <div class="name"><h3><a href="product">冰与火之歌</a></h3></div>
-                <div class="price">$122<span>$98</span></div>
-                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="product">
-              <div class="image"><a href="product"><img src="images/halibote.jpg" /></a></div>
-              <div class="buttons">
-                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-              </div>
-              <div class="caption">
-                <div class="name"><h3><a href="product">哈利波特系列</a></h3></div>
-                <div class="price">$122<span>$98</span></div>
+                <div class="name"><h3><a href="oneProduct?id=13">哈利波特系列</a></h3></div>
+                <div class="price">21元<span>29元</span></div>
                 <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
               </div>
             </div>
@@ -287,65 +292,65 @@
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <div class="heading"><h2>FEATURED PRODUCTS</h2></div>
+        <div class="heading"><h2>世界名著</h2></div>
         <div class="products">
           <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="product">
-              <div class="image"><a href="product"><img src="images/hongloumeng.jpg" /></a></div>
+              <div class="image"><a href="oneProduct?id=7"><img src="images/hongloumeng.jpg" /></a></div>
               <div class="buttons">
                 <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                 <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
                 <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
               </div>
               <div class="caption">
-                <div class="name"><h3><a href="product">红楼梦</a></h3></div>
-                <div class="price">$122<span>$98</span></div>
-                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="product">
-              <div class="image"><a href="product"><img src="images/sanguoyanyi.jpg" /></a></div>
-              <div class="buttons">
-                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-              </div>
-              <div class="caption">
-                <div class="name"><h3><a href="product">三国演义</a></h3></div>
-                <div class="price">$122<span>$98</span></div>
-                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="product">
-              <div class="image"><a href="product"><img src="images/shuihuzhuan.jpg" /></a></div>
-              <div class="buttons">
-                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-              </div>
-              <div class="caption">
-                <div class="name"><h3><a href="product">水浒传</a></h3></div>
-                <div class="price">$122<span>$98</span></div>
-                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="product">
-              <div class="image"><a href="product"><img src="images/xiaogushi.jpg" /></a></div>
-              <div class="buttons">
-                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
-                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
-                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
-              </div>
-              <div class="caption">
-                <div class="name"><h3><a href="product">小故事大道理</a></h3></div>
-                <div class="price">$122<span>$98</span></div>
+                <div class="name"><h3><a href="oneProduct?id=7">红楼梦</a></h3></div>
+                <div class="price">20元<span>28元</span></div>
                 <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="product">
+              <div class="image"><a href="oneProduct?id=8"><img src="images/sanguoyanyi.jpg" /></a></div>
+              <div class="buttons">
+                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
+              </div>
+              <div class="caption">
+                <div class="name"><h3><a href="oneProduct?id=8">三国演义1</a></h3></div>
+                <div class="price">21元<span>29元</span></div>
+                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="product">
+              <div class="image"><a href="oneProduct?id=6"><img src="images/shuihuzhuan.jpg" /></a></div>
+              <div class="buttons">
+                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
+              </div>
+              <div class="caption">
+                <div class="name"><h3><a href="oneProduct?id=6">水浒传</a></h3></div>
+                <div class="price">19元<span>27元</span></div>
+                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="product">
+              <div class="image"><a href="oneProduct?id=3"><img src="images/xiaogushi.jpg" /></a></div>
+              <div class="buttons">
+                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
+              </div>
+              <div class="caption">
+                <div class="name"><h3><a href="oneProduct?id=3">小故事大道理</a></h3></div>
+                <div class="price">20元<span>28元</span></div>
+                <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
               </div>
             </div>
           </div>
@@ -354,6 +359,7 @@
     </div>
   </div>
 </div>
+
 <footer>
   <div class="container">
     <div class="wrap-footer">

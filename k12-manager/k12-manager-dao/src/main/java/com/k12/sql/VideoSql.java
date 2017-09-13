@@ -5,7 +5,7 @@ import com.k12.utils.PageBean;
 import org.apache.ibatis.jdbc.SQL;
 
 /**
- * ¶¯Ì¬sqlÊµÏÖÄ£ºý²éÑ¯
+ * ï¿½ï¿½Ì¬sqlÊµï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½Ñ¯
  * Created by LB on 2017/9/6.
  */
 
@@ -14,7 +14,7 @@ public class VideoSql {
     public String selectByPage(PageBean pageBean, String gid, String cid, Order order, String statusId, String name) {
         String sql = new SQL() {
             {
-                SELECT("v.*,g.grade grade,c.course course,case v.status when 1 then 'Õý³£' when 2 then 'ÏÂ¼Ü' when 3 then 'É¾³ý'end as statusName");
+                SELECT("v.*,g.grade grade,c.course course,case v.status when 1 then '' when 2 then '' when 3 then ''end as statusName");
                 FROM("tb_video v");
                 LEFT_OUTER_JOIN("tb_grade g on v.gid=g.id");
                 LEFT_OUTER_JOIN("tb_course c on v.cid=c.id");
