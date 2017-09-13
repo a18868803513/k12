@@ -3,7 +3,7 @@ package com.k12.domain;
 /**
  * Created by dwy on 2017/9/12.
  */
-public class ShoppingItems {
+public class Tb_ShoppingItems {
     private int id;
     private int counts;
     private String username;
@@ -52,7 +52,7 @@ public class ShoppingItems {
 
     @Override
     public String  toString() {
-        return "ShoppingItems{" +
+        return "Tb_ShoppingItems{" +
                 "id=" + id +
                 ", counts=" + counts +
                 ", username='" + username + '\'' +

@@ -8,14 +8,14 @@ import java.util.List;
 public class Tb_ShoppingCar {
     private int id;
     private Tb_User tb_user;
-    private List<ShoppingItems> itemses;
+    private List<Tb_ShoppingItems> itemses;
     private int status;
 
-    public List<ShoppingItems> getItemses() {
+    public List<Tb_ShoppingItems> getItemses() {
         return itemses;
     }
 
-    public void setItemses(List<ShoppingItems> itemses) {
+    public void setItemses(List<Tb_ShoppingItems> itemses) {
         this.itemses = itemses;
     }
 
