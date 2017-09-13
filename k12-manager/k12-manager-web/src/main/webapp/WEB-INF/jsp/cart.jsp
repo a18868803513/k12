@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Mobile Shop</title>
+  <title>购物车</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
@@ -158,30 +159,34 @@
     </div>
     <div class="row">
       <div class="product well">
+        <c:forEach items="${shoppingItem}" var="v" varStatus="vs">
+
         <div class="col-md-3">
           <div class="image">
-            <img src="images/galaxy-note.jpg" />
+            <img src="images/${v.tb_product.img}" />
           </div>
         </div>
         <div class="col-md-9">
           <div class="caption">
-            <div class="name"><h3><a href="product.html">Aliquam erat volutpat</a></h3></div>
+            <div class="name"><h3><a href="oneProduct?id=${v.tb_product.id}">${v.tb_product.name}</a></h3></div>
             <div class="info">
               <ul>
-                <li>Brand: text</li>
-                <li>ID: 0122222</li>
+                <li>Brand: K12</li>
+                <li>ID: ${v.tb_product.id}</li>
               </ul>
             </div>
-            <div class="price">$122<span>$98</span></div>
-            <label>Qty: </label> <input class="form-inline quantity" type="text" value="1"><a href="#" class="btn btn-2 ">Update</a>
+            <div class="price">${v.tb_product.price}元</div>
+            <label>数量: </label> <input class="form-inline quantity" type="text" value="1"><a href="#" class="btn btn-2 ">更新数量</a>
             <hr>
             <a href="#" class="btn btn-default pull-right">REMOVE</a>
           </div>
         </div>
         <div class="clear"></div>
+          <br/>
+        </c:forEach>
       </div>
     </div>
-    <div class="row">
+    <%--<div class="row">
       <div class="product well">
         <div class="col-md-3">
           <div class="image">
@@ -205,10 +210,10 @@
         </div>
         <div class="clear"></div>
       </div>
-    </div>
+    </div>--%>
     <div class="row">
       <div class="col-md-4 col-md-offset-8 ">
-        <center><a href="#" class="btn btn-1">Continue To Shopping</a></center>
+        <center><a href="#" class="btn btn-1">继续购物</a></center>
       </div>
     </div>
     <div class="row">
