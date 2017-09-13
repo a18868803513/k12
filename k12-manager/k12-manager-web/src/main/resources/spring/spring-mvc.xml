@@ -43,6 +43,7 @@
     <mvc:resources mapping="/images/**" location="/images/"/>
     <mvc:resources mapping="/my_video/**" location="/my_video/"/>
     <mvc:resources mapping="/fonts/**" location="/fonts/"/>
+    <mvc:resources mapping="/font-awesome/**" location="/font-awesome/"/>
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/*"/>

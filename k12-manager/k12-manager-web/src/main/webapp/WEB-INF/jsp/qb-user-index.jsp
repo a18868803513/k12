@@ -25,6 +25,7 @@
 <div class="container">
   <div class="row clearfix">
     <div class="col-md-12 column">
+      <%@include file="head.jsp"%>
       <div class="page-header">
         <h1>
           在线题库 <small>Subtext for header</small>
@@ -68,6 +69,8 @@
 
 <script>
   var qArr=new Array();
+  var anArr=new Array();
+  var staArr=new Array();
   $('#bg').click(function(){
 
     var gid=$('#cc').combobox("getValue");
@@ -85,7 +88,7 @@
 
         for(var i=0;i< length;i++){
           html2=html2+"<tr><th>"+ e[i].question+"</th><th><input id='a"+i+"'  type='text'/></th><th><div id=d"+i+"><div></th><th><input type='hidden' class='rk' id=rk"+i+" value="+e[i].answer+"></th></tr>"
-          /*qArr.add()*/
+          qArr.push(e[i].id)
         }
         html3="</table><tr><button onclick='submit("+length+")'>提交</button><div id='lookrk'></div>"
         html2=html1+html2+html3;
@@ -100,12 +103,14 @@
 
   function submit(length){
     for(var i=0;i<length;i++){
-
+      anArr.push($("#a"+i).val());
 
         if($("#a"+i).val()==$("#rk"+i).val()){
           document.getElementById("d"+i).innerHTML="正确";
+          staArr.push(1);
         }else{
           document.getElementById("d"+i).innerHTML="错误";
+          staArr.push(0);
         }
     }
 
@@ -118,7 +123,7 @@
       qArr.add()
     }*/
     $.ajax({
-      url:'',
+      url:'addTestPaper?qArr='+qArr+"&anArr="+anArr+"&staArr="+staArr,
       type:"post"
     })
   }

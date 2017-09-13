@@ -30,35 +30,7 @@
 <div class="container">
   <div class="row clearfix">
     <div class="col-md-12 column">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">网站首页</a>
-        </div>
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="#">联系电话:110</a>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="useredit">${user.username}</a>
-            </li>
-            <li>
-              <a href="cart">购物车</a>
-            </li>
-            <li>
-              <a href="register">注册</a>
-            </li>
-            <li>
-              <a href="login">登录</a>
-            </li>
-          </ul>
-        </div>
-
-      </nav>
+      <%@include file="head.jsp"%>
       <div id="h1" class="jumbotron" style="background: url(images/cc.jpg)">
         <h1>
           欢迎来到万峰教育中心
@@ -120,34 +92,42 @@
       <nav class="navbar navbar-default" role="navigation">
         <div id="h2">
         <div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <div class="col-md-3 column">
+          <div class="col-md-2 column">
             <ul class="nav navbar-nav navbar-left">
               <li>
                 <a href="qb-user-index">在线题库</a>
               </li>
               </ul>
           </div>
-          <div class="col-md-3 column">
+          <div class="col-md-2 column">
             <ul class="nav navbar-nav navbar-left">
               <li>
                 <a href="#">在线书籍</a>
               </li>
             </ul>
           </div>
-          <div class="col-md-3 column">
+          <div class="col-md-2 column">
             <ul class="nav navbar-nav navbar-left">
               <li>
                 <a href="showAllVideo">在线视频</a>
               </li>
             </ul>
           </div>
-          <div class="col-md-3 column">
+          <div class="col-md-2 column">
             <ul class="nav navbar-nav navbar-left">
               <li>
                 <a href="product-user-list">教育商城</a>
               </li>
             </ul>
 
+
+          </div>
+          <div class="col-md-2 column">
+            <ul class="nav navbar-nav navbar-left">
+              <li>
+                <a href="queryAll">师生问答</a>
+              </li>
+            </ul>
           </div>
 
         </div>
