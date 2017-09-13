@@ -21,8 +21,6 @@ public class CourseController {
     public Tb_Course a(int cid){
         return courseService.selectById(cid);
 
-
-
     }
     @ResponseBody
     @RequestMapping("courseList")
