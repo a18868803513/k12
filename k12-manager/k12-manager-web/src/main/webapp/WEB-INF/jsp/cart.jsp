@@ -211,11 +211,23 @@
         <div class="clear"></div>
       </div>
     </div>--%>
+
     <div class="row">
       <div class="col-md-4 col-md-offset-8 ">
         <center><a href="product-user-list" class="btn btn-1">继续购物</a></center>
       </div>
     </div>
+
+<form method="post" action="addOrder">
+    <p>
+      收货地址：<input name="receiverAddress" type="text" value="杭州市江干区九堡旺田书画城"
+                  style="width:350px" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"></a>
+      <br /> 收货人：&nbsp;&nbsp;&nbsp;&nbsp;<input
+            name="receiverName" type="text" value="有钱人小明"
+            style="width:150px" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"></a>
+      <br /> 联系方式：<input type="text" name="receiverPhone"
+                         value="110120119" style="width:150px" />&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
     <div class="row">
       <div class="pricedetails">
         <div class="col-md-4 col-md-offset-8">
@@ -231,10 +243,11 @@
               <td id="div"></td>
             </tr>
           </table>
-          <center><a href="order" class="btn btn-1">Checkout</a></center>
+          <input type="submit" value="购买"></input>
         </div>
       </div>
     </div>
+</form>
   </div>
 </div>
 <footer>

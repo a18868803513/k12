@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>订单列表</title>
@@ -57,28 +58,42 @@
           </th>
         </tr>
         </thead>
+        <div>
+        <c:forEach items="${myItems}" var="v" varStatus="vs">
         <tbody>
-        <tr>
+        <tr class="success">
+
           <td>
-            1
+            ${vs.index+1}
           </td>
           <td>
-            TB - Monthly
+            ${v.receiverName}
           </td>
           <td>
-            01/04/2012
+            ${v.createTime}
           </td>
           <td>
-            Default
+            <c:if test="${v.status==1}">
+              未支付
+            </c:if>
+            <c:if test="${v.status==2}">
+              已支付
+            </c:if>
           </td>
           <td>
-            <a href="order">查看</a>
+            <a href="chaKan?id=${v.id}">查看</a>
           </td>
           <td>
-            删除
+            <c:if test="${v.status==1}">
+              <a href="#">删除</a>
+            </c:if>
+            <c:if test="${v.status==2}">
+              不可删除
+            </c:if>
           </td>
         </tr>
-        <tr class="success">
+
+        <%--<tr class="success">
           <td>
             1
           </td>
@@ -158,8 +173,10 @@
           <td>
             删除
           </td>
-        </tr>
+        </tr>--%>
         </tbody>
+        </c:forEach>
+
       </table>
     </div>
   </div>

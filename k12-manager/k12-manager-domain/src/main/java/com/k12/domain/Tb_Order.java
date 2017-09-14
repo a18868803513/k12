@@ -7,14 +7,23 @@ import java.util.List;
  */
 public class Tb_Order {
     private int id;
+    private String no;
     private String receiverName;
     private int status;
     private String receiverAddress;
     private String receiverPhone;
-    private int money;
+    private double money;
     private String createTime;
     private Tb_User tb_user;
     private List<Tb_OrderItems> tb_orderItemses;
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
 
     public int getId() {
         return id;
@@ -48,11 +57,11 @@ public class Tb_Order {
         this.receiverPhone = receiverPhone;
     }
 
-    public int getMoney() {
+    public double getMoney() {
         return money;
     }
 
-    public void setMoney(int money) {
+    public void setMoney(double money) {
         this.money = money;
     }
 

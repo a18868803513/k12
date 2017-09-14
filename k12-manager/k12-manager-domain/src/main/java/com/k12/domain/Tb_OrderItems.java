@@ -50,4 +50,13 @@ public class Tb_OrderItems {
                 ", tb_product=" + tb_product +
                 '}';
     }
+
+    public Tb_OrderItems(int counts, Tb_Order tb_order, Tb_Product tb_product) {
+        this.counts = counts;
+        this.tb_order = tb_order;
+        this.tb_product = tb_product;
+    }
+
+    public Tb_OrderItems() {
+    }
 }
