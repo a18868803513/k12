@@ -18,6 +18,7 @@
 <!-- jquery easyui -->
 <script src="js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
 <script src="js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
+<script src="js/countDown.js"></script>
 <html>
 <head>
     <title></title>

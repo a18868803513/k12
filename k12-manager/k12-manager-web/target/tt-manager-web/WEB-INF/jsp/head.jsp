@@ -28,6 +28,9 @@
           <li>
             <a href="useredit">${user.username}</a>
           </li>
+          <li>
+            <a href="quit">注销</a>
+          </li>
         </c:when>
         <c:otherwise>
           <li>
@@ -40,7 +43,7 @@
       </c:choose>
 
       <li>
-        <a href="cart">购物车</a>
+        <a href="showShoppingItems">购物车</a>
       </li>
 
     </ul>

@@ -76,7 +76,7 @@
       </form>
     </div>
     <div class="col-md-4">
-      <div id="cart"><a class="btn btn-1" href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>CART : 0 ITEM</a></div>
+      <div id="cart"><a class="btn btn-1" href="showShoppingItems"><span class="glyphicon glyphicon-shopping-cart"></span>CART</a></div>
     </div>
   </div>
 </header>
@@ -176,9 +176,9 @@
               </ul>
             </div>
             <div class="price">${v.tb_product.price}元</div>
-            <label>数量: </label> <input class="form-inline quantity" type="text" value="${v.counts}"><a href="#" class="btn btn-2 ">更新数量</a>
+            <label>数量: </label> <input class="form-inline quantity" type="text" id="${vs.count}" value="${v.counts}"><a onclick="b(${vs.count},${v.tb_product.id})" class="btn btn-2 ">更新数量</a>
             <hr>
-            <a href="#" class="btn btn-default pull-right">REMOVE</a>
+            <a href="removeShoppingItem?id=${v.tb_product.id}" class="btn btn-default pull-right">移除</a>
           </div>
         </div>
         <div class="clear"></div>
@@ -213,7 +213,7 @@
     </div>--%>
     <div class="row">
       <div class="col-md-4 col-md-offset-8 ">
-        <center><a href="#" class="btn btn-1">继续购物</a></center>
+        <center><a href="product-user-list" class="btn btn-1">继续购物</a></center>
       </div>
     </div>
     <div class="row">
@@ -222,20 +222,13 @@
           <table>
             <h6>Price Details</h6>
             <tr>
-              <td>Total</td>
-              <td>350.00</td>
+              <td >Total</td>
+              <td id="total"></td>
             </tr>
-            <tr>
-              <td>Discount</td>
-              <td>-----</td>
-            </tr>
-            <tr>
-              <td>Delivery Charges</td>
-              <td>100.00</td>
-            </tr>
+
             <tr style="border-top: 1px solid #333">
               <td><h5>TOTAL</h5></td>
-              <td>400.00</td>
+              <td id="div"></td>
             </tr>
           </table>
           <center><a href="#" class="btn btn-1">Checkout</a></center>
@@ -303,5 +296,40 @@
     </div>
   </div>
 </footer>
+<input type="hidden" id="user" value="${user.username}">
+<script>
+function b(count,pid){
+  var counts=$("#"+count).val();
+  $.ajax({
+    url:'updateShppingItem?id='+pid+"&counts="+counts,
+    type:"post",
+
+  })
+  setTimeout(c(),500);
+}
+$(function () {
+  c();
+
+});
+  function c(){
+    var username=$('#user').val();
+    $.ajax({
+      url:'showShoppingItemsAjax?username='+username,
+      type:'post',
+      success:function(data){
+        var e=eval(data);
+        var total=0;
+        for(var i=0;i< e.length;i++){
+          total=Number(e[i].tb_product.price)*Number(e[i].counts)+total;
+        }
+        $('#total').val(total);
+        document.getElementById("total").innerHTML=total+"元";
+        document.getElementById("div").innerHTML=total+"元";
+      }
+    })
+  }
+
+</script>
+
 </body>
 </html>
