@@ -4,18 +4,16 @@ package com.k12.domain;
  * Created by LB on 2017/9/12.
  */
 public class Tb_Fiction {
-    private String id;
+    private Long id;
     private String title;//小说卷宗
     private String content;
-    private String url;
-    private String nextUrl;
-    private String headline;//小说标题
+    private Tb_Headline headline;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -35,39 +33,11 @@ public class Tb_Fiction {
         this.content = content;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getNextUrl() {
-        return nextUrl;
-    }
-
-    public void setNextUrl(String nextUrl) {
-        this.nextUrl = nextUrl;
-    }
-
-    public String getHeadline() {
+    public Tb_Headline getHeadline() {
         return headline;
     }
 
-    public void setHeadline(String headline) {
+    public void setHeadline(Tb_Headline headline) {
         this.headline = headline;
-    }
-
-    @Override
-    public String toString() {
-        return "Tb_Fiction{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", url='" + url + '\'' +
-                ", nextUrl='" + nextUrl + '\'' +
-                ", headline='" + headline + '\'' +
-                '}';
     }
 }

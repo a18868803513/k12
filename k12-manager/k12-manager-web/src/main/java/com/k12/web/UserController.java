@@ -27,9 +27,6 @@ public class UserController {
             }
         }
             return jn+".jsp";
-
-
-
     }
 
   /*  @RequestMapping(value = "login/{username}/{password}",method = RequestMethod.GET)

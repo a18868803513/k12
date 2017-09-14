@@ -1,6 +1,9 @@
 package com.k12.dao;
 
 import com.k12.domain.Tb_Fiction;
+import com.k12.domain.Tb_Headline;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -11,14 +14,23 @@ import java.util.List;
  */
 public interface FictionDao {
 
-    @Select("select * from tb_fiction")
+    @Select("select f.*,c.* from tb_fiction f left join tb_headline h on f.hid=h.id")
+    @Results({
+    @Result(id = true, property = "id", column = "id") ,
+    @Result(property = "title", column = "title") ,
+    @Result(property = "content", column = "content") ,
+    @Result(property = "headline.id", column = "h.id") ,
+    @Result(property = "headline.novelTitle", column = "novelTitle") ,
+    })
      List<Tb_Fiction> queryAll();
-    //通过标题查询
-    @Select("select * from tb_fiction where headline =#{headline}")
-    Tb_Fiction selectByName(String headline);
-    //查出题目
-    @Select("select * from tb_fiction where title =#{title}")
-    Tb_Fiction selectTitle(String title);
+    //通过小说题目查询
+    @Select("select * from tb_fiction where hid =#{headline.id}")
+    List<Tb_Fiction> selectByHid(int id);
+
+    //查询出所有小说标题
+     @Select("select * from tb_headline")
+      List<Tb_Headline> selectAllHeadLine();
+
 
 
 

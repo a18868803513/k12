@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>小说网</title>
+    <title>小说列表</title>
     <style type="text/css">
         #first {
             list-style-type: none;
@@ -16,11 +16,11 @@
 </head>
 <body>
 <div>
-    <h2>章节介绍</h2>
+    <h2>小说区</h2>
     <ul id="first">
-    <#list fictionlist as n>
-        <li><a href="xxxx${n.id}"><span>${ n.title}</span></a></li>
-    </#list>
+        <#list noveTitles as t>
+            <li><a href="yyyy${t.id}"><span>${t.novelTitle}</span></a></li>
+        </#list>
     </ul>
 </div>
 </body>

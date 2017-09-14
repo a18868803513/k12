@@ -1,6 +1,7 @@
 package com.k12.service;
 
 import com.k12.domain.Tb_Fiction;
+import com.k12.domain.Tb_Headline;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
 public interface FictionService  {
     List<Tb_Fiction> queryAll();
 
-    Tb_Fiction selectByHeadline(String headline);
+   List <Tb_Fiction> queryByHid(int id );
 
-    Tb_Fiction selectByTitle(String title);
+    List<Tb_Headline> listHeadLine();
 }
