@@ -77,7 +77,7 @@
       </form>
     </div>
     <div class="col-md-4">
-      <div id="cart"><a class="btn btn-1" href="cart"><span class="glyphicon glyphicon-shopping-cart"></span>CART : 0 ITEM</a></div>
+      <div id="cart"><a class="btn btn-1" href="showShoppingItems"><span class="glyphicon glyphicon-shopping-cart"></span>CART</a></div>
     </div>
   </div>
 </header>

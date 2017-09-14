@@ -43,7 +43,7 @@
       </c:choose>
 
       <li>
-        <a href="cart">购物车</a>
+        <a href="showShoppingItems">购物车</a>
       </li>
 
     </ul>
