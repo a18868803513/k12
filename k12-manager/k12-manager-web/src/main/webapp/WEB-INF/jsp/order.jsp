@@ -76,7 +76,7 @@
       </form>
     </div>
     <div class="col-md-4">
-      <div id="cart"><a class="btn btn-1" href="showShoppingItems"><span class="glyphicon glyphicon-shopping-cart"></span>ITEM</a></div>
+      <div id="cart"><a class="btn btn-1" href="order"><span class="glyphicon glyphicon-shopping-cart"></span>ITEM</a></div>
     </div>
   </div>
 </header>
@@ -154,6 +154,7 @@
         <ul class="breadcrumb">
           <li><a href="product-user-list">商城主页</a></li>
           <li><a href="cart">购物车</a></li>
+          <li><a href="order">订单详情</a></li>
         </ul>
       </div>
     </div>

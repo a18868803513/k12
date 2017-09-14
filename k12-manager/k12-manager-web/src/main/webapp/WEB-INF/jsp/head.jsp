@@ -42,6 +42,9 @@
       <li>
         <a href="showShoppingItems">购物车</a>
       </li>
+      <li>
+        <a href="order-list">我的订单</a>
+      </li>
 
     </ul>
   </div>
