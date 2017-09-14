@@ -12,7 +12,7 @@
     <!--[if IE]>
     <script src="js/html5.js"></script>
     <![endif]-->
-    <script>
+   <%-- <script>
         //Register
         function b(){
             location.href="register";
@@ -29,7 +29,7 @@
             }
         }*/
 
-    </script>
+    </script>--%>
 </head>
 <body>
 <div class="container demo-1">

@@ -44,9 +44,9 @@
           <li>
             <a href="cart" style="color: #a63d56;text-decoration: underline" >购物车</a>
           </li>
-          <li>
+         <%-- <li>
             <a onclick="javascript:return out()" href="signout" style="color: red;text-decoration: underline" >注销</a>
-          </li>
+          </li>--%>
         </c:when>
         <c:otherwise>
           <li>

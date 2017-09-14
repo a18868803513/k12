@@ -92,9 +92,9 @@ public class UserLoginController {
        /* response.getWriter().write("修改个人信息失败!");*/
     }
 }
-    @RequestMapping("/signout")
+  /*  @RequestMapping("/signout")
     public String signout(HttpServletRequest request){
          request.getSession().removeAttribute("user");
         return "login";
-    }
+    }*/
 }
