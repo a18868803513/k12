@@ -25,9 +25,11 @@ public class RevesionServiceImpl implements ReversionService {
     }
 
     @Override
-    public List<Tb_Reversion> queryRevesionById(int id) {
-        return dao.queryRevesionById(id);
+    public List<Tb_Reversion> queryReversionById(int id) {
+        return dao.queryReversionById(id);
     }
+
+
 
 
 }

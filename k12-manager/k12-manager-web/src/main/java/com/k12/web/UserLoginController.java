@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -77,6 +78,11 @@ public class UserLoginController {
         }else{
             response.getWriter().write("修改失败!");
         }
+    }
+    @RequestMapping("/quit")
+    public String quit(HttpSession session){
+        session.removeAttribute("user");
+        return "index";
     }
 
 

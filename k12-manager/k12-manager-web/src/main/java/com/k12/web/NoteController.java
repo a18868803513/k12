@@ -21,20 +21,23 @@ public class NoteController {
     @Autowired
     ReversionService reversionService;
     @RequestMapping("addNote")
-    public void test1(Tb_Note note) throws UnsupportedEncodingException {
-         note.setContent(new String(note.getContent().getBytes("ISO8859_1"),"utf-8"));
+    public String test1(Tb_Note note,Model model) throws UnsupportedEncodingException {
+        note.setContent(new String(note.getContent().getBytes("ISO8859_1"),"utf-8"));
         note.setTitle(new String(note.getTitle().getBytes("ISO8859_1"),"utf-8"));
         service.addNote(note);
+        model.addAttribute("note",service.queryAll());
+        return "note";
     }
     @RequestMapping("queryAll")
     public String test2(Model model){
         model.addAttribute("note",service.queryAll());
-        return "aaaa";
+        return "note";
     }
     @RequestMapping("queryNoteById")
-    public String test3(int NoteID,Model model){
-        model.addAttribute("note",service.queryById(NoteID));
-        model.addAttribute("revesion",reversionService.queryRevesionById(NoteID));
-        return "b";
+    public String test3(int noteID,Model model){
+        model.addAttribute("note",service.queryById(noteID));
+        model.addAttribute("reversion",reversionService.queryReversionById(noteID));
+        System.out.println(service.queryById(noteID));
+        return "reversion";
     }
 }

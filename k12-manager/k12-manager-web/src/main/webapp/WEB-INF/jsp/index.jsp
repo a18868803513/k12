@@ -1,4 +1,4 @@
-
+<%@ page import="com.k12.web.OnlineListener" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -31,6 +31,10 @@
   <div class="row clearfix">
     <div class="col-md-12 column">
       <%@include file="head.jsp"%>
+      <%
+        int count= OnlineListener.getCount();
+        out.print("在线人数为："+count);
+      %>
       <div id="h1" class="jumbotron" style="background: url(images/cc.jpg)">
         <h1>
           欢迎来到万峰教育中心
@@ -126,6 +130,13 @@
             <ul class="nav navbar-nav navbar-left">
               <li>
                 <a href="queryAll">师生问答</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 column">
+            <ul class="nav navbar-nav navbar-left">
+              <li>
+                <a href="http://localhost:5080/oflaDemo/zb.html">讲师直播</a>
               </li>
             </ul>
           </div>
