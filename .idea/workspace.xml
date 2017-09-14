@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d2f26a2-4c27-46cd-a204-058dc6e95db0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/OrderController.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/OrderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-dao/src/main/java/com/k12/dao/OrderDao.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-dao/src/main/java/com/k12/dao/OrderDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-service/src/main/java/com/k12/service/OrderService.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-service/src/main/java/com/k12/service/OrderService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/src/main/java/com/k12/service/impl/OrderServiceImpl.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/src/main/java/com/k12/service/impl/OrderServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/ShoppingCarController.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/ShoppingCarController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-domain/src/main/java/com/k12/domain/Tb_Order.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-domain/src/main/java/com/k12/domain/Tb_Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-domain/src/main/java/com/k12/domain/Tb_OrderItems.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-domain/src/main/java/com/k12/domain/Tb_OrderItems.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-domain/src/main/java/com/k12/domain/Tb_User.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-domain/src/main/java/com/k12/domain/Tb_User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/cart.jsp" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/cart.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/head.jsp" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/order-list.jsp" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/order-list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/order.jsp" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/order.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="K12.iws" />
@@ -1270,7 +1258,7 @@
       <workItem from="1505375591622" duration="3901000" />
       <workItem from="1505379521406" duration="360000" />
       <workItem from="1505379904273" duration="518000" />
-      <workItem from="1505380448996" duration="20309000" />
+      <workItem from="1505380448996" duration="20397000" />
     </task>
     <task id="LOCAL-00001" summary="日常商城小更新">
       <created>1505121192617</created>
@@ -1386,11 +1374,17 @@
       <option name="project" value="LOCAL" />
       <updated>1505379984839</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="实现订单的功能">
+      <created>1505402319074</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1505402319074</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108590000" />
+    <option name="totallyTimeSpent" value="108678000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1407,11 +1401,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874355" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874355" sideWeight="0.4969651" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6574871" sideWeight="0.5121396" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27921093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27921093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6574871" sideWeight="0.48786038" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3958692" sideWeight="0.4848255" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15662651" sideWeight="0.4969651" order="13" side_tool="false" content_ui="tabs" />
@@ -1429,7 +1424,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874355" sideWeight="0.4969651" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1483,7 +1477,8 @@
     <MESSAGE value="商品添加到购物车" />
     <MESSAGE value="商品购买，到购物车流程完成。" />
     <MESSAGE value="添加订单详情，订单条目页面，head里面添加了订单连接。" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加订单详情，订单条目页面，head里面添加了订单连接。" />
+    <MESSAGE value="实现订单的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现订单的功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
