@@ -3,6 +3,7 @@ package com.k12.domain;
 /**小说的实体类
  * Created by LB on 2017/9/12.
  */
+
 public class Tb_Fiction {
     private Long id;
     private String title;//小说卷宗
