@@ -202,7 +202,7 @@
                 </select>
               </div>--%>
               <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
-              <div class="well"><label>购买数量: </label> <input class="form-inline quantity" type="text" value="1"><a href="#" class="btn btn-2 ">购买</a></div>
+              <div class="well"><label>购买数量: </label> <input class="form-inline quantity" type="text" id="counts" value="1"><a onclick="a()"   class="btn btn-2 ">购买</a></div>
               <div class="share well">
                 <strong style="margin-right: 13px;">Share :</strong>
                 <a href="#" class="share-btn" target="_blank">
@@ -459,8 +459,13 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
+<input  type="hidden" id="oneProduct" value="${oneProduct.id}"/>
 <script>
+  function a(){
+    var counts=$('#counts').val();
+    var oneProduct=$('#oneProduct').val();
+    location.href="addShoppingItem?counts="+counts+"&id="+oneProduct;
+  }
   $(document).ready(function(){
     $(".nav-tabs a").click(function(){
       $(this).tab('show');

@@ -4,7 +4,9 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/Test.jsp" value="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/dfsdf.jsp" value="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/play-video.jsp" value="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp" />
+        <entry key="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/qb-user-index.jsp" value="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/video-index-list.jsp" value="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp" />
       </map>
     </option>

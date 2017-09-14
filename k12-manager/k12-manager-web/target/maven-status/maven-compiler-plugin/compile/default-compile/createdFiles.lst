@@ -9,3 +9,5 @@ com\k12\web\CourseController.class
 com\k12\web\LoginInterceptor.class
 com\k12\web\TestPaperController.class
 com\k12\web\VideoController.class
+com\k12\web\ShoppingCarController.class
+com\k12\web\OnlineListener.class

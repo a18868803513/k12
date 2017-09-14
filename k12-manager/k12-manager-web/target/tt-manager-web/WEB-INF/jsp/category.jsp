@@ -178,7 +178,7 @@
                   </div>
                   <div class="caption">
                     <div class="name"><h3><a href="oneProduct?id=${v.id}">${v.name}</a></h3></div>
-                    <div class="price">${v.price}</div>
+                    <div class="price">${v.price}元</div>
                     <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
                   </div>
                 </div>

@@ -28,6 +28,9 @@
           <li>
             <a href="useredit">${user.username}</a>
           </li>
+          <li>
+            <a href="quit">注销</a>
+          </li>
         </c:when>
         <c:otherwise>
           <li>
