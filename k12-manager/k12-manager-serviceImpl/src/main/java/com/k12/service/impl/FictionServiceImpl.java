@@ -2,7 +2,6 @@ package com.k12.service.impl;
 
 import com.k12.dao.FictionDao;
 import com.k12.domain.Tb_Fiction;
-import com.k12.domain.Tb_Headline;
 import com.k12.service.FictionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,6 @@
 package com.k12.web;
 
 import com.k12.domain.Tb_Fiction;
-import com.k12.domain.Tb_Headline;
 import com.k12.service.FictionService;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
