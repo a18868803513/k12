@@ -20,7 +20,8 @@ public class UserController {
     }
     @RequestMapping("/{jn}")
     public String t1(@PathVariable String jn){
-            String[] arr={"xxxx","fic"};
+        System.out.println(jn);
+            String[] arr={"xxxx","fic","yyyy"};
         for(int i=0;i<arr.length;i++){
             if (jn.contains(arr[i])){
                 return "/fiction/"+jn+".html";

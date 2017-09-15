@@ -19,7 +19,7 @@
     <h2>章节介绍</h2>
     <ul id="first">
     <#list fictionlist as n>
-        <li><a href="xxxx${n.id}"><span>${ n.title}</span></a></li>
+        <li><a href="xxxx${n.id}"><span>${n.title}</span></a></li>
     </#list>
     </ul>
 </div>

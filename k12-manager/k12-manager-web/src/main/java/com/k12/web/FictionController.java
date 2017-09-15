@@ -44,27 +44,31 @@ public class FictionController {
         map.put("noveTitles", list);
         Template template = config.getTemplate("noveTitle_list.ftl");
         Writer writer = new OutputStreamWriter(new FileOutputStream(
-                new File(request.getServletContext().getRealPath("/"), "WEB-INF/jsp/fiction/noveTitle.html")));
+                new File(request.getServletContext().getRealPath("/"), "WEB-INF/jsp/fiction/ficnoveTitle.html")));
         System.out.println("路径====" + request.getServletContext().getRealPath("/"));
         template.process(map, writer);
         writer.close();
         map.clear();
+
         for (int i = 0; i < list.size(); i++) {
             int id = list.get(i).getId();
             //得到某部小说整个卷宗
             List<Tb_Fiction> fictions = fictionService.queryByHid(id);
             System.out.println(fictions);
-            map.put("fictionlist", fictions);
-            template = config.getTemplate("fictionTitle_list.ftl");
-            writer = new OutputStreamWriter(new FileOutputStream(
-                    new File(request.getServletContext().getRealPath("/"), "WEB-INF/jsp/fiction/fictionTitle.html")));
-            System.out.println("路径====" + request.getServletContext().getRealPath("/"));
-            template.process(map, writer);
-            writer.close();
-            map.clear();
 
-            template = config.getTemplate("fictioncon_list.ftl");
+            template = config.getTemplate("fictionTitle_list.ftl");
             for (Tb_Fiction fic : fictions) {
+             /* Document doc1 = Jsoup.parse(fic.getTitle());
+              fic.setTitle(doc1.html());*/
+                map.put("fictionlist", fictions);
+                writer = new OutputStreamWriter(new FileOutputStream(
+                        new File(request.getServletContext().getRealPath("/"), "WEB-INF/jsp/fiction/" + "yyyy" + fic.getId() + ".html")));
+                System.out.println("路径====" + request.getServletContext().getRealPath("/"));
+                template.process(map, writer);
+                writer.close();
+                map.clear();
+
+                template = config.getTemplate("fictioncon_list.ftl");
                 Document doc = Jsoup.parse(fic.getContent());
                 fic.setContent(doc.html());
                 map.put("fic", fic);
@@ -74,10 +78,8 @@ public class FictionController {
                 template.process(map, writer);
                 writer.close();
             }
-
         }
-        return "headLine.html";
-
+        return "HeadLine.html";
     }
 }
 
