@@ -13,6 +13,7 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
@@ -84,6 +85,8 @@
       </profile-state>
     </entry>
   </component>
+=======
+>>>>>>> 875e26a9e6402ff3bb7cd6b3d4ae7fcd90bb211c
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -94,7 +97,11 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+=======
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+>>>>>>> 875e26a9e6402ff3bb7cd6b3d4ae7fcd90bb211c
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

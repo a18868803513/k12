@@ -1,5 +1,7 @@
 package com.k12.domain;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2017/9/1/001.
  */
@@ -14,6 +16,15 @@ public class Tb_User {
     private String registertime;
     private String lastlogintime;
     private Tb_ShoppingCar shoppingCar;
+    private List<Tb_Order> tb_orders;
+
+    public List<Tb_Order> getTb_orders() {
+        return tb_orders;
+    }
+
+    public void setTb_orders(List<Tb_Order> tb_orders) {
+        this.tb_orders = tb_orders;
+    }
 
     public Tb_ShoppingCar getShoppingCar() {
         return shoppingCar;

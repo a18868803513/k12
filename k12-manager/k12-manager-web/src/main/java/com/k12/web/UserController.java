@@ -1,11 +1,11 @@
 package com.k12.web;
 
+
 import com.k12.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 
 /**
  * Created by Administrator on 2017/9/1/001.
@@ -28,6 +28,10 @@ public class UserController {
             }
         }
             return jn+".jsp";
+
+
+
+
     }
 
   /*  @RequestMapping(value = "login/{username}/{password}",method = RequestMethod.GET)

@@ -8,12 +8,16 @@
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web" charset="UTF-8" />
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 875e26a9e6402ff3bb7cd6b3d4ae7fcd90bb211c
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/css/css.css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/css/ligerui-dialog.css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/css/ligerui-icons.css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/css/pager.css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/dist" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/images/1.jpg" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/images/2.jpg" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/images/3.jpg" charset="GBK" />
@@ -25,10 +29,15 @@
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/images/wbk.jpg" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/js/jquery.idcode.js" charset="UTF-8" />
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/video/css" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/video/fonts" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/video/images" charset="GBK" />
     <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/video/js" charset="GBK" />
+=======
+    <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/my_video/1.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/src" charset="GBK" />
+>>>>>>> 875e26a9e6402ff3bb7cd6b3d4ae7fcd90bb211c
     <file url="file://$PROJECT_DIR$/k12-parent" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
