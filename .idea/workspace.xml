@@ -86,7 +86,7 @@
       <file leaf-file-name="spring-jedis.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/spring/spring-jedis.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7159664">
+            <state vertical-scroll-proportion="0.9861111">
               <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
@@ -673,6 +673,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -683,7 +684,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Production">
@@ -706,7 +706,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1179,13 +1179,8 @@
       <workItem from="1505352407251" duration="4447000" />
       <workItem from="1505357596748" duration="11126000" />
       <workItem from="1505443198865" duration="7649000" />
-      <workItem from="1505472191868" duration="66000" />
-    </task>
-    <task id="LOCAL-00018" summary="修改查询的方法，增加删除">
-      <created>1504591391219</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1504591391219</updated>
+      <workItem from="1505472191868" duration="154000" />
+      <workItem from="1505472367806" duration="16000" />
     </task>
     <task id="LOCAL-00019" summary="排序">
       <created>1504611688217</created>
@@ -1475,11 +1470,17 @@
       <option name="project" value="LOCAL" />
       <updated>1505471997689</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="增加用户退出功能，统计网站在线人数功能。">
+      <created>1505472272002</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1505472272003</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299292000" />
+    <option name="totallyTimeSpent" value="299396000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1498,7 +1499,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08895706" sideWeight="0.4854962" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2929448" sideWeight="0.5257186" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2929448" sideWeight="0.5257186" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28971255" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19478528" sideWeight="0.47806355" order="4" side_tool="false" content_ui="tabs" />
@@ -1966,7 +1967,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/spring/spring-jedis.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7159664">
+        <state vertical-scroll-proportion="0.9861111">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
