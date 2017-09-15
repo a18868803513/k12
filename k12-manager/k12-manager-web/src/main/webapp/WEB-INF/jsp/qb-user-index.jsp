@@ -18,6 +18,7 @@
 <!-- jquery easyui -->
 <script src="js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
 <script src="js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
+<script src="js/countDown.js"></script>
 <html>
 <head>
     <title></title>
@@ -25,7 +26,8 @@
 <div class="container">
   <div class="row clearfix">
     <div class="col-md-12 column">
-      <%@include file="head.jsp"%>
+
+    <%--  <%@include file="head.jsp"%>--%>
       <div class="page-header">
         <h1>
           在线题库 <small>Subtext for header</small>
@@ -128,15 +130,15 @@
     })
   }
   $('#cc').combobox({
-    url: 'gradeList',
-    valueField: 'id',
-    textField: 'grade'
+    url:'gradeList',
+    valueField:'id',
+    textField:'grade'
   });
 
   $('#dd').combobox({
-    url: 'courseList',
-    valueField: 'id',
-    textField: 'course'
+    url:'courseList',
+    valueField:'id',
+    textField:'course'
   });
 
 

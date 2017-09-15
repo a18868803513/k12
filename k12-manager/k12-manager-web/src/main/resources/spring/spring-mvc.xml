@@ -13,28 +13,22 @@
         ">
 
     <context:component-scan base-package="com.k12.web"/>
-
     <mvc:annotation-driven/>
+    <mvc:default-servlet-handler/>
+
 
     <!--视图解析器-->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+ <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
-        <property name="suffix" value=".jsp"/>
+       <!-- <property name="suffix" value=".jsp"/>-->
     </bean>
 
     <!--文件上传解析器-->
     <bean id="multipartResolver"
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <property name="defaultEncoding">
-            <value>UTF-8</value>
-        </property>
-        <property name="maxUploadSize">
-            <!-- 10M -->
-            <value>1048576000</value>
-        </property>
-        <property name="maxInMemorySize">
-            <value>4096</value>
-        </property>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSize" value="1048576000"/>
+        <property name="maxInMemorySize" value="4096"/>
     </bean>
 
     <!--静态资源解析-->
@@ -43,15 +37,14 @@
     <mvc:resources mapping="/images/**" location="/images/"/>
     <mvc:resources mapping="/my_video/**" location="/my_video/"/>
     <mvc:resources mapping="/fonts/**" location="/fonts/"/>
-
     <mvc:resources mapping="/video/**" location="/video/"/>
     <mvc:resources mapping="/font-awesome/**" location="/font-awesome/"/>
-
-    <mvc:resources mapping="/font-awesome/**" location="/font-awesome/"/>
+    <mvc:resources mapping="/dist/**" location="/dist/"/>
+    <mvc:resources mapping="/src/**" location="/src/"/>
     <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/*"/>
-            <bean class="com.k12.web.LoginInterceptor"></bean>
+            <bean class="com.k12.web.LoginInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 

@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface ReversionService {
     void addReversion(Tb_Reversion reversion);
-    List<Tb_Reversion> queryRevesionById(int id);
+    List<Tb_Reversion> queryReversionById(int id);
 }

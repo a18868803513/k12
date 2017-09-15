@@ -4,7 +4,7 @@ package com.k12.domain;
  * Created by Administrator on 2017/9/12/012.
  */
 public class Tb_Reversion {
-    private int NodeID;
+    private int noteID;
     private Tb_User user;
     private String content;
     private int floor;
@@ -33,14 +33,11 @@ public class Tb_Reversion {
         this.floor = floor;
     }
 
-    public int getNodeID() {
-
-        return NodeID;
+    public int getNoteID() {
+        return noteID;
     }
 
-    public void setNodeID(int nodeID) {
-        NodeID = nodeID;
+    public void setNoteID(int noteID) {
+        this.noteID = noteID;
     }
-
-
 }

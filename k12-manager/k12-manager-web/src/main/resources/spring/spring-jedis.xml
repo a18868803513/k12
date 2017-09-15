@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/mvc
+            http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        ">
+
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <!-- 鏈�澶ц繛鎺ユ暟 -->
+        <property name="maxTotal" value="30"/>
+        <!-- 鏈�澶х┖闂茶繛鎺ユ暟 -->
+        <property name="maxIdle" value="10"/>
+        <!-- 姣忔閲婃斁杩炴帴鐨勬渶澶ф暟鐩� -->
+        <property name="numTestsPerEvictionRun" value="1024"/>
+        <!-- 閲婃斁杩炴帴鐨勬壂鎻忛棿闅旓紙姣锛� -->
+        <property name="timeBetweenEvictionRunsMillis" value="30000"/>
+        <!-- 杩炴帴鏈�灏忕┖闂叉椂闂� -->
+        <property name="minEvictableIdleTimeMillis" value="1800000"/>
+        <!-- 杩炴帴绌洪棽澶氫箙鍚庨噴鏀�, 褰撶┖闂叉椂闂�>璇ュ�� 涓� 绌洪棽杩炴帴>鏈�澶х┖闂茶繛鎺ユ暟 鏃剁洿鎺ラ噴鏀� -->
+        <property name="softMinEvictableIdleTimeMillis" value="10000"/>
+        <!-- 鑾峰彇杩炴帴鏃剁殑鏈�澶х瓑寰呮绉掓暟,灏忎簬闆�:闃诲涓嶇‘瀹氱殑鏃堕棿,榛樿-1 -->
+        <property name="maxWaitMillis" value="1500"/>
+        <!-- 鍦ㄨ幏鍙栬繛鎺ョ殑鏃跺�欐鏌ユ湁鏁堟��, 榛樿false -->
+        <property name="testOnBorrow" value="true"/>
+        <!-- 鍦ㄧ┖闂叉椂妫�鏌ユ湁鏁堟��, 榛樿false -->
+        <property name="testWhileIdle" value="true"/>
+        <!-- 杩炴帴鑰楀敖鏃舵槸鍚﹂樆濉�, false鎶ュ紓甯�,ture闃诲鐩村埌瓒呮椂, 榛樿true -->
+        <property name="blockWhenExhausted" value="false"/>
+    </bean>
+
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
+        <constructor-arg name="host" value="10.31.152.34"/>
+        <constructor-arg name="port" value="6379"/>
+    </bean>
+
+    <bean id="jedisClientPool" class="com.k12.utils.JedisClientPool">
+        <property name="jedisPool" ref="jedisPool"/>
+    </bean>
+
+
+
+
+
+
+
+</beans>

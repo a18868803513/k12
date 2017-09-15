@@ -1,5 +1,6 @@
 package com.k12.web;
 
+
 import com.k12.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,11 +16,22 @@ public class UserController {
     UserService userService;
     @RequestMapping("/")
     public String t(){
-        return "index";
+        return "index.jsp";
     }
     @RequestMapping("/{jn}")
     public String t1(@PathVariable String jn){
-        return jn;
+        System.out.println(jn);
+            String[] arr={"xxxx","fic","yyyy"};
+        for(int i=0;i<arr.length;i++){
+            if (jn.contains(arr[i])){
+                return "/fiction/"+jn+".html";
+            }
+        }
+            return jn+".jsp";
+
+
+
+
     }
 
   /*  @RequestMapping(value = "login/{username}/{password}",method = RequestMethod.GET)

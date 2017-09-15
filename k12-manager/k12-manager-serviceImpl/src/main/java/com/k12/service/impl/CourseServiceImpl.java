@@ -21,6 +21,7 @@ public class CourseServiceImpl implements CourseService {
     CourseDao courseDao;
     @Override
     public Tb_Course selectByName(String course) {
+        "abc".substring(0);
         return courseDao.selectByName(course);
     }
 
