@@ -133,6 +133,13 @@
               </li>
             </ul>
           </div>
+          <div class="col-md-2 column">
+            <ul class="nav navbar-nav navbar-left">
+              <li>
+                <a href="http://10.31.152.34:5080/oflaDemo/zb.html">讲师直播</a>
+              </li>
+            </ul>
+          </div>
 
         </div>
         </div>

@@ -102,14 +102,7 @@
     })
 
   })
-  $(".count_down").countDown({
-    startTimeStr: '2017/01/11 00:00:00',//开始时间
-    endTimeStr: '2017/01/17 23:59:59',//结束时间
-    daySelector: ".day_num",
-    hourSelector: ".hour_num",
-    minSelector: ".min_num",
-    secSelector: ".sec_num"
-  });
+
   function submit(length){
     for(var i=0;i<length;i++){
       anArr.push($("#a"+i).val());
