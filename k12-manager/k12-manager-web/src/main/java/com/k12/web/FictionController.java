@@ -30,7 +30,6 @@ import java.util.Map;
 public class FictionController {
     @Autowired
     private FictionService fictionService;
-
     @RequestMapping("/showFiction")
     //@ResponseBody
     public String test1(HttpServletRequest request) throws Exception {
@@ -63,14 +62,13 @@ public class FictionController {
                 map.put("fictionlist", fictions);
                 writer = new OutputStreamWriter(new FileOutputStream(
                         new File(request.getServletContext().getRealPath("/"), "WEB-INF/jsp/fiction/" + "yyyy" + fic.getId() + ".html")));
-                System.out.println("路径====" + request.getServletContext().getRealPath("/"));
                 template.process(map, writer);
                 writer.close();
                 map.clear();
-
                 template = config.getTemplate("fictioncon_list.ftl");
                 Document doc = Jsoup.parse(fic.getContent());
                 fic.setContent(doc.html());
+                System.out.println(fic.getContent());
                 map.put("fic", fic);
                 writer = new OutputStreamWriter(new FileOutputStream(
                         //request.getServletContext().getRealPath("/")获得本工程的路径

@@ -24,7 +24,7 @@ public interface FictionDao {
     })
      List<Tb_Fiction> queryAll();
     //通过小说题目查询
-    @Select("select * from tb_fiction where hid =#{headline.id}")
+    @Select("select * from tb_fiction where hid =#{id}")
     List<Tb_Fiction> selectByHid(int id);
 
     //查询出所有小说标题
