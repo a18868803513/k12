@@ -2,59 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c13535a6-69aa-4266-85c8-4ec7955a929e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-common/src/main/java/com/k12/utils/JedisClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-common/src/main/java/com/k12/utils/JedisClientCluster.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-common/src/main/java/com/k12/utils/JedisClientPool.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-common/src/main/java/com/k12/utils/JsonUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/spring/spring-jedis.xml" />
-      <change type="DELETED" beforePath="C:\project\K12\k12-manager\k12-manager-web\target\tomcat\logs\access_log.2017-09-13" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\K12\k12-manager\k12-manager-web\target\tomcat\work\Tomcat\localhost\k12\org\apache\jsp\WEB_002dINF\jsp\head_jsp.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\K12\k12-manager\k12-manager-web\target\tomcat\work\Tomcat\localhost\k12\org\apache\jsp\WEB_002dINF\jsp\head_jsp.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\K12\k12-manager\k12-manager-web\target\tomcat\work\Tomcat\localhost\k12\org\apache\jsp\WEB_002dINF\jsp\note_jsp.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\K12\k12-manager\k12-manager-web\target\tomcat\work\Tomcat\localhost\k12\org\apache\jsp\WEB_002dINF\jsp\note_jsp.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\K12\k12-manager\k12-manager-web\target\tomcat\work\Tomcat\localhost\k12\org\apache\jsp\WEB_002dINF\jsp\play_002dvideo_jsp.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\K12\k12-manager\k12-manager-web\target\tomcat\work\Tomcat\localhost\k12\org\apache\jsp\WEB_002dINF\jsp\play_002dvideo_jsp.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\K12\k12-manager\k12-manager-web\target\tomcat\work\Tomcat\localhost\k12\org\apache\jsp\WEB_002dINF\jsp\video_002dindex_jsp.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\project\K12\k12-manager\k12-manager-web\target\tomcat\work\Tomcat\localhost\k12\org\apache\jsp\WEB_002dINF\jsp\video_002dindex_jsp.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/target/classes/com/k12/service/impl/GradeServiceImpl.class" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/target/classes/com/k12/service/impl/GradeServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tomcat/work/Tomcat/localhost/k12/org/apache/jsp/WEB_002dINF/jsp/index_jsp.class" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tomcat/work/Tomcat/localhost/k12/org/apache/jsp/WEB_002dINF/jsp/index_jsp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-common-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-common-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-common/target/k12-common.jar" afterPath="$PROJECT_DIR$/k12-common/target/k12-common.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-manager-dao-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-manager-dao-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-dao/target/k12-manager-dao.jar" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-dao/target/k12-manager-dao.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-manager-domain-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-manager-domain-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-domain/target/k12-manager-domain.jar" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-domain/target/k12-manager-domain.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-manager-service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-manager-service-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-service/target/k12-manager-service.jar" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-service/target/k12-manager-service.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-manager-serviceImpl-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/lib/k12-manager-serviceImpl-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/target/k12-manager-serviceImpl.jar" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/target/k12-manager-serviceImpl.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web.war" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/src/main/java/com/k12/service/impl/GradeServiceImpl.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/src/main/java/com/k12/service/impl/GradeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/k12-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tomcat/work/Tomcat/localhost/k12/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tomcat/work/Tomcat/localhost/k12/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/k12-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-common/k12-common.iml" afterPath="$PROJECT_DIR$/k12-common/k12-common.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-dao/k12-manager-dao.iml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-dao/k12-manager-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-domain/k12-manager-domain.iml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-domain/k12-manager-domain.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-service/k12-manager-service.iml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-service/k12-manager-service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/k12-manager-serviceImpl.iml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/k12-manager-serviceImpl.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/k12-manager-web.iml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/k12-manager-web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager.iml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/k12_manager_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/k12_manager_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-common/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/k12-common/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-dao/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-dao/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-domain/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-domain/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-service/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-service/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-common/pom.xml" afterPath="$PROJECT_DIR$/k12-common/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/jsp/qb-user-index.jsp" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/target/tt-manager-web/WEB-INF/jsp/qb-user-index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9f99db48-e206-472d-be92-3eb79a53ac75" name="Failed commit: Default" comment="添加编辑功能" />
@@ -99,7 +46,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.645161">
+            <state vertical-scroll-proportion="0.0">
               <caret line="138" column="44" selection-start-line="138" selection-start-column="44" selection-end-line="138" selection-end-column="44" />
               <folding />
             </state>
@@ -119,7 +66,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/k12-parent/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5666666">
+            <state vertical-scroll-proportion="0.0">
               <caret line="39" column="14" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="14" />
               <folding />
             </state>
@@ -139,7 +86,7 @@
       <file leaf-file-name="spring-jedis.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/spring/spring-jedis.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6333333">
+            <state vertical-scroll-proportion="0.7159664">
               <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
@@ -426,26 +373,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Production">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -756,10 +683,30 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Production">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1231,13 +1178,8 @@
       <workItem from="1505292342250" duration="5677000" />
       <workItem from="1505352407251" duration="4447000" />
       <workItem from="1505357596748" duration="11126000" />
-      <workItem from="1505443198865" duration="7445000" />
-    </task>
-    <task id="LOCAL-00017" summary="修改查询的方法，增加删除">
-      <created>1504584138980</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1504584138980</updated>
+      <workItem from="1505443198865" duration="7649000" />
+      <workItem from="1505472191868" duration="66000" />
     </task>
     <task id="LOCAL-00018" summary="修改查询的方法，增加删除">
       <created>1504591391219</created>
@@ -1527,11 +1469,17 @@
       <option name="project" value="LOCAL" />
       <updated>1505379577499</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="增加用户退出功能，统计网站在线人数功能。">
+      <created>1505471997685</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1505471997689</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299022000" />
+    <option name="totallyTimeSpent" value="299292000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1544,7 +1492,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1554,24 +1502,24 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28971255" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19478528" sideWeight="0.47806355" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2684049" sideWeight="0.4742814" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.4969743" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.48789713" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2193646" sideWeight="0.83908045" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2193646" sideWeight="0.83908045" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23444612" sideWeight="0.16091955" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13464448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961832" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961832" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.49389312" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.48411497" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2684049" sideWeight="0.4742814" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6671875" sideWeight="0.24810892" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1658,7 +1606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1800327">
           <caret line="251" column="37" selection-start-line="251" selection-start-column="37" selection-end-line="251" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1736,9 +1683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51589245">
           <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1767,7 +1711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1872,7 +1815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.576244">
           <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1880,7 +1822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1895,7 +1836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1903,7 +1843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1911,7 +1850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1919,7 +1857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1927,7 +1864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="20" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1943,7 +1879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1951,13 +1886,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="92" column="74" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.645161">
+        <state vertical-scroll-proportion="0.0">
           <caret line="138" column="44" selection-start-line="138" selection-start-column="44" selection-end-line="138" selection-end-column="44" />
           <folding />
         </state>
@@ -1973,7 +1907,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/k12-parent/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5666666">
+        <state vertical-scroll-proportion="0.0">
           <caret line="39" column="14" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="14" />
           <folding />
         </state>
@@ -2015,7 +1949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8047619">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2033,7 +1966,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/spring/spring-jedis.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6333333">
+        <state vertical-scroll-proportion="0.7159664">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
