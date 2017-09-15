@@ -10,8 +10,7 @@
 <head>
     <meta charset="utf-8">
     <title>html5移动端单视频播放代码 - 站长素材</title>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport"content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <script src="video/js/jquery-1.8.3.min.js"></script>
 
     <link rel="stylesheet" href="video/css/zy.media.min.css">
@@ -24,6 +23,7 @@
             height: 150px;
             width: 300px;
             position: relative;
+            display: none;
         }
 
         .playvideo {
@@ -42,33 +42,33 @@
 
 <div class="playvideo">
     <div class="zy_media">
-        <%--<video poster="https://r1.ykimg.com/05420408584A363C6A0A47047DD24931" data-config='{"mediaTitle": "测试视频--视频"}'>
-            <source src="http://www.w3cschool.cc/try/demo_source/mov_bbb.mp4" type="video/mp4">
-            您的浏览器不支持HTML5视频
-        </video>--%>
-        <video src="my_video/${tb_video.url}#t=" controls height="400px" onclick="a()" id="aa" data-config='{"mediaTitle": "测试视频--视频"}'></video>
+            <video onclick="a()" id="aa"  width="120%" height="500" data-config='{"mediaTitle": "测试视频--视频"}' src="my_video/${tb_video.url}#t=" controls>
+            </video>
     </div>
     <div id="modelView">&nbsp;</div>
 </div>
 
 <script src="zy.media.min.js"></script>
 <script>
-    //document.documentElement.style.overflow='hidden';
     document.body.style.overflow = 'hidden';
     zymedia('video', {autoplay: true});
-    var screenheight = window.screen.height / 2;
+    var screenheight = window.screen.height /4;
     $("#modelView").width(window.screen.width);
     $("#modelView").height(window.screen.height);
-    var videoheight = $(".zy_media").height() / 2;
+    var videoheight = $(".zy_media").height() / 4;
     var padding_top = screenheight - videoheight;
     $(".playvideo").css({"top": padding_top});
     $("#modelView").css({"margin-top": -1 * (padding_top + $(".zy_media").height())});
+
+
+    function a() {
+        document.getElementById("aa").pause();
+        //document.getElementById("aa").palyer();
+    }
 </script>
 
-<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-<%--    <p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>--%>
 
-    <p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
-</div>
+
+
 </body>
 </html>

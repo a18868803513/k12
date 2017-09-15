@@ -11,5 +11,6 @@ com\k12\utils\JedisClientCluster.class
 com\k12\utils\JedisClientPool.class
 com\k12\utils\UpQb.class
 com\k12\utils\Page.class
+com\k12\utils\WebCrawlerDemo.class
 com\k12\utils\PageBean.class
 com\k12\utils\Article.class

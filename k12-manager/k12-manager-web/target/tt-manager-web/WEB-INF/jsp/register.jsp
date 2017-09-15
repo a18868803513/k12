@@ -140,7 +140,9 @@
     <div align="center" style="background-color: #cccccc;opacity: 0.6;margin-top:3%;width: 50%;height:620px;margin-left: 27%">
 
         <div style="height: 400px">
-            <table><tr style="height: 60px;><td align="center">
+            <table><tr style="height: 60px;>
+            <td align="center">
+
                 <font size="20px">K12注册</font>
                 </td></tr>
                 <tr style="height: 60px;">

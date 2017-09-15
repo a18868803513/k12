@@ -70,9 +70,12 @@ public class ShoppingCarController {
     }
 
     @RequestMapping("removeShoppingItem")
-    public String removeShoppingItem(Tb_Product tb_product) {
+    public String removeShoppingItem(Tb_Product tb_product,HttpServletRequest request,Model model) {
         shoppingCarService.deleteShoppingItem(tb_product);
-        return "showShoppingItems";
+        Tb_User user = (Tb_User) request.getSession().getAttribute("user");
+        List<Tb_ShoppingItems> list = shoppingCarService.selectAllItem(user.getUsername());
+        model.addAttribute("shoppingItem", list);
+        return "cart";
     }
 
     @RequestMapping("updateShppingItem")

@@ -7,13 +7,23 @@ import java.util.List;
  */
 public class Tb_Order {
     private int id;
-    private String username;
+    private String no;
+    private String receiverName;
     private int status;
     private String receiverAddress;
     private String receiverPhone;
-    private int money;
+    private double money;
     private String createTime;
+    private Tb_User tb_user;
     private List<Tb_OrderItems> tb_orderItemses;
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
 
     public int getId() {
         return id;
@@ -21,14 +31,6 @@ public class Tb_Order {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public int getStatus() {
@@ -55,11 +57,11 @@ public class Tb_Order {
         this.receiverPhone = receiverPhone;
     }
 
-    public int getMoney() {
+    public double getMoney() {
         return money;
     }
 
-    public void setMoney(int money) {
+    public void setMoney(double money) {
         this.money = money;
     }
 
@@ -79,16 +81,33 @@ public class Tb_Order {
         this.tb_orderItemses = tb_orderItemses;
     }
 
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
+    public Tb_User getTb_user() {
+        return tb_user;
+    }
+
+    public void setTb_user(Tb_User tb_user) {
+        this.tb_user = tb_user;
+    }
+
     @Override
     public String toString() {
         return "Tb_Order{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", receiverName='" + receiverName + '\'' +
                 ", status=" + status +
                 ", receiverAddress='" + receiverAddress + '\'' +
                 ", receiverPhone='" + receiverPhone + '\'' +
                 ", money=" + money +
                 ", createTime='" + createTime + '\'' +
+                ", tb_user=" + tb_user +
                 ", tb_orderItemses=" + tb_orderItemses +
                 '}';
     }

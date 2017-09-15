@@ -1,11 +1,13 @@
 com\k12\domain\Tb_Order.class
 com\k12\domain\Tb_User.class
+com\k12\domain\Tb_Headline.class
 com\k12\domain\Tb_ShoppingItems.class
 com\k12\domain\Tb_Course.class
 com\k12\domain\Tb_Video.class
 com\k12\domain\Tb_Note.class
 com\k12\domain\Tb_Grade.class
 com\k12\domain\Tb_Test.class
+com\k12\domain\Tb_Fiction.class
 com\k12\domain\Tb_OrderItems.class
 com\k12\domain\Tb_Product.class
 com\k12\domain\Tb_QusetionBase.class

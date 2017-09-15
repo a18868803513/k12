@@ -76,7 +76,7 @@
       </form>
     </div>
     <div class="col-md-4">
-      <div id="cart"><a class="btn btn-1" href="showShoppingItems"><span class="glyphicon glyphicon-shopping-cart"></span>ITEM</a></div>
+      <div id="cart"><a class="btn btn-1" href="addOrder"><span class="glyphicon glyphicon-shopping-cart"></span>ITEM</a></div>
     </div>
   </div>
 </header>
@@ -154,12 +154,13 @@
         <ul class="breadcrumb">
           <li><a href="product-user-list">商城主页</a></li>
           <li><a href="cart">购物车</a></li>
+          <li><a href="order">订单详情</a></li>
         </ul>
       </div>
     </div>
     <div class="row">
       <div class="product well">
-        <c:forEach items="${shoppingItem}" var="v" varStatus="vs">
+        <c:forEach items="${allItem}" var="v" varStatus="vs">
 
         <div class="col-md-3">
           <div class="image">
@@ -178,7 +179,7 @@
             <div class="price">${v.tb_product.price}元</div>
             <label>数量: </label> <input class="form-inline quantity" type="text" id="${vs.count}" value="${v.counts}"><a onclick="b(${vs.count},${v.tb_product.id})" class="btn btn-2 ">更新数量</a>
             <hr>
-            <a href="removeShoppingItem?id=${v.tb_product.id}" class="btn btn-default pull-right">移除</a>
+            <a href="removeOrderItem?id=${v.tb_product.id}" class="btn btn-default pull-right">移除</a>
           </div>
         </div>
         <div class="clear"></div>
@@ -211,11 +212,12 @@
         <div class="clear"></div>
       </div>
     </div>--%>
-    <div class="row">
+
+   <%-- <div class="row">
       <div class="col-md-4 col-md-offset-8 ">
         <center><a href="product-user-list" class="btn btn-1">继续购物</a></center>
       </div>
-    </div>
+    </div>--%>
     <div class="row">
       <div class="pricedetails">
         <div class="col-md-4 col-md-offset-8">
@@ -231,7 +233,7 @@
               <td id="div"></td>
             </tr>
           </table>
-          <center><a href="#" class="btn btn-1">Checkout</a></center>
+          <center><a href="#" class="btn btn-1">付款</a></center>
         </div>
       </div>
     </div>
