@@ -47,6 +47,8 @@
          <%-- <li>
             <a onclick="javascript:return out()" href="signout" style="color: red;text-decoration: underline" >注销</a>
           </li>--%>
+
+
         </c:when>
         <c:otherwise>
           <li>
