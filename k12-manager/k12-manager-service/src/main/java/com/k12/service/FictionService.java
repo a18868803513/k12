@@ -1,6 +1,7 @@
 package com.k12.service;
 
 import com.k12.domain.Tb_Fiction;
+import com.k12.domain.Tb_Headline;
 
 import java.util.List;
 
