@@ -15,8 +15,11 @@ public interface OrderDao {
     void addOrderItems(Tb_OrderItems tb_orderItems);
     @Select("select id from tb_order where no=#{no}")
     Tb_Order selectByNo(String no);
-    @Select("select * from tb_order where ouid=#{id} and status=1")
+    @Select("select * from tb_order where ouid=#{id}")
     List<Tb_Order> selectByUid(Tb_User tb_user);
+    @Select("select * from tb_order where id=#{id}")
+    Tb_Order selectById(Tb_Order tb_order);
+
     @Delete("delete from tb_orderitems where pid=#{id}")
     void deleteOrderItem(Tb_Product tb_product);
     @Select("select o.*,p.* from tb_orderitems o left join tb_product p on o.pid=p.id where oid=#{id}")

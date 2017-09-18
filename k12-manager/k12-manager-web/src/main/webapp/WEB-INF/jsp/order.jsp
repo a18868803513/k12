@@ -221,6 +221,7 @@
     <div class="row">
       <div class="pricedetails">
         <div class="col-md-4 col-md-offset-8">
+
           <table>
             <h6>Price Details</h6>
             <tr>
@@ -233,7 +234,14 @@
               <td id="div"></td>
             </tr>
           </table>
-          <center><a href="#" class="btn btn-1">付款</a></center>
+        <form method="post" action="payOrder?id=${oneItem.id}">
+          <c:if test="${oneItem.status==1}">
+          <input type="submit" class="btn btn-1" value="付款"/>
+         </c:if>
+          <c:if test="${oneItem.status==2}">
+            订单完成！
+          </c:if>
+            </form>
         </div>
       </div>
     </div>

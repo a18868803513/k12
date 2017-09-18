@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
  * Created by Administrator on 2017/9/12/012.
  */
 public class LoginInterceptor implements HandlerInterceptor {
-    private String[] arr={"login","register"};
+    private String[] arr={"login","register","Register"};
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         String url=httpServletRequest.getRequestURI();
