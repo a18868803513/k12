@@ -64,7 +64,7 @@ public class PayController {
         request.setAttribute("pr_NeedResponse", pr_NeedResponse);
         request.setAttribute("hmac", hmac);
 
-    return "confirm";
+    return "confirm.jsp";
 
     }
 

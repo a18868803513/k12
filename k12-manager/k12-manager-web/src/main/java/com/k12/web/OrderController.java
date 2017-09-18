@@ -55,8 +55,10 @@ public class OrderController {
             tb_orderItems.setTb_order(tb_order);
             orderService.addOrderItems(tb_orderItems);
         }
+        tb_order=orderService.selectById(tb_order);
+        model.addAttribute("oneItem",tb_order);
         model.addAttribute("allItem",list);
-        return "order";
+        return "order.jsp";
     }
 
     @RequestMapping("selectByUid")
@@ -67,7 +69,7 @@ public class OrderController {
         List<Tb_ShoppingItems> list1=shoppingCarService.selectAllItem(tb_user.getUsername());
         model.addAttribute("allItem",list1);
         model.addAttribute("myItems",list);
-        return "order-list";
+        return "order-list.jsp";
     }
 
     @RequestMapping("chaKan")
@@ -79,7 +81,7 @@ public class OrderController {
         List<Tb_OrderItems> list=orderService.selectAllOrderItem(tb_order);
         model.addAttribute("allItem",list);
         model.addAttribute("oneItem",tb_order);
-        return "order";
+        return "order.jsp";
     }
 
     @RequestMapping("removeItem")
@@ -88,7 +90,7 @@ public class OrderController {
         Tb_User user = (Tb_User) session.getAttribute("user");
         List<Tb_ShoppingItems> list = shoppingCarService.selectAllItem(user.getUsername());
         model.addAttribute("shoppingItem", list);
-        return "order";
+        return "order.jsp";
     }
 
     @RequestMapping("payOrder")
@@ -97,7 +99,7 @@ public class OrderController {
         tb_order.setId(id1);
         tb_order=orderService.selectById(tb_order);
         model.addAttribute("payOne",tb_order);
-        return "pay";
+        return "pay.jsp";
     }
 
 

@@ -26,8 +26,8 @@ public interface ShoppingCarDao {
             @Result(property = "tb_product.price", column = "price")
     })
     List<Tb_ShoppingItems> selectAllItem(String username);
-    @Select("select * from tb_shoppingitems where pid=#{id}")
-    List<Tb_ShoppingItems> selectByPid(Tb_Product tb_product);
+    @Select("select * from tb_shoppingitems where pid=#{arg0.id} and username=#{arg1.username}")
+    List<Tb_ShoppingItems> selectByPid(Tb_Product tb_product,Tb_User tb_user);
 
     @Select("select counts from tb_shoppingitems WHERE pid=#{id}")
     int selectCount(Tb_Product tb_product);

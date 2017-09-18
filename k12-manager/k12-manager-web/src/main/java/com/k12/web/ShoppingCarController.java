@@ -34,7 +34,7 @@ public class ShoppingCarController {
             int id1 = Integer.parseInt(id);
             if (count > 0) {
                 Tb_ShoppingItems tb_shoppingItems = new Tb_ShoppingItems();
-                List<Tb_ShoppingItems> list1 = shoppingCarService.selectByPid(tb_product);
+                List<Tb_ShoppingItems> list1 = shoppingCarService.selectByPid(tb_product,tb_user);
                 if (list1.size() > 0) {
                     //System.out.println(count+"------"+shoppingCarService.selectCount(tb_product));
                     count = count + shoppingCarService.selectCount(tb_product);
@@ -54,7 +54,7 @@ public class ShoppingCarController {
                     tb_shoppingItems.setTb_shoppingCar(tb_shoppingCar);
                     shoppingCarService.addShoppingItems(tb_shoppingItems);
                     List<Tb_ShoppingItems> list = shoppingCarService.selectAllItem(user.getUsername());
-                    //System.out.println(list);
+                    System.out.println(list+"------------------");
                     model.addAttribute("shoppingItem", list);
                     //tb_product = productService.selectById(id1);
                     //model.addAttribute("oneProduct", tb_product);
@@ -92,7 +92,7 @@ public class ShoppingCarController {
                 return "showShoppingItems.jsp";
             }
         }
-        return "showShoppingItems.jsp";
+        return "showShoppingItems";
 
     }
 
@@ -102,7 +102,7 @@ public class ShoppingCarController {
         Tb_User user = (Tb_User) request.getSession().getAttribute("user");
         List<Tb_ShoppingItems> list = shoppingCarService.selectAllItem(user.getUsername());
         model.addAttribute("shoppingItem", list);
-        return "cart";
+        return "cart.jsp";
     }
     @ResponseBody
     @RequestMapping("showShoppingItemsAjax")

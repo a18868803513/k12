@@ -33,8 +33,8 @@ public class ShoppingCarServiceImpl implements ShoppingCarService {
     }
 
     @Override
-    public List<Tb_ShoppingItems> selectByPid(Tb_Product tb_product) {
-        return dao.selectByPid(tb_product);
+    public List<Tb_ShoppingItems> selectByPid(Tb_Product tb_product,Tb_User tb_user) {
+        return dao.selectByPid(tb_product,tb_user);
     }
 
     @Override

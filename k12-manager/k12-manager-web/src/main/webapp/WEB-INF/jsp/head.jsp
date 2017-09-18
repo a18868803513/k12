@@ -22,7 +22,7 @@
 </script>
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">网站首页</a>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index">网站首页</a>
   </div>
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -44,9 +44,12 @@
           <li>
             <a href="cart" style="color: #a63d56;text-decoration: underline" >购物车</a>
           </li>
-         <%-- <li>
-            <a onclick="javascript:return out()" href="signout" style="color: red;text-decoration: underline" >注销</a>
-          </li>--%>
+          <li>
+            <a href="selectByUid" style="color: #a63d56;text-decoration: underline" >我的订单</a>
+          </li>
+         <li>
+            <a onclick="javascript:return out()" href="quit" style="color: red;text-decoration: underline" >注销</a>
+          </li>
 
 
         </c:when>
