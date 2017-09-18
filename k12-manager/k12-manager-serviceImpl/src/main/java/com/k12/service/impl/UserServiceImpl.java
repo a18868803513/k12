@@ -1,6 +1,7 @@
 package com.k12.service.impl;
 
 import com.k12.dao.UserDao;
+import com.k12.domain.Tb_Student;
 import com.k12.domain.Tb_User;
 import com.k12.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,5 +48,15 @@ public class UserServiceImpl implements UserService {
     public boolean useredit(Tb_User user) {
         int i = userDao.useredit(user);
         return i>0?true:false;
+    }
+
+    @Override
+    public boolean adduserinfo(int id) {
+        return userDao.adduserinfo(id)>0?true:false;
+    }
+
+    @Override
+    public boolean userinfo(Tb_Student student) {
+        return userDao.userinfo(student)>0?true:false;
     }
 }

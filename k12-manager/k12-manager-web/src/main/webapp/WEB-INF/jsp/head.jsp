@@ -10,6 +10,16 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  function out(){
+    var msg = "您真的确定要退出吗？\n\n请确认！";
+    if (confirm(msg)==true){
+      return true;
+    }else{
+      return false;
+    }
+  }
+</script>
 <nav class="navbar navbar-default" role="navigation">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">网站首页</a>
@@ -26,11 +36,19 @@
       <c:choose>
         <c:when test="${user!=null}">
           <li>
-            <a href="useredit">${user.username}</a>
+            <a href="useredit">用户：<font color="#a63d56">${user.username}</font></a>
           </li>
           <li>
-            <a href="quit">注销</a>
+          <a href="userinfo" style="color:#a63d56;text-decoration: underline">个人信息</a>
+        </li>
+          <li>
+            <a href="cart" style="color: #a63d56;text-decoration: underline" >购物车</a>
           </li>
+         <%-- <li>
+            <a onclick="javascript:return out()" href="signout" style="color: red;text-decoration: underline" >注销</a>
+          </li>--%>
+
+
         </c:when>
         <c:otherwise>
           <li>
@@ -42,12 +60,7 @@
         </c:otherwise>
       </c:choose>
 
-      <li>
-        <a href="showShoppingItems">购物车</a>
-      </li>
-      <li>
-        <a href="selectByUid">我的订单</a>
-      </li>
+
 
     </ul>
   </div>

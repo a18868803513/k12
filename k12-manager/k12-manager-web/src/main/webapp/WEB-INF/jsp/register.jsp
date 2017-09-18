@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/jquery.idcode.css">
     <script src="js/jquery-easyui-1.5/jquery.min.js"></script>
     <!-- jquery easyui -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easyui.min.js"></script>
     <script src="js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
     <script src="js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript">
@@ -63,7 +65,7 @@
                         title:"消息提醒!",
                         msg:data,
                         showType:"show",
-                        timeout:1000,
+                        timeout:2000,
                         style: {
                             right: '',
                             bottom: ''
@@ -91,14 +93,6 @@
     <script>
         $(function(){
             $.extend($.fn.validatebox.defaults.rules, {
-                equals: {
-                    validator: function (value, param) {
-                        return value == $(param[0]).val();
-                    },
-                    message: '密码输入不一致!'
-                }
-            });
-            $.extend($.fn.validatebox.defaults.rules, {
                 minLength: {
                     validator: function (value, param) {
                         return value.length >= param[0];
@@ -106,7 +100,22 @@
                     message: '请输入至少6六位以上的用户名!'
                 }
             });
-
+            $.extend($.fn.validatebox.defaults.rules, {
+                minLeng: {
+                    validator: function (value, param) {
+                        return /^[a-zA-Z]\w{5,17}$/.test(value);
+                    },
+                    message: '请输入以首字母开头的6-18位密码!'
+                }
+            });
+            $.extend($.fn.validatebox.defaults.rules, {
+                equals: {
+                    validator: function (value, param) {
+                        return value == $(param[0]).val();
+                    },
+                    message: '密码输入不一致!'
+                }
+            });
             $.extend($.fn.validatebox.defaults.rules, {
                 email: {
                     validator: function (value, param) {
@@ -151,7 +160,7 @@
                 <tr style="height: 60px;">
                     <td>
                         密码：</td><td><input id="t1" type="password" name="password" style="width:300px" class="easyui-validatebox"
-                                           data-options="required:true">
+                                           data-options="required:true" validType="minLeng[6]">
                 </td>
                 </tr>
                 <tr style="height: 60px;">

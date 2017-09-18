@@ -1,6 +1,7 @@
 package com.k12.web;
 
 import com.k12.domain.Tb_ShoppingCar;
+import com.k12.domain.Tb_Student;
 import com.k12.domain.Tb_User;
 import com.k12.service.ShoppingCarService;
 import com.k12.service.UserService;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -50,14 +50,12 @@ public class UserLoginController {
         if (u!=null){
             response.getWriter().write("用户名已经存在!");
         }else{
-            System.out.println(tb_user);
             Tb_ShoppingCar shoppingCar=new Tb_ShoppingCar();
             tb_user.setShoppingCar(shoppingCar);
             boolean b=userService.register(tb_user);
             Tb_User use=userService.selectUser(tb_user.getUsername());
+            boolean ad = userService.adduserinfo(use.getId());
             shoppingCarService.addShoppingCar(use);
-
-
             if(b){
                 response.getWriter().write("注册成功!");
             }else{
@@ -79,12 +77,24 @@ public class UserLoginController {
             response.getWriter().write("修改失败!");
         }
     }
-    @RequestMapping("/quit")
-    public String quit(HttpSession session){
-        session.removeAttribute("user");
+    @RequestMapping("/userInfo")
+    public String userinfo(Tb_Student student,HttpServletRequest request,HttpServletResponse response) throws IOException {
+    Tb_User tb_user = (Tb_User) request.getSession().getAttribute("user");
+    Tb_User u = userService.selectUser(tb_user.getUsername());
+    student.setUid(u.getId());
+    boolean ad= userService.userinfo(student);
+    if(ad){
+//        response.getWriter().write("修改个人信息成功!");
         return "index";
+    }else{
+        request.setAttribute("message","修改失败");
+        return "userinfo";
+       /* response.getWriter().write("修改个人信息失败!");*/
     }
-
-
-
+}
+  /*  @RequestMapping("/signout")
+    public String signout(HttpServletRequest request){
+         request.getSession().removeAttribute("user");
+        return "login";
+    }*/
 }
