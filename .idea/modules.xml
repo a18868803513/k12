@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/k12-manager/k12-manager-web/k12-manager-web.iml" filepath="$PROJECT_DIR$/k12-manager/k12-manager-web/k12-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/k12-parent/k12-parent.iml" filepath="$PROJECT_DIR$/k12-parent/k12-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/k12-parent/k12-realm/k12-realm.iml" filepath="$PROJECT_DIR$/k12-parent/k12-realm/k12-realm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/k12-parent/k12-realm/k12-realm.iml" filepath="$PROJECT_DIR$/k12-parent/k12-realm/k12-realm.iml" />
     </modules>
   </component>
 </project>
