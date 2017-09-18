@@ -5,43 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c13535a6-69aa-4266-85c8-4ec7955a929e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/LoginFifter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-domain/src/main/java/com/k12/domain/Tb_Permission.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-domain/src/main/java/com/k12/domain/Tb_Role.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-shiro/src/main/java/com/k12/realm/UserRealm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-shiro/k12-manager-shiro.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-shiro/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-parent/k12-realm/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/spring/spring-shiro.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/success.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/LoginInterceptor.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/LoginInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_26_incubating.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_26_incubating.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-dao/src/test/java/com/k12/text/MyTest.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-dao/src/test/java/com/k12/text/MyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/ProductController.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/ProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/ReversionController.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/ReversionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/ShoppingCarController.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/ShoppingCarController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-dao/src/main/java/com/k12/dao/UserDao.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-dao/src/main/java/com/k12/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserLoginController.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserLoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-service/src/main/java/com/k12/service/UserService.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-service/src/main/java/com/k12/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/src/main/java/com/k12/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/src/main/java/com/k12/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/VideoController.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/VideoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/db.properties" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/db.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-dao/k12-manager-dao.iml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-dao/k12-manager-dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/k12-manager-serviceImpl.iml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/k12-manager-serviceImpl.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/k12-manager-web.iml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/k12-manager-web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/k12_manager_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/k12_manager_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/pom.xml" afterPath="$PROJECT_DIR$/k12-manager/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-dao/pom.xml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-dao/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/pom.xml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-parent/pom.xml" afterPath="$PROJECT_DIR$/k12-parent/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/spring/spring-mvc.xml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/spring/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9f99db48-e206-472d-be92-3eb79a53ac75" name="Failed commit: Default" comment="添加编辑功能" />
@@ -89,8 +53,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30769232">
-              <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.5506608">
+              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -220,9 +184,9 @@
         <option value="$PROJECT_DIR$/k12-manager/k12-manager-shiro/src/main/java/com/k12/realm/UserRealm.java" />
         <option value="$PROJECT_DIR$/k12-manager/k12-manager-dao/src/main/java/com/k12/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/jsp/success.jsp" />
-        <option value="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java" />
         <option value="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/resources/spring/spring-shiro.xml" />
         <option value="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java" />
       </list>
     </option>
   </component>
@@ -1484,13 +1448,7 @@
       <workItem from="1505664945612" duration="1326000" />
       <workItem from="1505695636065" duration="1512000" />
       <workItem from="1505697199641" duration="1231000" />
-      <workItem from="1505701600533" duration="15057000" />
-    </task>
-    <task id="LOCAL-00020" summary="排序">
-      <created>1504616458502</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1504616458502</updated>
+      <workItem from="1505701600533" duration="15208000" />
     </task>
     <task id="LOCAL-00021" summary="增加模糊查询，排序等功能，页面合并。存在bug，不能搜索+号">
       <created>1504619901164</created>
@@ -1780,11 +1738,17 @@
       <option name="project" value="LOCAL" />
       <updated>1505472855001</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="增加用户退出功能，统计网站在线人数功能。">
+      <created>1505736131449</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1505736131451</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334194000" />
+    <option name="totallyTimeSpent" value="334345000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1801,13 +1765,14 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32561728" sideWeight="0.48411497" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08895706" sideWeight="0.4854962" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24079755" sideWeight="0.52874434" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.078668684" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19478528" sideWeight="0.47806355" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2588055" sideWeight="0.47125566" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25920245" sideWeight="0.47125566" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.4969743" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.48789713" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1823,7 +1788,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32561728" sideWeight="0.48411497" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6671875" sideWeight="0.24810892" order="8" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2290,8 +2254,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30769232">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.5506608">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
           <folding />
         </state>
       </provider>

@@ -61,6 +61,8 @@ public class UserController {
 
 
     }
+
+
     @RequestMapping("/user/update")
     public String test2() {
         Subject subject = SecurityUtils.getSubject();
