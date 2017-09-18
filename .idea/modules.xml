@@ -8,8 +8,10 @@
       <module fileurl="file://$PROJECT_DIR$/k12-manager/k12-manager-domain/k12-manager-domain.iml" filepath="$PROJECT_DIR$/k12-manager/k12-manager-domain/k12-manager-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/k12-manager/k12-manager-service/k12-manager-service.iml" filepath="$PROJECT_DIR$/k12-manager/k12-manager-service/k12-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/k12-manager-serviceImpl.iml" filepath="$PROJECT_DIR$/k12-manager/k12-manager-serviceImpl/k12-manager-serviceImpl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/k12-manager/k12-manager-shiro/k12-manager-shiro.iml" filepath="$PROJECT_DIR$/k12-manager/k12-manager-shiro/k12-manager-shiro.iml" />
       <module fileurl="file://$PROJECT_DIR$/k12-manager/k12-manager-web/k12-manager-web.iml" filepath="$PROJECT_DIR$/k12-manager/k12-manager-web/k12-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/k12-parent/k12-parent.iml" filepath="$PROJECT_DIR$/k12-parent/k12-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/k12-parent/k12-realm/k12-realm.iml" filepath="$PROJECT_DIR$/k12-parent/k12-realm/k12-realm.iml" />
     </modules>
   </component>
 </project>

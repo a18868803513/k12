@@ -24,12 +24,12 @@ public class ReversionController {
         reversion.setUser((Tb_User)session.getAttribute("user"));
         service.addReversion(reversion);
          model.addAttribute("reversion", service.queryReversionById(reversion.getNoteID()));
-        return "reversion";
+        return "reversion.jsp";
     }
     @RequestMapping("queryReversionById")
     public String text2(int noteID,Model model){
         model.addAttribute("reversion",service.queryReversionById(noteID));
 
-        return "reversion";
+        return "reversion.jsp";
     }
 }

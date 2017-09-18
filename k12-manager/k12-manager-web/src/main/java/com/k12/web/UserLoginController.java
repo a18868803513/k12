@@ -28,19 +28,19 @@ public class UserLoginController {
         Tb_User u= userService.login(username, password);
         if (u==null){
             request.setAttribute("message","用户不存在。。。");
-            return "login";
+            return "login.jsp";
         }else if(username.equals(u.getUsername())&&password.equals(u.getPassword())){
 
             if (u.getRole()==1){
                 request.setAttribute("userManager",u);
-                return "ManagerIndex";
+                return "ManagerIndex.jsp";
             }else{
                 request.getSession().setAttribute("user",u);
-                return "index";
+                return "index.jsp";
             }
         }else{
             request.setAttribute("message","账号或者密码错误请重新输入。。。");
-            return "login";
+            return "login.jsp";
         }
     }
     @RequestMapping("/userRegister")
@@ -82,7 +82,7 @@ public class UserLoginController {
     @RequestMapping("/quit")
     public String quit(HttpSession session){
         session.removeAttribute("user");
-        return "index";
+        return "index.jsp";
     }
 
 

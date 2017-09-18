@@ -41,12 +41,12 @@
     <mvc:resources mapping="/font-awesome/**" location="/font-awesome/"/>
     <mvc:resources mapping="/dist/**" location="/dist/"/>
     <mvc:resources mapping="/src/**" location="/src/"/>
-    <mvc:interceptors>
+<!--   <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/*"/>
             <bean class="com.k12.web.LoginInterceptor"/>
         </mvc:interceptor>
-    </mvc:interceptors>
+    </mvc:interceptors>-->
 
 
 </beans>

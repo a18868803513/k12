@@ -18,6 +18,8 @@
         <module>k12-manager-service</module>
         <module>k12-manager-serviceImpl</module>
         <module>k12-manager-web</module>
+
+        <module>k12-manager-shiro</module>
     </modules>
     <dependencies>
         <dependency>
