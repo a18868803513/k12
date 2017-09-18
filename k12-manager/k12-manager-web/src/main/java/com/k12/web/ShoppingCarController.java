@@ -46,7 +46,7 @@ public class ShoppingCarController {
                     model.addAttribute("shoppingItem", list);
                     //tb_product = productService.selectById(id1);
                     //model.addAttribute("oneProduct", tb_product);
-                    return "cart";
+                    return "cart.jsp";
                 } else {
                     tb_shoppingItems.setCounts(count);
                     tb_shoppingItems.setUsername(user.getUsername());
@@ -58,13 +58,13 @@ public class ShoppingCarController {
                     model.addAttribute("shoppingItem", list);
                     //tb_product = productService.selectById(id1);
                     //model.addAttribute("oneProduct", tb_product);
-                    return "cart";
+                    return "cart.jsp";
                 }
             } else {
-                return "product";
+                return "product.jsp";
             }
         } else {
-            return "product";
+            return "product.jsp";
         }
 
     }
@@ -75,7 +75,7 @@ public class ShoppingCarController {
         Tb_User user = (Tb_User) request.getSession().getAttribute("user");
         List<Tb_ShoppingItems> list = shoppingCarService.selectAllItem(user.getUsername());
         model.addAttribute("shoppingItem", list);
-        return "cart";
+        return "cart.jsp";
     }
 
     @RequestMapping("updateShppingItem")
@@ -87,12 +87,12 @@ public class ShoppingCarController {
                 tb_shoppingItems.setCounts(count);
                 tb_product.setId(id1);
                 shoppingCarService.updateCounts(tb_shoppingItems, tb_product);
-                return "showShoppingItems";
+                return "showShoppingItems.jsp";
             } else {
-                return "showShoppingItems";
+                return "showShoppingItems.jsp";
             }
         }
-        return "showShoppingItems";
+        return "showShoppingItems.jsp";
 
     }
 

@@ -71,11 +71,14 @@ public class OrderController {
     }
 
     @RequestMapping("chaKan")
-    public String chaKan(Model model,Tb_Order tb_order,String id){
+    public String chaKan(Model model,Tb_Order tb_order,String id,Tb_User tb_user,HttpSession session){
+        tb_user= (Tb_User) session.getAttribute("user");
         int id1=Integer.parseInt(id);
         tb_order.setId(id1);
+        tb_order=orderService.selectById(tb_order);
         List<Tb_OrderItems> list=orderService.selectAllOrderItem(tb_order);
         model.addAttribute("allItem",list);
+        model.addAttribute("oneItem",tb_order);
         return "order";
     }
 
@@ -88,7 +91,14 @@ public class OrderController {
         return "order";
     }
 
-
+    @RequestMapping("payOrder")
+    public String payOrder(String id,Tb_Order tb_order,Model model){
+        int id1=Integer.parseInt(id);
+        tb_order.setId(id1);
+        tb_order=orderService.selectById(tb_order);
+        model.addAttribute("payOne",tb_order);
+        return "pay";
+    }
 
 
 }

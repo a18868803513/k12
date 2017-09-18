@@ -10,6 +10,7 @@
     <modules>
         <module>../k12-common</module>
         <module>../k12-manager</module>
+        <module>k12-realm</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

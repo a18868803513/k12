@@ -169,14 +169,14 @@ public class VideoController {
         tb_video.setIntroduction(introduction);
         tb_video.setName(name);
         videoService.updateVideo(tb_video);
-        return "ManagerIndex";
+        return "ManagerIndex.jsp";
     }
 
     @RequestMapping("/showAllVideo")
     public String test5(Model model) {
         model.addAttribute("list", videoService.queryAll());
         System.out.println(videoService.queryAll().size());
-        return "video-index";
+        return "video-index.jsp";
     }
 
     @RequestMapping("/showVideo")
@@ -184,13 +184,13 @@ public class VideoController {
         int id1 = Integer.parseInt(id);
         model.addAttribute("tb_video", videoService.queryById(id1));
         System.out.println(videoService.queryById(id1));
-        return "play-video";
+        return "play-video.jsp";
     }
     @RequestMapping("/lookVideo")
     //@ResponseBody
     public String test7(Model model, String gid,String cid){
         model.addAttribute("list",videoService.listVideosById(Integer.parseInt(gid),Integer.parseInt(cid)));
-        return "video-index";
+        return "video-index.jsp";
     }
 }
 

@@ -15,6 +15,7 @@ public interface OrderService {
     void addOrderItems(Tb_OrderItems tb_orderItems);
     Tb_Order selectByNo(String no);
     List<Tb_Order> selectByUid(Tb_User tb_user);
+    Tb_Order selectById(Tb_Order tb_order);
     void deleteOrderItem(Tb_Product tb_product);
     List<Tb_OrderItems> selectAllOrderItem(Tb_Order tb_order);
 }

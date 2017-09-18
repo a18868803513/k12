@@ -57,16 +57,39 @@
         <processorPath useClasspath="true" />
         <module name="k12-manager-web" />
       </profile>
+      <profile default="false" name="Annotation profile for k12-realm" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="k12-realm" />
+      </profile>
+      <profile default="false" name="Annotation profile for k12-manager-realm" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for k12-manager-shiro" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="k12-manager-shiro" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="k12-common" target="1.8" />
       <module name="k12-manager" target="1.8" />
       <module name="k12-manager-dao" target="1.8" />
       <module name="k12-manager-domain" target="1.8" />
+      <module name="k12-manager-realm" target="1.8" />
       <module name="k12-manager-service" target="1.8" />
       <module name="k12-manager-serviceImpl" target="1.8" />
+      <module name="k12-manager-shiro" target="1.8" />
       <module name="k12-manager-web" target="1.8" />
       <module name="k12-parent" target="1.8" />
+      <module name="k12-realm" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

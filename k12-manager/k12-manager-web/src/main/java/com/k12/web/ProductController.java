@@ -44,21 +44,21 @@ public class ProductController {
         String[] a=ids.split(",");
         List<String> list= Arrays.asList(a);
         list.forEach(n->productService.removeProduct(Integer.parseInt(n)));
-        return "ManagerIndex";
+        return "ManagerIndex.jsp";
     }
     @RequestMapping("upProduct")
     public String upProduct(String ids){
         String[] a=ids.split(",");
         List<String> list= Arrays.asList(a);
         list.forEach(n->productService.upProduct(Integer.parseInt(n)));
-        return "ManagerIndex";
+        return "ManagerIndex.jsp";
     }
     @RequestMapping("downProduct")
     public String downProduct(String ids){
         String[] a=ids.split(",");
         List<String> list= Arrays.asList(a);
         list.forEach(n->productService.downProduct(Integer.parseInt(n)));
-        return "ManagerIndex";
+        return "ManagerIndex.jsp";
     }
 
 
@@ -90,7 +90,7 @@ public class ProductController {
         product.setTb_course(tb_course);
         product.setTb_grade(tb_grade);
         productService.addProduct(product);
-        return "ManagerIndex";
+        return "ManagerIndex.jsp";
     }
 
     @RequestMapping("updateProduct")
@@ -98,21 +98,21 @@ public class ProductController {
         product.setName(new String(product.getName().getBytes("ISO8859_1"),"utf-8"));
         product.setInstrudction(new String(product.getInstrudction().getBytes("ISO8859_1"), "utf-8"));
         productService.updateProduct(product);
-        return "ManagerIndex";
+        return "ManagerIndex.jsp";
     }
 
     @RequestMapping("allProduct")
     public String selectAll(Model model,Tb_Product tb_product){
         List<Tb_Product> list=productService.selectAll();
         model.addAttribute("product",list);
-        return "category";
+        return "category.jsp";
     }
     @RequestMapping("oneProduct")
     public String selectById(Model model,String id,Tb_Product tb_product){
         int id1=Integer.parseInt(id);
         tb_product=productService.selectById(id1);
         model.addAttribute("oneProduct",tb_product);
-        return "product";
+        return "product.jsp";
     }
 
 

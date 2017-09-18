@@ -47,4 +47,10 @@ public class OrderServiceImpl implements OrderService {
     public List<Tb_OrderItems> selectAllOrderItem(Tb_Order tb_order) {
         return dao.selectAllOrderItem(tb_order);
     }
+
+    @Override
+    public Tb_Order selectById(Tb_Order tb_order) {
+        return dao.selectById(tb_order);
+    }
 }
+
