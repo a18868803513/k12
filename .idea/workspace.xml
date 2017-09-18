@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c13535a6-69aa-4266-85c8-4ec7955a929e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java" afterPath="$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9f99db48-e206-472d-be92-3eb79a53ac75" name="Failed commit: Default" comment="添加编辑功能" />
@@ -54,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5506608">
-              <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-dao/src/main/java/com/k12/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="229" />
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -1448,13 +1447,7 @@
       <workItem from="1505664945612" duration="1326000" />
       <workItem from="1505695636065" duration="1512000" />
       <workItem from="1505697199641" duration="1231000" />
-      <workItem from="1505701600533" duration="15208000" />
-    </task>
-    <task id="LOCAL-00021" summary="增加模糊查询，排序等功能，页面合并。存在bug，不能搜索+号">
-      <created>1504619901164</created>
-      <option name="number" value="00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1504619901164</updated>
+      <workItem from="1505701600533" duration="15371000" />
     </task>
     <task id="LOCAL-00022" summary="增加模糊查询，排序等功能，页面合并。存在bug，不能搜索+号">
       <created>1504658639697</created>
@@ -1744,11 +1737,17 @@
       <option name="project" value="LOCAL" />
       <updated>1505736131451</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="增加用户退出功能，统计网站在线人数功能。">
+      <created>1505736237774</created>
+      <option name="number" value="00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1505736237774</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334345000" />
+    <option name="totallyTimeSpent" value="334508000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1761,18 +1760,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32561728" sideWeight="0.48411497" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08895706" sideWeight="0.4854962" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24079755" sideWeight="0.52874434" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25920245" sideWeight="0.53177005" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.078668684" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19478528" sideWeight="0.47806355" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25920245" sideWeight="0.47125566" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25920245" sideWeight="0.46822995" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.4969743" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.48789713" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2186,7 +2185,7 @@
     <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-dao/src/main/java/com/k12/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="229" />
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2255,7 +2254,7 @@
     <entry file="file://$PROJECT_DIR$/k12-manager/k12-manager-web/src/main/java/com/k12/web/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5506608">
-          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding />
         </state>
       </provider>
