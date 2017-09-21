@@ -65,6 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="header-top-left">
                 <ul>
                     <li><a href="#">不断学习，探索最大资源</a></li>
+                    <li><a href="#">活到老，学到老</a></li>
                 </ul>
             </div>
             <%--搜索区--%>
@@ -212,23 +213,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </li>
                     </ul>
                 <li>
-                <li class="dropdown pull-left"><a href="#" data-toggle="dropdown" class="dropdown-toggle">其他<strong
-                        class="caret"></strong></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">小班辅导</a>
-                        </li>
-                        <li>
-                            <a href="#">基础教学</a>
-                        </li>
-                        <li>
-                            <a href="#">进阶练习</a>
-                        </li>
-                        <li class="divider">
-                        </li>
-                    </ul>
-                <li>
-                    <%--<div class="clearfix"> </div>--%>
             </ul>
             <!-- script-for-menu -->
             <script>

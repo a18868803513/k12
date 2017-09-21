@@ -18,11 +18,11 @@
             text-decoration: none;
         }
         .sd a{
-            font-size: 0.8cm;
-            float: right;
-            padding-top: 10px;
-            text-decoration: none;
-        }
+              font-size: 0.8cm;
+              float: right;
+              padding-top: 10px;
+              text-decoration: none;
+          }
     </style>
 </head>
 <body style="background: url(images/picture4.jpg)">
